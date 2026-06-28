@@ -47,7 +47,7 @@ export const practiceAreas: PracticeArea[] = [
       "What does the asset-tracing process involve?",
       "How are fees structured in a recovery matter?",
     ]),
-    relatedResults: [],
+    relatedResults: ["result-001"],
   },
   {
     slug: "commercial-litigation",
@@ -62,7 +62,7 @@ export const practiceAreas: PracticeArea[] = [
       "What is the difference between state and federal court for my matter?",
       "Can a dispute be resolved without going to trial?",
     ]),
-    relatedResults: [],
+    relatedResults: ["result-002"],
   },
   {
     slug: "securities-fraud",
@@ -77,7 +77,7 @@ export const practiceAreas: PracticeArea[] = [
       "What is the deadline to bring a securities fraud claim?",
       "How are damages calculated in an investor claim?",
     ]),
-    relatedResults: [],
+    relatedResults: ["result-003"],
   },
   {
     slug: "economic-disputes",
@@ -92,7 +92,7 @@ export const practiceAreas: PracticeArea[] = [
       "Do you work with forensic accountants and experts?",
       "Can a partnership or shareholder dispute be resolved privately?",
     ]),
-    relatedResults: [],
+    relatedResults: ["result-004"],
   },
   {
     slug: "contract-disputes",
@@ -107,7 +107,7 @@ export const practiceAreas: PracticeArea[] = [
       "How is breach proven when terms are ambiguous?",
       "What is the deadline to bring a breach-of-contract claim?",
     ]),
-    relatedResults: [],
+    relatedResults: ["result-005"],
   },
   {
     slug: "international-arbitration",
@@ -122,6 +122,6 @@ export const practiceAreas: PracticeArea[] = [
       "How are foreign arbitral awards enforced in the United States?",
       "How long does an international arbitration typically take?",
     ]),
-    relatedResults: [],
+    relatedResults: ["result-006"],
   },
 ];
