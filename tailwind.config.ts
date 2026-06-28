@@ -20,9 +20,9 @@ const config: Config = {
         muted: "#6B7A8D",
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
-        body: ["var(--font-serif)", "Georgia", "serif"],
-        ui: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", '"Cormorant Garamond"', "Georgia", "serif"],
+        body: ["var(--font-body)", '"Source Serif 4"', "Georgia", "serif"],
+        ui: ["var(--font-ui)", "Jost", "system-ui", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: '0px',
