@@ -21,11 +21,12 @@ const config: Config = {
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        body: ["var(--font-serif)", "Georgia", "serif"],
+        ui: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        none: "0px",
+        DEFAULT: '0px',
+        full: '9999px',
       },
     },
   },
