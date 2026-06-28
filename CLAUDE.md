@@ -44,9 +44,9 @@ colors: {
   muted:       '#6B7A8D',
 },
 fontFamily: {
-  display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-  serif:   ['"Source Serif 4"', 'Georgia', 'serif'],
-  sans:    ['Jost', 'system-ui', 'sans-serif'],
+  display: ['"Cormorant Garamond"', 'Georgia', 'serif'],   // font-display → headlines
+  body:    ['"Source Serif 4"', 'Georgia', 'serif'],       // font-body    → body copy, paragraphs
+  ui:      ['Jost', 'system-ui', 'sans-serif'],             // font-ui      → nav, labels, buttons, captions
 },
 ```
 
