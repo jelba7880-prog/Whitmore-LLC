@@ -13,13 +13,13 @@ const sourceSerif4 = Source_Serif_4({
   subsets: ["latin"],
   weight: ["400", "600"],
   style: ["normal", "italic"],
-  variable: "--font-serif",
+  variable: "--font-body",
 });
 
 const jost = Jost({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
-  variable: "--font-sans",
+  variable: "--font-ui",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cormorantGaramond.variable} ${sourceSerif4.variable} ${jost.variable} font-serif antialiased`}
+        className={`${cormorantGaramond.variable} ${sourceSerif4.variable} ${jost.variable} font-body antialiased`}
       >
         {children}
       </body>
