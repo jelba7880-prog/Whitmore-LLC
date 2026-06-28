@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { practiceAreas } from "@/lib/practice-areas";
+
+export function generateStaticParams() {
+  return practiceAreas.map((area) => ({ slug: area.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -20,10 +25,16 @@ export default function PracticeAreaDetailPage({
 }: {
   params: { slug: string };
 }) {
+  const practiceArea = practiceAreas.find((p) => p.slug === params.slug);
+
+  if (!practiceArea) {
+    notFound();
+  }
+
   return (
     <main>
-      <h1>{params.slug}</h1>
-      {/* TODO: Long description, process steps, FAQs, related results, inline CTA */}
+      <h1>{practiceArea.title}</h1>
+      {/* TODO: Page hero, long description, process steps, FAQs, related results, inline CTA */}
     </main>
   );
 }

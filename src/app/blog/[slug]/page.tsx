@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { blogPosts } from "@/lib/blog";
+
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({ slug: post.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -20,10 +25,16 @@ export default function BlogPostPage({
 }: {
   params: { slug: string };
 }) {
+  const post = blogPosts.find((p) => p.slug === params.slug);
+
+  if (!post) {
+    notFound();
+  }
+
   return (
     <main>
-      <h1>{params.slug}</h1>
-      {/* TODO: Blog post content, author card, practice area card, related posts, mini-CTA */}
+      <h1>{post.title}</h1>
+      {/* TODO: Article body, author card, practice area card, related posts, mini-CTA */}
     </main>
   );
 }

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { attorneys } from "@/lib/attorneys";
+
+export function generateStaticParams() {
+  return attorneys.map((attorney) => ({ slug: attorney.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -20,10 +25,16 @@ export default function AttorneyProfilePage({
 }: {
   params: { slug: string };
 }) {
+  const attorney = attorneys.find((a) => a.slug === params.slug);
+
+  if (!attorney) {
+    notFound();
+  }
+
   return (
     <main>
-      <h1>{params.slug}</h1>
-      {/* TODO: Attorney hero, bio, notable matters, articles */}
+      <h1>{attorney.name}</h1>
+      {/* TODO: Attorney hero (name, title, bar number + verify link), bio, notable matters, articles */}
     </main>
   );
 }
