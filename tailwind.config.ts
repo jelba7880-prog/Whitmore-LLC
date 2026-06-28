@@ -28,6 +28,9 @@ const config: Config = {
         DEFAULT: '0px',
         full: '9999px',
       },
+      maxWidth: {
+        content: '1200px',
+      },
     },
   },
   plugins: [],
