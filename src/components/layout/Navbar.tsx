@@ -42,9 +42,9 @@ export default function Navbar() {
       <div className="mx-auto flex h-full max-w-content items-center justify-between px-6">
         <Link
           href="/"
-          className="font-display text-xl md:text-2xl font-semibold text-cream"
+          className="font-display text-[18px] md:text-[21px] font-bold text-cream"
         >
-          Whitmore <span className="text-gold">&amp;</span> Associates
+          Whitmore <span className="text-gold">&amp;</span> Associates LLP
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -77,16 +77,21 @@ export default function Navbar() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
-          className="md:hidden flex h-10 w-10 flex-col items-center justify-center gap-1.5"
+          className="md:hidden flex h-10 w-10 flex-col items-center justify-center gap-[6px]"
         >
           <span
-            className={`block h-px w-6 bg-cream transition-transform ${
-              menuOpen ? "translate-y-[3px] rotate-45" : ""
+            className={`block h-px w-[22px] bg-cream transition-all duration-200 ${
+              menuOpen ? "translate-y-[7px] rotate-45" : ""
             }`}
           />
           <span
-            className={`block h-px w-6 bg-cream transition-transform ${
-              menuOpen ? "-translate-y-[3px] -rotate-45" : ""
+            className={`block h-px w-[22px] bg-cream transition-opacity duration-200 ${
+              menuOpen ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`block h-px w-[22px] bg-cream transition-all duration-200 ${
+              menuOpen ? "-translate-y-[7px] -rotate-45" : ""
             }`}
           />
         </button>

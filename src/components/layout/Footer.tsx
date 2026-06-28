@@ -7,7 +7,11 @@ const firmLinks = [
   { label: "Results", href: "/results" },
   { label: "Process", href: "/process" },
   { label: "Blog", href: "/blog" },
+];
+
+const contactLinks = [
   { label: "Contact", href: "/contact" },
+  { label: "Free Consultation", href: "/free-consultation" },
 ];
 
 const legalLinks = [
@@ -82,10 +86,27 @@ export default function Footer() {
           {/* Column 4 — Contact Info */}
           <div>
             <div className={columnHeaderClasses}>Contact</div>
-            <div className="font-body text-sm text-cream/65 space-y-2">
-              <p>One Liberty Plaza, Suite 4200</p>
-              <p>New York, NY 10006</p>
-              <p>(212) 555-0100</p>
+            <ul className="space-y-3 mb-5">
+              {contactLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-ui text-[13px] text-cream/60 hover:text-gold-light hover:opacity-100 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="font-body text-sm text-cream/65 space-y-1">
+              <p>
+                <a
+                  href="tel:+12125550100"
+                  className="hover:text-gold-light transition-colors"
+                >
+                  (212) 555-0100
+                </a>
+              </p>
               <p>Mon–Fri, 9:00 AM – 6:00 PM ET</p>
             </div>
           </div>
@@ -95,7 +116,7 @@ export default function Footer() {
         <div className="border-t border-navy-light mt-12 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <p className="font-ui text-[11px] font-light text-muted">
             Attorney Advertising. Results may vary. Past results do not
-            guarantee future outcomes.
+            guarantee future outcomes. Whitmore &amp; Associates LLP.
           </p>
           <div className="flex flex-wrap gap-6">
             {legalLinks.map((link) => (

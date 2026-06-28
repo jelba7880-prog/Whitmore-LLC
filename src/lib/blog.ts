@@ -1,4 +1,5 @@
 import type { BlogPost } from "@/types";
+import { attorneys } from "@/lib/attorneys";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -10,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     practiceArea: "fraud-asset-recovery",
     publishedAt: "2024-03-12T00:00:00.000Z",
     readMinutes: 6,
-    content: "TODO: full article content — 600-800 words",
+    content: "{/* TODO: Article body */}",
     relatedSlugs: [],
   },
   {
@@ -22,7 +23,18 @@ export const blogPosts: BlogPost[] = [
     practiceArea: "international-arbitration",
     publishedAt: "2024-05-02T00:00:00.000Z",
     readMinutes: 8,
-    content: "TODO: full article content — 600-800 words",
+    content: "{/* TODO: Article body */}",
     relatedSlugs: [],
   },
 ];
+
+// Build-time invariant (CLAUDE.md Hard Rule #5): every blog author must be a
+// named attorney on the /attorneys roster. Fail the build on any mismatch.
+const attorneySlugs = new Set(attorneys.map((attorney) => attorney.slug));
+for (const post of blogPosts) {
+  if (!attorneySlugs.has(post.authorSlug)) {
+    throw new Error(
+      `Blog post "${post.slug}" has authorSlug "${post.authorSlug}", which does not match any attorney in lib/attorneys.ts.`,
+    );
+  }
+}

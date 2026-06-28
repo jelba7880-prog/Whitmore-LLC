@@ -45,7 +45,7 @@ export default function RootLayout({
         className={`${cormorantGaramond.variable} ${sourceSerif4.variable} ${jost.variable} font-body antialiased`}
       >
         <Navbar />
-        <main className="pt-[72px]">{children}</main>
+        <div className="pt-[54px] md:pt-[72px]">{children}</div>
         <CTASection />
         <Footer />
       </body>
