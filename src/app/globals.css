@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0d1b2a;
+  --navy-mid: #1b2e44;
+  --navy-light: #2c4a6e;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --cream: #f8f5ee;
+  --parchment: #ede8df;
+  --ink: #1a1a2e;
+  --muted: #6b7a8d;
+}
+
+body {
+  color: var(--ink);
+  background: var(--cream);
+}
