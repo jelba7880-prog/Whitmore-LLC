@@ -13,7 +13,7 @@ export const attorneys: Attorney[] = [
           "https://iapps.courts.state.ny.us/attorneyservices/search?1",
       },
     ],
-    bio: "{/* TODO: Attorney bio — 3 paragraphs */}",
+    bio: "",
     practiceAreas: [
       "fraud-asset-recovery",
       "commercial-litigation",
@@ -36,7 +36,7 @@ export const attorneys: Attorney[] = [
           "https://apps.calbar.ca.gov/attorney/Licensee/Detail/298741",
       },
     ],
-    bio: "{/* TODO: Attorney bio — 3 paragraphs */}",
+    bio: "",
     practiceAreas: [
       "international-arbitration",
       "economic-disputes",

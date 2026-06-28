@@ -19,7 +19,8 @@ export default function AttorneyProfile({
   relatedResults,
   posts,
 }: AttorneyProfileProps) {
-  const bioIsTodo = attorney.bio.startsWith("{/*");
+  const bioIsTodo =
+    attorney.bio.length === 0 || attorney.bio.startsWith("{/*");
   const bioParagraphs = bioIsTodo ? [] : attorney.bio.split("\n\n");
   // "last name only" — use the final name token (not split[1], which is the
   // middle initial for these names). See report note.

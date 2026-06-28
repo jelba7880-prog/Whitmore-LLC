@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Attorney } from "@/types";
+import { practiceAreas } from "@/lib/practice-areas";
 
 interface AttorneyCardProps {
   attorney: Attorney;
@@ -16,8 +17,9 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
     );
   }
 
-  // Placeholder bios are stored as TODO comment strings; never surface them.
-  const showBio = !attorney.bio.startsWith("{/*");
+  // Placeholder bios are stored as TODO comment strings, or left empty
+  // pending content; never surface either as rendered copy.
+  const showBio = attorney.bio.length > 0 && !attorney.bio.startsWith("{/*");
   const bioExcerpt =
     attorney.bio.length > 200 ? attorney.bio.slice(0, 200) + "…" : attorney.bio;
 
@@ -77,11 +79,15 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
 
         {/* Practice area tags */}
         <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
-          {attorney.practiceAreas.map((slug) => (
-            <span key={slug} className="font-ui text-[11px] text-muted">
-              &#9679; {slug}
-            </span>
-          ))}
+          {attorney.practiceAreas.map((slug) => {
+            const area = practiceAreas.find((a) => a.slug === slug);
+            const label = area?.title ?? slug;
+            return (
+              <span key={slug} className="font-ui text-[11px] text-muted">
+                &#9679; {label}
+              </span>
+            );
+          })}
         </div>
 
         <span className="mt-auto pt-5 font-ui text-[11px] uppercase tracking-[0.1em] text-gold">
