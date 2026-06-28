@@ -3,7 +3,7 @@ export default function TestimonialBlock() {
     <section className="bg-navy-mid py-20">
       <div className="mx-auto max-w-[1200px] px-6 text-center">
         <div className="select-none font-display text-[140px] font-bold leading-none text-gold/30">
-          &ldquo;
+          {"“"}
         </div>
 
         <blockquote className="mx-auto mt-[-40px] max-w-[800px] font-body text-[22px] italic leading-[1.7] text-cream">
