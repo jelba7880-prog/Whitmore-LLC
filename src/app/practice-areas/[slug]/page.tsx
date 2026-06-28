@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import PracticeAreaDetail from "@/components/practice-areas/PracticeAreaDetail";
 import { practiceAreas } from "@/lib/practice-areas";
+import { caseResults } from "@/lib/results";
 
 export function generateStaticParams() {
   return practiceAreas.map((area) => ({ slug: area.slug }));
@@ -11,12 +13,15 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const practiceArea = practiceAreas.find((p) => p.slug === params.slug);
+  const area = practiceAreas.find((p) => p.slug === params.slug);
+
+  if (!area) {
+    notFound();
+  }
+
   return {
-    title: practiceArea ? practiceArea.title : "Practice Area",
-    description: practiceArea
-      ? practiceArea.shortDescription
-      : "A practice area handled by Whitmore & Associates LLP.",
+    title: area.title,
+    description: area.shortDescription,
   };
 }
 
@@ -25,16 +30,15 @@ export default function PracticeAreaDetailPage({
 }: {
   params: { slug: string };
 }) {
-  const practiceArea = practiceAreas.find((p) => p.slug === params.slug);
+  const area = practiceAreas.find((p) => p.slug === params.slug);
 
-  if (!practiceArea) {
+  if (!area) {
     notFound();
   }
 
-  return (
-    <main>
-      <h1>{practiceArea.title}</h1>
-      {/* TODO: Page hero, long description, process steps, FAQs, related results, inline CTA */}
-    </main>
+  const relatedResults = caseResults.filter((r) =>
+    area.relatedResults.includes(r.id),
   );
+
+  return <PracticeAreaDetail area={area} relatedResults={relatedResults} />;
 }
