@@ -18,3 +18,36 @@ body {
   color: var(--ink);
   background: var(--cream);
 }
+
+/* Practice-area long description, rendered from trusted in-repo HTML via
+   dangerouslySetInnerHTML. Base typography (size, color, leading, font) is set
+   with utility classes on the container; these rules style the nested elements
+   that utilities can't reach. */
+.pa-prose > * + * {
+  margin-top: 1.5rem;
+}
+.pa-prose h3 {
+  font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.pa-prose blockquote {
+  border-left: 2px solid var(--gold);
+  background: var(--parchment);
+  padding: 16px 28px;
+  font-style: italic;
+}
+.pa-prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 2px;
+}
+
+/* Practice-area FAQ accordion (native <details>/<summary>, no JS): rotate the
+   chevron when the item is open. */
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}

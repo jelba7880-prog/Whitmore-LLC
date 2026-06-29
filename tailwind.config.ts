@@ -20,12 +20,16 @@ const config: Config = {
         muted: "#6B7A8D",
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", '"Cormorant Garamond"', "Georgia", "serif"],
+        body: ["var(--font-body)", '"Source Serif 4"', "Georgia", "serif"],
+        ui: ["var(--font-ui)", "Jost", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        none: "0px",
+        DEFAULT: '0px',
+        full: '9999px',
+      },
+      maxWidth: {
+        content: '1200px',
       },
     },
   },
