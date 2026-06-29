@@ -5,6 +5,7 @@ import CaseResultCard from "@/components/results/CaseResultCard";
 import BlogCard from "@/components/blog/BlogCard";
 import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
+import { practiceAreas as allAreas } from "@/lib/practice-areas";
 
 interface AttorneyProfileProps {
   attorney: Attorney;
@@ -106,15 +107,19 @@ export default function AttorneyProfile({
 
             {/* Practice areas */}
             <div className="mt-6 flex flex-wrap gap-2">
-              {attorney.practiceAreas.map((slug) => (
-                <Link
-                  key={slug}
-                  href={`/practice-areas/${slug}`}
-                  className="border border-gold/40 px-3 py-1 font-ui text-[11px] text-gold/80 transition-colors hover:border-gold hover:text-gold"
-                >
-                  {slug}
-                </Link>
-              ))}
+              {attorney.practiceAreas.map((slug) => {
+                const areaData = allAreas.find((a) => a.slug === slug);
+                const label = areaData?.title ?? slug;
+                return (
+                  <Link
+                    key={slug}
+                    href={`/practice-areas/${slug}`}
+                    className="border border-gold/40 px-3 py-1 font-ui text-[11px] text-gold/80 transition-colors hover:border-gold hover:text-gold"
+                  >
+                    {label}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
