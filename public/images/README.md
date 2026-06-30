@@ -27,9 +27,12 @@ regenerated as a plain navy field with no embedded text for that reason. Any
 other placeholder moved into a full-bleed/overlay context should get the same
 treatment until real photography is swapped in.
 
+`home/hero-courthouse.jpg` is real photography (federal courthouse exterior,
+supplied by the firm) — not a placeholder. Everything else below remains a
+placeholder pending real photography.
+
 | Path | Intended subject |
 | --- | --- |
-| `home/hero-courthouse.jpg` | Federal courthouse exterior, dramatic architecture (homepage full-bleed hero background) |
 | `about/law-library.jpg` | Law library, dark wood shelves, warm light |
 | `about/office-interior.jpg` | Modern professional office reception interior |
 | `results/city-skyline.jpg` | Financial district skyline at dusk |
