@@ -20,7 +20,7 @@ A high-credibility law firm website for a fraud recovery and commercial litigati
 3. **Custom domain email only.** `contact@whitmore-assoc.com` — no Gmail, no generic addresses, ever.
 4. **Bar numbers on every attorney card/profile.** Format: `NY Bar #XXXXXXX · [Verify with NY State Bar →]`
 5. **Blog authors must match `/attorneys` roster exactly.** If an attorney isn't on the roster page, they cannot author a post.
-6. **No animated counters.** Stats are static text, never JavaScript number roll-ups.
+6. **No animated counters.** Stats are static text, never JavaScript number roll-ups. A single one-time fade/slide-in-on-scroll-into-view (via IntersectionObserver + opacity/transform transition) is permitted on StatsBar and the new Industries section, but the displayed value must never tick, increment, or roll up from zero — it renders at final value immediately, only the entrance animates.
 7. **No border-radius on cards or buttons.** Sharp corners throughout, per design system.
 8. **California Bar attorney advertising compliance line** on all pages (footer): "Attorney Advertising. Results may vary. Past results do not guarantee future outcomes."
 9. **All legal pages must be real and complete:** `/privacy-policy`, `/terms`, `/disclaimer`, `/accessibility`.
@@ -290,10 +290,11 @@ Section order (strict):
 1. `<Hero />` — headline, subtext, 2 CTAs, architectural photo right
 2. `<StatsBar />` — 4 canonical stats
 3. `<PracticeAreaCards />` — 3×2 grid, all 6 areas
-4. `<AttorneyTeaser />` — 2–3 cards, "View All Attorneys →" → `/attorneys`
-5. `<TestimonialBlock />` — single featured testimonial
-6. *(CTASection injected by layout)*
-7. *(Footer injected by layout)*
+4. `<IndustriesServed />` — industries/sectors served
+5. `<AttorneyTeaser />` — 2–3 cards, "View All Attorneys →" → `/attorneys`
+6. `<TestimonialBlock />` — single featured testimonial
+7. *(CTASection injected by layout)*
+8. *(Footer injected by layout)*
 
 ### Practice Area pages (`/practice-areas/[slug]`)
 1. Page hero (navy bg, breadcrumb)

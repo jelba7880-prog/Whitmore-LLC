@@ -39,26 +39,46 @@ export default function Hero() {
             Fraud Recovery &amp; Commercial Litigation
           </p>
           <h1 className="font-display text-[72px] font-bold leading-[1.05] tracking-[-0.02em] text-cream">
-            Recovering What Was Taken. Holding the Responsible Accountable.
+            When Millions Are at Stake, the Recovery Strategy Matters.
           </h1>
+          <p className="mt-4 font-ui text-[13px] uppercase tracking-[0.1em] text-gold">
+            Commercial Litigation &middot; Economic Disputes &middot; Fraud Recovery &middot; International Arbitration
+          </p>
           <p className="mt-6 max-w-xl font-body text-[20px] leading-[1.65] text-[#9CAFC0]">
-            Whitmore &amp; Associates LLP represents individuals, institutions,
-            and businesses in complex fraud recovery, commercial litigation, and
-            investment disputes.
+            Whitmore &amp; Associates LLP represents businesses, institutions, and
+            individuals pursuing or defending complex commercial and fraud
+            claims.
           </p>
           <div className="mt-10 flex gap-4">
             <Link
               href="/free-consultation"
               className="bg-gold px-9 py-4 font-ui text-[12px] font-semibold uppercase tracking-widest text-navy transition-colors hover:bg-gold-light"
             >
-              Request a Consultation
+              Discuss Your Matter
             </Link>
-            <Link
-              href="/contact"
+            <a
+              href="tel:+12125550100"
               className="border border-cream/30 px-9 py-4 font-ui text-[12px] font-semibold uppercase tracking-widest text-cream transition-colors hover:border-cream/80"
             >
-              Contact the Firm
-            </Link>
+              Speak With Our Team
+            </a>
+          </div>
+          <div className="mt-8 flex flex-wrap items-center gap-x-0 gap-y-3">
+            {[
+              "Confidential Representation",
+              "Cross-Border Experience",
+              "Business-Focused Strategy",
+              "Responsive Counsel",
+            ].map((label, index) => (
+              <span key={label} className="flex items-center">
+                {index > 0 && (
+                  <span className="mx-4 h-3 w-px bg-navy-light" aria-hidden="true" />
+                )}
+                <span className="font-ui text-[11px] text-cream/65">
+                  {label}
+                </span>
+              </span>
+            ))}
           </div>
         </div>
       </div>
