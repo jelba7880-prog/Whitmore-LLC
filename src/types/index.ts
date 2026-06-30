@@ -22,7 +22,8 @@ export interface PracticeArea {
   longDescription: string;
   process: ProcessStep[];
   faqs: FAQ[];
-  relatedResults: string[]; // array of result IDs
+  relatedResults: string[];
+   imageUrl?: string; // array of result IDs
 }
 
 export interface ProcessStep {
