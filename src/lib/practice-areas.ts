@@ -80,6 +80,7 @@ export const practiceAreas: PracticeArea[] = [
       "How are damages calculated in an investor claim?",
     ]),
     relatedResults: ["result-003"],
+    imageUrl: "/images/practice-areas/securities-fraud.jpg",
   },
   {
     slug: "economic-disputes",
