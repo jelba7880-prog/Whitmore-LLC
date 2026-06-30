@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { CaseResult, PracticeArea } from "@/types";
 import GoldRule from "@/components/ui/GoldRule";
@@ -20,7 +21,20 @@ export default function PracticeAreaDetail({
     <main>
       {/* SECTION A — Page Hero */}
       <section className="relative overflow-hidden bg-navy py-20">
-        <div className="mx-auto max-w-[1200px] px-6">
+        {area.imageUrl && (
+          <>
+            <Image
+              src={area.imageUrl}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-navy/65" aria-hidden="true" />
+          </>
+        )}
+        <div className="relative z-10 mx-auto max-w-[1200px] px-6">
           <nav className="font-ui text-[11px] uppercase tracking-[0.1em] text-muted">
             <Link href="/" className="transition-colors hover:text-gold">
               Home

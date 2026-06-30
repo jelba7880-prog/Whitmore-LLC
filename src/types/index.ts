@@ -22,8 +22,8 @@ export interface PracticeArea {
   longDescription: string;
   process: ProcessStep[];
   faqs: FAQ[];
-  relatedResults: string[];
-   imageUrl?: string; // array of result IDs
+  relatedResults: string[]; // array of result IDs
+  imageUrl?: string; // hero/card background image path (e.g. /images/practice-areas/[slug].jpg)
 }
 
 export interface ProcessStep {
@@ -57,6 +57,6 @@ export interface BlogPost {
   publishedAt: string; // ISO date string
   readMinutes: number;
   content: string; // MDX or HTML string
-  relatedSlugs: string[];
-  heroImage?: string; // other blog post slugs
+  relatedSlugs: string[]; // other blog post slugs
+  heroImage?: string; // hero/feature image path (e.g. /images/blog/default-hero.jpg)
 }

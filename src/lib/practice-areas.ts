@@ -48,6 +48,7 @@ export const practiceAreas: PracticeArea[] = [
       "How are fees structured in a recovery matter?",
     ]),
     relatedResults: ["result-001"],
+    imageUrl: "/images/practice-areas/fraud-asset-recovery.jpg",
   },
   {
     slug: "commercial-litigation",
@@ -63,6 +64,7 @@ export const practiceAreas: PracticeArea[] = [
       "Can a dispute be resolved without going to trial?",
     ]),
     relatedResults: ["result-002"],
+    imageUrl: "/images/practice-areas/commercial-litigation.jpg",
   },
   {
     slug: "securities-fraud",
@@ -93,6 +95,7 @@ export const practiceAreas: PracticeArea[] = [
       "Can a partnership or shareholder dispute be resolved privately?",
     ]),
     relatedResults: ["result-004"],
+    imageUrl: "/images/practice-areas/economic-disputes.jpg",
   },
   {
     slug: "contract-disputes",
@@ -108,6 +111,7 @@ export const practiceAreas: PracticeArea[] = [
       "What is the deadline to bring a breach-of-contract claim?",
     ]),
     relatedResults: ["result-005"],
+    imageUrl: "/images/practice-areas/contract-disputes.jpg",
   },
   {
     slug: "international-arbitration",
@@ -123,5 +127,6 @@ export const practiceAreas: PracticeArea[] = [
       "How long does an international arbitration typically take?",
     ]),
     relatedResults: ["result-006"],
+    imageUrl: "/images/practice-areas/international-arbitration.jpg",
   },
 ];
