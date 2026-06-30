@@ -4,6 +4,16 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative min-h-[620px] overflow-hidden bg-navy">
+      <Image
+        src="/images/home/hero-courthouse.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-navy/70" aria-hidden="true" />
+
       {/* SVG grain overlay — turbulence noise, no motion */}
       <svg
         className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.05]"
@@ -21,26 +31,7 @@ export default function Hero() {
         <rect width="100%" height="100%" filter="url(#hero-grain)" />
       </svg>
 
-      {/* Right photo area — architectural / texture only, no faces */}
-      <div className="absolute right-0 top-0 h-full w-[38%] bg-navy-light">
-        <Image
-          src="/images/hero/courthouse-exterior.jpg"
-          alt="Federal courthouse exterior with neoclassical stone columns"
-          width={680}
-          height={520}
-          priority
-          className="h-full w-full object-cover"
-        />
-        {/* Left-edge gradient fade into the navy section */}
-        <div
-          className="absolute inset-y-0 left-0 w-32"
-          style={{
-            background: "linear-gradient(to right, #0D1B2A, transparent)",
-          }}
-        />
-      </div>
-
-      {/* Left content */}
+      {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[620px] max-w-content items-center px-6">
         <div className="max-w-[660px]">
           <div className="mb-4 h-px w-11 bg-gold" />

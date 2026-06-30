@@ -20,7 +20,7 @@ landscape, ≥1600px wide, royalty-free (Unsplash / Pexels) imagery.
 
 | Path | Intended subject |
 | --- | --- |
-| `hero/courthouse-exterior.jpg` | Federal courthouse exterior, dramatic architecture |
+| `home/hero-courthouse.jpg` | Federal courthouse exterior, dramatic architecture (homepage full-bleed hero background) |
 | `about/law-library.jpg` | Law library, dark wood shelves, warm light |
 | `about/office-interior.jpg` | Modern professional office reception interior |
 | `results/city-skyline.jpg` | Financial district skyline at dusk |
