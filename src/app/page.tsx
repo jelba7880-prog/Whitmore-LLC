@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import StatsBar from "@/components/home/StatsBar";
 import PracticeAreaCards from "@/components/home/PracticeAreaCards";
+import IndustriesServed from "@/components/home/IndustriesServed";
 import AttorneyTeaser from "@/components/home/AttorneyTeaser";
 import TestimonialBlock from "@/components/home/TestimonialBlock";
 
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
       <PracticeAreaCards />
+      <IndustriesServed />
       <AttorneyTeaser />
       <TestimonialBlock />
     </main>

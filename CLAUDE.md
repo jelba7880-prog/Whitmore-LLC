@@ -263,6 +263,23 @@ export const STATS = [
 - Separated by `1px bg-navy-light` vertical rules
 - No JavaScript — pure static markup
 
+### IndustriesServed
+- Server component by default — `components/home/IndustriesServed.tsx` has no client state of its own; the scroll-entrance animation is isolated to a `<RevealOnScroll>` client wrapper in `components/ui/`
+- Background `--cream`; eyebrow "Industries We Serve" (Jost 11px, 0.2em tracking, uppercase, gold); H2 "Sector-Specific Experience Across Complex Disputes" (Cormorant Garamond 40px 700, −0.02em, ink)
+- Grid of 10 fixed industries — label + icon only, no descriptions, no per-industry stats or claims:
+  1. Financial Services & Banking
+  2. Private Equity & Hedge Funds
+  3. Real Estate & Construction
+  4. Healthcare & Life Sciences
+  5. Technology & Software
+  6. Energy & Natural Resources
+  7. Manufacturing & Industrials
+  8. Insurance
+  9. Retail & Consumer Goods
+  10. Family Offices & High-Net-Worth Individuals
+- Card: `border border-navy-light bg-parchment`, sharp corners, icon 30×30px inline SVG (gold stroke, stroke-width 1.5, matches Practice Area Card icon treatment), label Jost 13px uppercase
+- Entrance animation: one-time fade + 8–12px slide-up on scroll-into-view via IntersectionObserver; triggers once and never re-triggers on scroll up/down — this section has no numbers, so there is nothing to count or roll up
+
 ### AttorneyCard (horizontal layout)
 - Photo slot: `w-[196px] flex-shrink-0 bg-navy-light` — grayscale image or initials fallback
 - **Always render bar number + verify link** — missing either is a hard failure
