@@ -38,7 +38,7 @@ export const practiceAreas: PracticeArea[] = [
     slug: "fraud-asset-recovery",
     title: "Fraud & Asset Recovery",
     shortDescription:
-      "Tracing and recovering assets misappropriated through fraud, Ponzi schemes, and breaches of fiduciary duty.",
+      "When a client discovers assets have vanished through fraud or a breach of trust, recovery often depends on speed. We trace misappropriated funds across jurisdictions and pursue judgment, disgorgement, and recovery wherever the money leads.",
     longDescription: "{/* TODO: 3+ paragraph long description */}",
     process: placeholderProcess(),
     faqs: faqs([
@@ -54,7 +54,7 @@ export const practiceAreas: PracticeArea[] = [
     slug: "commercial-litigation",
     title: "Commercial Litigation",
     shortDescription:
-      "Representing businesses and investors in high-stakes commercial disputes across state and federal courts.",
+      "When a contract dispute, partnership conflict, or competitive threat puts a company's operations at risk, the right strategy can be decisive. We represent businesses and investors in state and federal court through trial and appeal.",
     longDescription: "{/* TODO: 3+ paragraph long description */}",
     process: placeholderProcess(),
     faqs: faqs([
@@ -70,7 +70,7 @@ export const practiceAreas: PracticeArea[] = [
     slug: "securities-fraud",
     title: "Securities Fraud",
     shortDescription:
-      "Pursuing claims on behalf of investors harmed by securities fraud, market manipulation, and broker misconduct.",
+      "Investors who suffer losses from broker misconduct, market manipulation, or misrepresented investments often have limited time to act. We pursue claims in court and FINRA arbitration to recover losses and hold wrongdoers accountable.",
     longDescription: "{/* TODO: 3+ paragraph long description */}",
     process: placeholderProcess(),
     faqs: faqs([
@@ -86,7 +86,7 @@ export const practiceAreas: PracticeArea[] = [
     slug: "economic-disputes",
     title: "Economic Disputes",
     shortDescription:
-      "Resolving complex economic and financial disputes between businesses, partners, and investors.",
+      "When partners, investors, or businesses disagree over valuation, profits, or financial terms, resolution takes both legal and forensic expertise. We work with forensic accountants to quantify damages and resolve disputes through litigation or negotiation.",
     longDescription: "{/* TODO: 3+ paragraph long description */}",
     process: placeholderProcess(),
     faqs: faqs([
@@ -102,7 +102,7 @@ export const practiceAreas: PracticeArea[] = [
     slug: "contract-disputes",
     title: "Contract Disputes",
     shortDescription:
-      "Enforcing and defending contractual rights in disputes arising from breach, fraud, and non-performance.",
+      "A breached or ambiguous contract can put a deal, a relationship, or a company's bottom line at risk. We enforce and defend contractual rights through litigation or arbitration, pursuing the remedies a breach requires.",
     longDescription: "{/* TODO: 3+ paragraph long description */}",
     process: placeholderProcess(),
     faqs: faqs([
@@ -118,7 +118,7 @@ export const practiceAreas: PracticeArea[] = [
     slug: "international-arbitration",
     title: "International Arbitration",
     shortDescription:
-      "Representing clients in cross-border commercial arbitration before leading international tribunals.",
+      "Cross-border disputes raise difficult questions of governing law, jurisdiction, and award enforcement. We represent clients in commercial arbitration before international tribunals and pursue enforcement of awards across borders.",
     longDescription: "{/* TODO: 3+ paragraph long description */}",
     process: placeholderProcess(),
     faqs: faqs([
