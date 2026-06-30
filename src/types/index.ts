@@ -57,5 +57,6 @@ export interface BlogPost {
   publishedAt: string; // ISO date string
   readMinutes: number;
   content: string; // MDX or HTML string
-  relatedSlugs: string[]; // other blog post slugs
+  relatedSlugs: string[];
+  heroImage?: string; // other blog post slugs
 }
