@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
@@ -22,6 +23,14 @@ export default function Hero() {
 
       {/* Right photo area — architectural / texture only, no faces */}
       <div className="absolute right-0 top-0 h-full w-[38%] bg-navy-light">
+        <Image
+          src="/images/hero/courthouse-exterior.jpg"
+          alt="Federal courthouse exterior with neoclassical stone columns"
+          width={680}
+          height={520}
+          priority
+          className="h-full w-full object-cover"
+        />
         {/* Left-edge gradient fade into the navy section */}
         <div
           className="absolute inset-y-0 left-0 w-32"
@@ -29,11 +38,6 @@ export default function Hero() {
             background: "linear-gradient(to right, #0D1B2A, transparent)",
           }}
         />
-        <div className="flex h-full items-center justify-center">
-          <span className="font-ui text-xs text-muted">
-            {/* Architectural / texture photo — no faces */}
-          </span>
-        </div>
       </div>
 
       {/* Left content */}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
@@ -67,6 +68,21 @@ export default function AboutPage() {
               share is complexity — and our commitment to resolving them.
             </p>
           </div>
+
+          {/* Firm story image */}
+          <figure className="mt-12">
+            <Image
+              src="/images/about/law-library.jpg"
+              alt="Law library with dark wood shelves and warm light"
+              width={1600}
+              height={1067}
+              sizes="(max-width: 768px) 100vw, 760px"
+              className="h-auto w-full border border-navy-light"
+            />
+            <figcaption className="mt-3 font-ui text-[11px] uppercase tracking-[0.1em] text-muted">
+              Our research library — the foundation of disciplined case work.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -110,6 +126,40 @@ export default function AboutPage() {
                 counsel, judges, and arbitrators that serve our clients&apos;
                 interests at every turn.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Visit Our Offices */}
+      <SectionDivider />
+      <section className="bg-cream py-20">
+        <div className="mx-auto max-w-[1200px] px-6">
+          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
+            <Image
+              src="/images/about/office-interior.jpg"
+              alt="Modern professional office reception interior"
+              width={1600}
+              height={1067}
+              sizes="(max-width: 768px) 100vw, 560px"
+              className="h-auto w-full border border-navy-light"
+            />
+            <div>
+              <GoldRule />
+              <h2 className="mb-6 mt-4 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+                Visit Our Offices
+              </h2>
+              <p className="mb-6 font-body text-[18px] leading-[1.8] text-ink">
+                We meet with clients by appointment. For office locations,
+                hours, and directions — including a map — please see our contact
+                page.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-gold px-8 py-4 font-ui text-[12px] font-semibold uppercase tracking-widest text-navy transition-colors hover:bg-gold-light"
+              >
+                Contact &amp; Directions
+              </Link>
             </div>
           </div>
         </div>

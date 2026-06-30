@@ -1,6 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "@/types";
 import { attorneys } from "@/lib/attorneys";
+
+const DEFAULT_HERO = "/images/blog/default-hero.jpg";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -18,31 +21,44 @@ export default function BlogCard({ post, showAuthor = true }: BlogCardProps) {
     year: "numeric",
   });
 
+  const heroImage = post.heroImage ?? DEFAULT_HERO;
+
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="block border border-navy-light bg-parchment p-7 transition-all duration-200 hover:border-gold"
+      className="block border border-navy-light bg-parchment transition-all duration-200 hover:border-gold"
     >
-      <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
-        {post.practiceArea}
-      </p>
-      <h3 className="font-display text-[22px] font-bold leading-[1.25] tracking-[-0.01em] text-ink">
-        {post.title}
-      </h3>
-      <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted">
-        {post.deck}
-      </p>
-      <div className="mt-4 flex items-center justify-between border-t border-navy-light pt-4">
-        {showAuthor ? (
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy-light">
+        <Image
+          src={heroImage}
+          alt={post.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 380px"
+          className="object-cover"
+        />
+      </div>
+      <div className="p-7">
+        <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
+          {post.practiceArea}
+        </p>
+        <h3 className="font-display text-[22px] font-bold leading-[1.25] tracking-[-0.01em] text-ink">
+          {post.title}
+        </h3>
+        <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted">
+          {post.deck}
+        </p>
+        <div className="mt-4 flex items-center justify-between border-t border-navy-light pt-4">
+          {showAuthor ? (
+            <span className="font-ui text-[11px] text-muted">
+              {author?.name ?? post.authorSlug}
+            </span>
+          ) : (
+            <span aria-hidden="true" />
+          )}
           <span className="font-ui text-[11px] text-muted">
-            {author?.name ?? post.authorSlug}
+            {post.readMinutes} min read &middot; {formattedDate}
           </span>
-        ) : (
-          <span aria-hidden="true" />
-        )}
-        <span className="font-ui text-[11px] text-muted">
-          {post.readMinutes} min read &middot; {formattedDate}
-        </span>
+        </div>
       </div>
     </Link>
   );

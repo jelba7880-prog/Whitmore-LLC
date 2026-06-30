@@ -13,6 +13,7 @@ export const blogPosts: BlogPost[] = [
     readMinutes: 6,
     content: "{/* TODO: Article body */}",
     relatedSlugs: [],
+    heroImage: "/images/blog/default-hero.jpg",
   },
   {
     slug: "navigating-cross-border-commercial-arbitration",
@@ -25,6 +26,7 @@ export const blogPosts: BlogPost[] = [
     readMinutes: 8,
     content: "{/* TODO: Article body */}",
     relatedSlugs: [],
+    heroImage: "/images/blog/default-hero.jpg",
   },
 ];
 
