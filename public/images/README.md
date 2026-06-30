@@ -18,9 +18,21 @@ Replace any file below **in place** (same path, same `.jpg` name). No code
 changes are required — the components already reference these paths. Use
 landscape, ≥1600px wide, royalty-free (Unsplash / Pexels) imagery.
 
+**Note on placeholder content:** most files below are annotated mockups with
+"PLACEHOLDER IMAGE" / subject / "REPLACE WITH ROYALTY-FREE PHOTO" text baked
+into the pixels — fine for a bordered card with full opacity, but the text
+shows through (ghosted) wherever a placeholder is used full-bleed behind a
+navy/70 overlay, as in a hero background. `home/hero-courthouse.jpg` was
+regenerated as a plain navy field with no embedded text for that reason. Any
+other placeholder moved into a full-bleed/overlay context should get the same
+treatment until real photography is swapped in.
+
+`home/hero-courthouse.jpg` is real photography (federal courthouse exterior,
+supplied by the firm) — not a placeholder. Everything else below remains a
+placeholder pending real photography.
+
 | Path | Intended subject |
 | --- | --- |
-| `hero/courthouse-exterior.jpg` | Federal courthouse exterior, dramatic architecture |
 | `about/law-library.jpg` | Law library, dark wood shelves, warm light |
 | `about/office-interior.jpg` | Modern professional office reception interior |
 | `results/city-skyline.jpg` | Financial district skyline at dusk |
