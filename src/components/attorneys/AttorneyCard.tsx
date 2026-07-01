@@ -24,10 +24,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
     attorney.bio.length > 200 ? attorney.bio.slice(0, 200) + "…" : attorney.bio;
 
   return (
-    <Link
-      href={`/attorneys/${attorney.slug}`}
-      className="flex border border-navy-light bg-parchment transition-colors duration-200 hover:border-gold"
-    >
+    <div className="relative flex border border-navy-light bg-parchment transition-colors duration-200 hover:border-gold">
       {/* Photo area — grayscale headshot or initials fallback */}
       <div className="relative min-h-[220px] w-[196px] flex-shrink-0 overflow-hidden bg-navy-light">
         {attorney.imageUrl ? (
@@ -63,7 +60,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
                 href={bar.verifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gold transition-colors hover:text-gold-light"
+                className="relative z-10 text-gold transition-colors hover:text-gold-light"
               >
                 Verify &rarr;
               </a>
@@ -90,10 +87,13 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
           })}
         </div>
 
-        <span className="mt-auto pt-5 font-ui text-[11px] uppercase tracking-[0.1em] text-gold">
+        <Link
+          href={`/attorneys/${attorney.slug}`}
+          className="before:absolute before:inset-0 before:content-[''] mt-auto pt-5 font-ui text-[11px] uppercase tracking-[0.1em] text-gold"
+        >
           View Profile &rarr;
-        </span>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
