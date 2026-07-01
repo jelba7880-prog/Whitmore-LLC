@@ -11,6 +11,10 @@ export const caseResults: CaseResult[] = [
     court: "S.D. Florida",
     year: 2024,
     practiceArea: "fraud-asset-recovery",
+    challenge:
+      "A group of investors discovered their retirement savings had been diverted into a Ponzi scheme disguised as a real estate fund.",
+    resolution:
+      "We traced the diverted funds through multiple shell entities and obtained judgment and disgorgement to recover the investors' losses.",
   },
   {
     id: "result-002",
@@ -20,6 +24,10 @@ export const caseResults: CaseResult[] = [
     court: "S.D. New York",
     year: 2023,
     practiceArea: "commercial-litigation",
+    challenge:
+      "A minority partner was frozen out of a business and stripped of profits by a co-founder who breached his fiduciary duties.",
+    resolution:
+      "At trial, we proved the breach and business tort claims, and the jury returned a verdict covering the lost profits and damages.",
   },
   {
     id: "result-003",
@@ -29,6 +37,10 @@ export const caseResults: CaseResult[] = [
     court: "D. New Jersey",
     year: 2024,
     practiceArea: "securities-fraud",
+    challenge:
+      "A retired investor's savings were placed into unsuitable, high-risk investments by a broker who misrepresented the risk involved.",
+    resolution:
+      "We pursued the claim in FINRA arbitration and secured an award covering the investor's losses and associated damages.",
   },
   {
     id: "result-004",
@@ -38,6 +50,10 @@ export const caseResults: CaseResult[] = [
     court: "N.D. Illinois",
     year: 2023,
     practiceArea: "economic-disputes",
+    challenge:
+      "Shareholders in a closely held company disagreed sharply over its valuation following a forced buyout offer.",
+    resolution:
+      "Working with forensic accountants, we built an independent valuation and negotiated a settlement reflecting the company's worth.",
   },
   {
     id: "result-005",
@@ -47,6 +63,10 @@ export const caseResults: CaseResult[] = [
     court: "E.D. Texas",
     year: 2024,
     practiceArea: "contract-disputes",
+    challenge:
+      "A supplier stopped fulfilling its obligations under a multi-year supply agreement, leaving our client to cover costs on short notice.",
+    resolution:
+      "We moved for summary judgment on the breach, and the court ruled in our client's favor without the need for a trial.",
   },
   {
     id: "result-006",
@@ -56,5 +76,9 @@ export const caseResults: CaseResult[] = [
     court: "S.D. New York",
     year: 2023,
     practiceArea: "international-arbitration",
+    challenge:
+      "A cross-border joint venture collapsed after a foreign partner refused to honor its payment obligations under the venture agreement.",
+    resolution:
+      "We obtained a favorable arbitral award and confirmed and enforced it in U.S. federal court to secure payment.",
   },
 ];

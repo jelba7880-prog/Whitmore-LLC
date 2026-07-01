@@ -11,6 +11,12 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  // Most recent post leads as the featured block; everything else follows in
+  // a 2-column row. Sorting a copy avoids mutating the shared lib/blog.ts export.
+  const [featuredPost, ...secondaryPosts] = [...blogPosts].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
+
   return (
     <main className="bg-cream">
       {/* Page hero */}
@@ -42,15 +48,32 @@ export default function BlogPage() {
       {/* Posts grid */}
       <section className="py-20">
         <div className="mx-auto max-w-[1200px] px-6">
-          {blogPosts.length === 0 ? (
+          {!featuredPost ? (
             <div className="py-20 text-center font-body text-[18px] text-muted">
               Insights coming soon.
             </div>
           ) : (
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {blogPosts.map((p) => (
-                <BlogCard post={p} showAuthor={true} key={p.slug} />
-              ))}
+            <div className="flex flex-col gap-6">
+              <BlogCard post={featuredPost} showAuthor={true} featured />
+              {secondaryPosts.length > 0 && (
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  {secondaryPosts.map((p, index) => {
+                    // Odd one out at the end of the row spans full width
+                    // instead of leaving an empty column beside it.
+                    const isTrailingOdd =
+                      secondaryPosts.length % 2 === 1 &&
+                      index === secondaryPosts.length - 1;
+                    return (
+                      <div
+                        key={p.slug}
+                        className={isTrailingOdd ? "md:col-span-2" : undefined}
+                      >
+                        <BlogCard post={p} showAuthor={true} />
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           )}
         </div>
