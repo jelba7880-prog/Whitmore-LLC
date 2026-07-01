@@ -48,7 +48,8 @@ export const practiceAreas: PracticeArea[] = [
       "How are fees structured in a recovery matter?",
     ]),
     relatedResults: ["result-001"],
-    imageUrl: "/images/practice-areas/fraud-asset-recovery.jpg",
+    // imageUrl intentionally absent — source file removed for baked-in
+    // garbled logo artifact (see public/images/README.md).
   },
   {
     slug: "commercial-litigation",
@@ -80,7 +81,8 @@ export const practiceAreas: PracticeArea[] = [
       "How are damages calculated in an investor claim?",
     ]),
     relatedResults: ["result-003"],
-    imageUrl: "/images/practice-areas/securities-fraud.jpg",
+    // imageUrl intentionally absent — source file removed for baked-in
+    // garbled logo artifact (see public/images/README.md).
   },
   {
     slug: "economic-disputes",
@@ -96,7 +98,8 @@ export const practiceAreas: PracticeArea[] = [
       "Can a partnership or shareholder dispute be resolved privately?",
     ]),
     relatedResults: ["result-004"],
-    imageUrl: "/images/practice-areas/economic-disputes.jpg",
+    // imageUrl intentionally absent — source file removed for baked-in
+    // garbled logo artifact (see public/images/README.md).
   },
   {
     slug: "contract-disputes",
@@ -112,7 +115,8 @@ export const practiceAreas: PracticeArea[] = [
       "What is the deadline to bring a breach-of-contract claim?",
     ]),
     relatedResults: ["result-005"],
-    imageUrl: "/images/practice-areas/contract-disputes.jpg",
+    // imageUrl intentionally absent — source file removed for baked-in
+    // garbled logo artifact (see public/images/README.md).
   },
   {
     slug: "international-arbitration",
@@ -128,6 +132,7 @@ export const practiceAreas: PracticeArea[] = [
       "How long does an international arbitration typically take?",
     ]),
     relatedResults: ["result-006"],
-    imageUrl: "/images/practice-areas/international-arbitration.jpg",
+    // imageUrl intentionally absent — source file removed for baked-in
+    // garbled logo artifact (see public/images/README.md).
   },
 ];

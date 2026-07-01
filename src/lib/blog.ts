@@ -13,7 +13,8 @@ export const blogPosts: BlogPost[] = [
     readMinutes: 6,
     content: "{/* TODO: Article body */}",
     relatedSlugs: [],
-    heroImage: "/images/blog/default-hero.jpg",
+    // heroImage intentionally absent — default-hero.jpg removed for
+    // baked-in garbled logo artifact (see public/images/README.md).
   },
   {
     slug: "navigating-cross-border-commercial-arbitration",
@@ -26,7 +27,8 @@ export const blogPosts: BlogPost[] = [
     readMinutes: 8,
     content: "{/* TODO: Article body */}",
     relatedSlugs: [],
-    heroImage: "/images/blog/default-hero.jpg",
+    // heroImage intentionally absent — default-hero.jpg removed for
+    // baked-in garbled logo artifact (see public/images/README.md).
   },
 ];
 
