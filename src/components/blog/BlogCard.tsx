@@ -8,12 +8,21 @@ const DEFAULT_HERO = "/images/blog/default-hero.jpg";
 interface BlogCardProps {
   post: BlogPost;
   showAuthor?: boolean;
+  featured?: boolean;
 }
 
 // Blog card used in the attorney profile (articles by this attorney) and the
 // blog index. Author is resolved from the canonical roster (Hard Rule #5) — a
 // build-time invariant in lib/blog.ts guarantees every authorSlug matches.
-export default function BlogCard({ post, showAuthor = true }: BlogCardProps) {
+//
+// `featured` renders a larger, near-full-width horizontal variant for the top
+// post on the blog index, reusing the same author/date logic and image
+// fallback instead of duplicating a separate component.
+export default function BlogCard({
+  post,
+  showAuthor = true,
+  featured = false,
+}: BlogCardProps) {
   const author = attorneys.find((a) => a.slug === post.authorSlug);
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString("en-US", {
@@ -22,6 +31,48 @@ export default function BlogCard({ post, showAuthor = true }: BlogCardProps) {
   });
 
   const heroImage = post.heroImage ?? DEFAULT_HERO;
+
+  if (featured) {
+    return (
+      <Link
+        href={`/blog/${post.slug}`}
+        className="flex flex-col border border-navy-light bg-parchment transition-all duration-200 hover:border-gold md:flex-row"
+      >
+        <div className="relative aspect-[16/9] w-full flex-shrink-0 overflow-hidden bg-navy-light md:aspect-auto md:w-3/5">
+          <Image
+            src={heroImage}
+            alt={post.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 720px"
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-1 flex-col justify-center p-10">
+          <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
+            {post.practiceArea}
+          </p>
+          <h2 className="font-display text-[36px] font-bold leading-[1.15] tracking-[-0.01em] text-ink">
+            {post.title}
+          </h2>
+          <p className="mt-4 font-body text-[17px] leading-[1.7] text-muted">
+            {post.deck}
+          </p>
+          <div className="mt-6 flex items-center justify-between border-t border-navy-light pt-4">
+            {showAuthor ? (
+              <span className="font-ui text-[12px] text-muted">
+                {author?.name ?? post.authorSlug}
+              </span>
+            ) : (
+              <span aria-hidden="true" />
+            )}
+            <span className="font-ui text-[12px] text-muted">
+              {post.readMinutes} min read &middot; {formattedDate}
+            </span>
+          </div>
+        </div>
+      </Link>
+    );
+  }
 
   return (
     <Link
