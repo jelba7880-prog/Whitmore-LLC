@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import type { ProcessStep } from "@/types";
 import ProcessTimeline from "@/components/process/ProcessTimeline";
@@ -49,17 +48,10 @@ const steps: ProcessStep[] = [
 export default function ProcessPage() {
   return (
     <main className="bg-cream">
-      {/* Page hero — process intro */}
+      {/* Page hero — process intro. Placeholder pending real photography
+          (previous file removed for a baked-in logo artifact); solid
+          bg-navy on the section is the fallback treatment. */}
       <section className="relative overflow-hidden bg-navy py-20">
-        <Image
-          src="/images/process/glass-architecture.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-navy/60" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-[1200px] px-6">
           <nav className="font-ui text-[11px] uppercase tracking-[0.1em] text-muted">
             <Link href="/" className="transition-colors hover:text-gold">

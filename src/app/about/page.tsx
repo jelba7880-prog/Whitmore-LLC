@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
@@ -69,16 +68,10 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Firm story image */}
+          {/* Firm story image — placeholder pending real photography
+              (previous file removed for a baked-in logo artifact) */}
           <figure className="mt-12">
-            <Image
-              src="/images/about/law-library.jpg"
-              alt="Law library with dark wood shelves and warm light"
-              width={1600}
-              height={1067}
-              sizes="(max-width: 768px) 100vw, 760px"
-              className="h-auto w-full border border-navy-light"
-            />
+            <div className="aspect-[3/2] w-full border border-navy-light bg-navy-mid" />
             <figcaption className="mt-3 font-ui text-[11px] uppercase tracking-[0.1em] text-muted">
               Our research library — the foundation of disciplined case work.
             </figcaption>
@@ -136,14 +129,9 @@ export default function AboutPage() {
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-[1200px] px-6">
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-            <Image
-              src="/images/about/office-interior.jpg"
-              alt="Modern professional office reception interior"
-              width={1600}
-              height={1067}
-              sizes="(max-width: 768px) 100vw, 560px"
-              className="h-auto w-full border border-navy-light"
-            />
+            {/* Placeholder pending real photography — previous file
+                removed for a baked-in logo artifact */}
+            <div className="aspect-[3/2] w-full border border-navy-light bg-navy-mid" />
             <div>
               <GoldRule />
               <h2 className="mb-6 mt-4 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">

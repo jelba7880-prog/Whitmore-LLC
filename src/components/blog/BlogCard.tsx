@@ -3,8 +3,6 @@ import Link from "next/link";
 import type { BlogPost } from "@/types";
 import { attorneys } from "@/lib/attorneys";
 
-const DEFAULT_HERO = "/images/blog/default-hero.jpg";
-
 interface BlogCardProps {
   post: BlogPost;
   showAuthor?: boolean;
@@ -30,7 +28,7 @@ export default function BlogCard({
     year: "numeric",
   });
 
-  const heroImage = post.heroImage ?? DEFAULT_HERO;
+  const heroImage = post.heroImage;
 
   if (featured) {
     return (
@@ -39,13 +37,15 @@ export default function BlogCard({
         className="flex flex-col border border-navy-light bg-parchment transition-all duration-200 hover:border-gold md:flex-row"
       >
         <div className="relative aspect-[16/9] w-full flex-shrink-0 overflow-hidden bg-navy-light md:aspect-auto md:w-3/5">
-          <Image
-            src={heroImage}
-            alt={post.title}
-            fill
-            sizes="(max-width: 768px) 100vw, 720px"
-            className="object-cover"
-          />
+          {heroImage && (
+            <Image
+              src={heroImage}
+              alt={post.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 720px"
+              className="object-cover"
+            />
+          )}
         </div>
         <div className="flex flex-1 flex-col justify-center p-10">
           <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
@@ -80,13 +80,15 @@ export default function BlogCard({
       className="block border border-navy-light bg-parchment transition-all duration-200 hover:border-gold"
     >
       <div className="relative aspect-[16/9] w-full overflow-hidden bg-navy-light">
-        <Image
-          src={heroImage}
-          alt={post.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 380px"
-          className="object-cover"
-        />
+        {heroImage && (
+          <Image
+            src={heroImage}
+            alt={post.title}
+            fill
+            sizes="(max-width: 768px) 100vw, 380px"
+            className="object-cover"
+          />
+        )}
       </div>
       <div className="p-7">
         <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
