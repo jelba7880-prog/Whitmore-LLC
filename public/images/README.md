@@ -1,53 +1,86 @@
 # Site Imagery
 
-These images are wired into the site via `next/image`. Each file below is a
-**branded placeholder**, not final photography.
+> **Any AI-generated or AI-upscaled image must be manually inspected for
+> baked-in text artifacts before being committed.** This has caused a live
+> credibility issue once already: 9 placeholder images shipped with a
+> garbled "WVHITMORE LLC" logo rendered into the pixels (wrong entity name,
+> illegible AI artifact), several visible full-bleed on live pages. See git
+> history around 2026-07-01 (PR #21, "Remove placeholder images with
+> baked-in garbled logo artifacts") for the incident and fix. Inspection
+> means actually opening the file and looking at it — not assuming a
+> generation prompt was followed correctly.
 
-## Why placeholders?
+This document is a from-scratch rewrite as of 2026-07-01. The previous
+version of this file had drifted from reality — it claimed a file that
+existed (`practice-areas/securities-fraud.jpg`) was absent, misdescribed
+the provenance of `blog/default-hero.jpg`, and didn't flag any of the 7
+other files that had the same baked-in logo artifact. Every "clean" claim
+below was verified by opening the actual file, not by assuming.
 
-The build environment's outbound network policy permits GitHub only. Unsplash
-(`images.unsplash.com`), Pexels, and every other image CDN are denied at the
-egress proxy (HTTP 403), so the royalty-free photos requested for this task
-could not be downloaded here. To keep the build green and the layout intact,
-each slot was filled with a navy/gold placeholder at the correct path and
-dimensions (1600×1067, landscape).
+## Why placeholders exist at all
 
-## How to swap in real photography
+The build environment's outbound network policy permits GitHub only.
+Unsplash, Pexels, and every other image CDN are denied at the egress
+proxy (HTTP 403), so royalty-free photography cannot be downloaded in
+this environment. Placeholder slots are filled at the correct path and
+dimensions (1600×1067, landscape) until real photography is supplied.
 
-Replace any file below **in place** (same path, same `.jpg` name). No code
-changes are required — the components already reference these paths. Use
-landscape, ≥1600px wide, royalty-free (Unsplash / Pexels) imagery.
+## Current inventory
 
-**Note on placeholder content:** most files below are annotated mockups with
-"PLACEHOLDER IMAGE" / subject / "REPLACE WITH ROYALTY-FREE PHOTO" text baked
-into the pixels — fine for a bordered card with full opacity, but the text
-shows through (ghosted) wherever a placeholder is used full-bleed behind a
-navy/70 overlay, as in a hero background. `home/hero-courthouse.jpg` was
-regenerated as a plain navy field with no embedded text for that reason. Any
-other placeholder moved into a full-bleed/overlay context should get the same
-treatment until real photography is swapped in.
+### Present and verified clean
 
-`home/hero-courthouse.jpg` is real photography (federal courthouse exterior,
-supplied by the firm) — not a placeholder. Everything else below remains a
-placeholder pending real photography.
+| Path | Source | Verified clean of text/logo artifacts? | Rendered by |
+| --- | --- | --- | --- |
+| `home/hero-courthouse.jpg` | Real photography, supplied by the firm — not a placeholder | Yes | `components/home/Hero.tsx` (homepage hero) |
+| `practice-areas/commercial-litigation.jpg` | AI-generated placeholder | Yes — inspected 2026-07-01, plain courthouse exterior, no firm branding | `components/practice-areas/PracticeAreaCard.tsx` (homepage grid + practice area index card) and `components/practice-areas/PracticeAreaDetail.tsx` (individual page hero) |
+| `results/city-skyline.jpg` | AI-generated placeholder | Yes — inspected 2026-07-01, plain skyline, no text | `app/results/page.tsx` (results page hero) |
 
-| Path | Intended subject |
-| --- | --- |
-| `about/law-library.jpg` | Law library, dark wood shelves, warm light |
-| `about/office-interior.jpg` | Modern professional office reception interior |
-| `results/city-skyline.jpg` | Financial district skyline at dusk |
-| `process/glass-architecture.jpg` | Modern glass office building exterior |
-| `practice-areas/fraud-asset-recovery.jpg` | Investigation documents on a desk |
-| `practice-areas/commercial-litigation.jpg` | Courthouse architecture (different angle than hero) |
-| `practice-areas/economic-disputes.jpg` | Corporate boardroom conference table |
-| `practice-areas/contract-disputes.jpg` | Professional business handshake, formal attire |
-| `practice-areas/international-arbitration.jpg` | International conference negotiation table |
-| `blog/default-hero.jpg` | Copy of `about/law-library.jpg` (blog fallback hero) |
+### Empty slots — NEEDS REPLACEMENT
 
-## Intentionally omitted
+These 9 files were deleted on 2026-07-01 because they had the garbled
+"WVHITMORE LLC" logo artifact baked into the pixels. All code references
+were nulled at the same time (`imageUrl` / `heroImage` fields set to
+absent, hardcoded `<Image>` usages removed) and each now renders a plain
+`bg-navy` / `bg-navy-mid` fallback block instead of a broken image icon.
+**Do not re-add a file at these paths without manually viewing it first
+— this exact failure mode is why the slot is empty.**
 
-`practice-areas/securities-fraud.jpg` — no suitable free image was sourced (per
-task instruction, to be supplied separately). The Securities Fraud practice area
-has **no** `imageUrl` set in `src/lib/practice-areas.ts`, so its card and detail
-hero fall back gracefully to the navy placeholder treatment until an image is
-added and `imageUrl` is set.
+| Path | Status | Rendered by (currently shows navy fallback) |
+| --- | --- | --- |
+| `about/law-library.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `app/about/page.tsx` (firm story figure) |
+| `about/office-interior.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `app/about/page.tsx` ("Visit Our Offices" section) |
+| `process/glass-architecture.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `app/process/page.tsx` (process intro hero) |
+| `practice-areas/fraud-asset-recovery.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `PracticeAreaCard.tsx` + `PracticeAreaDetail.tsx` via `imageUrl` in `src/lib/practice-areas.ts` (currently absent) |
+| `practice-areas/economic-disputes.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
+| `practice-areas/contract-disputes.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
+| `practice-areas/international-arbitration.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
+| `practice-areas/securities-fraud.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
+| `blog/default-hero.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `components/blog/BlogCard.tsx` + `components/blog/BlogPostLayout.tsx` via `heroImage` in `src/lib/blog.ts` (currently absent on both posts) |
+
+### Attorney headshots
+
+`public/images/attorneys/` does not exist. Both attorneys in
+`src/lib/attorneys.ts` (`richard-whitmore`, `catherine-harlow`) have
+`imageUrl: undefined` and render their initials fallback (`RW` / `CH`) —
+this is the intended graceful-degradation path per the design system, not
+a bug.
+
+## How to add real (or replacement) photography
+
+1. View the candidate image yourself, full-size, before saving it into
+   the repo. Confirm there is no baked-in text, logo, or watermark of any
+   kind — AI generators frequently render garbled brand text even when
+   not asked to.
+2. Save it at the documented path (same filename, landscape, ≥1600px
+   wide).
+3. For the 9 empty slots above, you must also restore the code reference:
+   set the relevant `imageUrl` (`src/lib/practice-areas.ts`) or
+   `heroImage` (`src/lib/blog.ts`) field back to the file path, or
+   restore the `<Image>` usage in `app/about/page.tsx` /
+   `app/process/page.tsx`. The navy fallback only disappears once the
+   reference is restored — dropping a file into the folder alone does
+   nothing.
+4. Re-inspect the file one more time after saving, in situ, in whatever
+   overlay/full-bleed context it will render in (hero sections apply a
+   navy overlay that can make faint artifacts ghost through even when
+   they looked acceptable in isolation).
