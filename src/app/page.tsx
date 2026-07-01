@@ -5,6 +5,8 @@ import PracticeAreaCards from "@/components/home/PracticeAreaCards";
 import IndustriesServed from "@/components/home/IndustriesServed";
 import AttorneyTeaser from "@/components/home/AttorneyTeaser";
 import TestimonialBlock from "@/components/home/TestimonialBlock";
+import SectionDivider from "@/components/ui/SectionDivider";
+import EditorialQuote from "@/components/ui/EditorialQuote";
 
 export const metadata: Metadata = {
   // `absolute` bypasses the root layout title template so the suffix isn't doubled.
@@ -22,7 +24,9 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
       <PracticeAreaCards />
+      <SectionDivider />
       <IndustriesServed />
+      <EditorialQuote />
       <AttorneyTeaser />
       <TestimonialBlock />
     </main>
