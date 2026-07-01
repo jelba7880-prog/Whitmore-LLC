@@ -46,6 +46,8 @@ export interface CaseResult {
   court: string; // e.g. "S.D. Florida"
   year: number;
   practiceArea: string; // practice area slug
+  challenge: string; // 1 sentence — the situation/problem, no client names
+  resolution: string; // 1 sentence — how it was resolved, no client names
 }
 
 export interface BlogPost {

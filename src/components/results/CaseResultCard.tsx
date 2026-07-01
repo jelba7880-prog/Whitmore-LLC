@@ -22,6 +22,12 @@ export default function CaseResultCard({ result }: CaseResultCardProps) {
       <p className="mt-3 font-ui text-[12px] text-muted">
         {result.matterType} &middot; {result.court} &middot; {result.year}
       </p>
+      <p className="mt-4 font-body text-[14px] leading-[1.6] text-muted">
+        {result.challenge}
+      </p>
+      <p className="mt-2 font-body text-[14px] leading-[1.6] text-muted">
+        {result.resolution}
+      </p>
       <p className="mt-4 font-ui text-[10px] text-muted/60">
         Past results do not guarantee future outcomes.
       </p>
