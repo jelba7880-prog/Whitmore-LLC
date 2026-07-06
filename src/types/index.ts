@@ -62,3 +62,11 @@ export interface BlogPost {
   relatedSlugs: string[]; // other blog post slugs
   heroImage?: string; // hero/feature image path (e.g. /images/blog/default-hero.jpg)
 }
+
+export interface Testimonial {
+  quote: string; // verbatim client quote — no full client names
+  clientType: string; // e.g. "Institutional Client"
+  matterType: string; // e.g. "Securities Fraud Matter"
+  court: string; // e.g. "Southern District of New York"
+  year: number;
+}

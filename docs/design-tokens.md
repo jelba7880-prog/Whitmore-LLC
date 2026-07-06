@@ -256,7 +256,7 @@
 3. Credential Bar (4 stats, navy-mid)
 4. Practice Area Cards (3×2 grid, cream bg)
 5. Attorney Roster Teaser (2–3 cards → `/attorneys`)
-6. Testimonial Block (navy-mid bg)
+6. Testimonial Carousel (navy-mid bg)
 7. CTA Section (navy bg)
 8. Footer (navy, gold top rule)
 
