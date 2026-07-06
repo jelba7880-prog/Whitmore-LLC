@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
@@ -68,10 +69,17 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Firm story image — placeholder pending real photography
-              (previous file removed for a baked-in logo artifact) */}
+          {/* Firm story image — bordered figure, fixed dimensions, no overlay */}
           <figure className="mt-12">
-            <div className="aspect-[3/2] w-full border border-navy-light bg-navy-mid" />
+            <div className="relative aspect-[3/2] w-full overflow-hidden border border-navy-light bg-navy-mid">
+              <Image
+                src="/images/about/law-library.jpg"
+                alt="An attorney reviewing case documents in the firm's research library"
+                fill
+                sizes="(max-width: 768px) 100vw, 760px"
+                className="object-cover"
+              />
+            </div>
             <figcaption className="mt-3 font-ui text-[11px] uppercase tracking-[0.1em] text-muted">
               Our research library — the foundation of disciplined case work.
             </figcaption>
@@ -129,9 +137,16 @@ export default function AboutPage() {
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-[1200px] px-6">
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
-            {/* Placeholder pending real photography — previous file
-                removed for a baked-in logo artifact */}
-            <div className="aspect-[3/2] w-full border border-navy-light bg-navy-mid" />
+            {/* Office interior — bordered figure, fixed dimensions, no overlay */}
+            <div className="relative aspect-[3/2] w-full overflow-hidden border border-navy-light bg-navy-mid">
+              <Image
+                src="/images/about/office-interior.jpg"
+                alt="A conference room at Whitmore & Associates LLP"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
             <div>
               <GoldRule />
               <h2 className="mb-6 mt-4 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
