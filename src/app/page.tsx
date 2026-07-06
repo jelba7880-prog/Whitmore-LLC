@@ -4,7 +4,7 @@ import StatsBar from "@/components/home/StatsBar";
 import PracticeAreaCards from "@/components/home/PracticeAreaCards";
 import IndustriesServed from "@/components/home/IndustriesServed";
 import AttorneyTeaser from "@/components/home/AttorneyTeaser";
-import TestimonialBlock from "@/components/home/TestimonialBlock";
+import TestimonialCarousel from "@/components/home/TestimonialCarousel";
 import SectionDivider from "@/components/ui/SectionDivider";
 import EditorialQuote from "@/components/ui/EditorialQuote";
 
@@ -28,7 +28,7 @@ export default function HomePage() {
       <IndustriesServed />
       <EditorialQuote />
       <AttorneyTeaser />
-      <TestimonialBlock />
+      <TestimonialCarousel />
     </main>
   );
 }
