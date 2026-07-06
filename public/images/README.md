@@ -32,30 +32,36 @@ dimensions (1600×1067, landscape) until real photography is supplied.
 | Path | Source | Verified clean of text/logo artifacts? | Rendered by |
 | --- | --- | --- | --- |
 | `home/hero-courthouse.jpg` | Real photography, supplied by the firm — not a placeholder | Yes | `components/home/Hero.tsx` (homepage hero) |
-| `practice-areas/commercial-litigation.jpg` | AI-generated placeholder | Yes — inspected 2026-07-01, plain courthouse exterior, no firm branding | `components/practice-areas/PracticeAreaCard.tsx` (homepage grid + practice area index card) and `components/practice-areas/PracticeAreaDetail.tsx` (individual page hero) |
+| `practice-areas/commercial-litigation.jpg` | AI-generated placeholder | Yes — inspected 2026-07-01, plain courthouse exterior, no firm branding | `components/practice-areas/PracticeAreaCard.tsx` (practice-areas index grid) and `components/practice-areas/PracticeAreaDetail.tsx` (individual page hero). Note: the homepage "What We Do" grid uses the separate, image-free `components/home/PracticeAreaCards.tsx`, so these images do not appear on the homepage |
+| `practice-areas/fraud-asset-recovery.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, overhead shot of hands reviewing a bank statement / tax form (calculator, laptop, pen). The document text is the photograph's subject, not an overlay; no firm branding, logo, or watermark | `components/practice-areas/PracticeAreaCard.tsx` (practice-areas index grid) and `components/practice-areas/PracticeAreaDetail.tsx` (detail hero) via `imageUrl` in `src/lib/practice-areas.ts` |
+| `practice-areas/economic-disputes.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, three professionals in discussion over financial charts on a table. Only text is generic chart-axis labeling; no firm branding, logo, or watermark | Same as above |
+| `practice-areas/contract-disputes.jpg` | Real photography — replacement upload (embedded credit: Alex Saharchuk) | Yes — inspected 2026-07-06, a legal contract being signed. Contract legalese is the photograph's subject; no firm branding, logo, or watermark | Same as above |
+| `practice-areas/international-arbitration.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, modern tiered assembly / tribunal chamber with dais and flags. Small venue placard on the lectern only (not firm branding); no logo or watermark | Same as above |
+| `practice-areas/securities-fraud.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, financial report with charts beside a calculator and keyboard; no firm branding, logo, or watermark. **Note:** the report's body text is Russian (Cyrillic) — real photographed document content, heavily darkened under the navy overlay in both render contexts, flagged for editorial review | Same as above |
 | `results/city-skyline.jpg` | AI-generated placeholder | Yes — inspected 2026-07-01, plain skyline, no text | `app/results/page.tsx` (results page hero) |
 
 ### Empty slots — NEEDS REPLACEMENT
 
-These 9 files were deleted on 2026-07-01 because they had the garbled
+Nine files were deleted on 2026-07-01 because they had the garbled
 "WVHITMORE LLC" logo artifact baked into the pixels. All code references
 were nulled at the same time (`imageUrl` / `heroImage` fields set to
-absent, hardcoded `<Image>` usages removed) and each now renders a plain
+absent, hardcoded `<Image>` usages removed) and each rendered a plain
 `bg-navy` / `bg-navy-mid` fallback block instead of a broken image icon.
-**Do not re-add a file at these paths without manually viewing it first
-— this exact failure mode is why the slot is empty.**
+
+**Five of those slots — the five practice-area images — were refilled
+on 2026-07-06** with verified-clean replacement photography (see the
+"Present and verified clean" table above; each was opened and inspected
+before its `imageUrl` was restored in `src/lib/practice-areas.ts`). The
+four slots below remain empty. **Do not re-add a file at these paths
+without manually viewing it first — the baked-in-logo failure mode is why
+these slots are empty.**
 
 | Path | Status | Rendered by (currently shows navy fallback) |
 | --- | --- | --- |
-| `about/law-library.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `app/about/page.tsx` (firm story figure) |
-| `about/office-interior.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `app/about/page.tsx` ("Visit Our Offices" section) |
-| `process/glass-architecture.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `app/process/page.tsx` (process intro hero) |
-| `practice-areas/fraud-asset-recovery.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `PracticeAreaCard.tsx` + `PracticeAreaDetail.tsx` via `imageUrl` in `src/lib/practice-areas.ts` (currently absent) |
-| `practice-areas/economic-disputes.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
-| `practice-areas/contract-disputes.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
-| `practice-areas/international-arbitration.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
-| `practice-areas/securities-fraud.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | Same as above |
-| `blog/default-hero.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 | `components/blog/BlogCard.tsx` + `components/blog/BlogPostLayout.tsx` via `heroImage` in `src/lib/blog.ts` (currently absent on both posts) |
+| `about/law-library.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01; no replacement file supplied as of 2026-07-06 | `app/about/page.tsx` (firm story figure) |
+| `about/office-interior.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01; no replacement file supplied as of 2026-07-06 | `app/about/page.tsx` ("Visit Our Offices" section) |
+| `process/glass-architecture.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01; no replacement file supplied as of 2026-07-06 | `app/process/page.tsx` (process intro hero) |
+| `blog/default-hero.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 (blog is currently paused, so these components render on no live surface) | `components/blog/BlogCard.tsx` + `components/blog/BlogPostLayout.tsx` via `heroImage` in `src/lib/blog.ts` (currently absent on both posts) |
 
 ### Attorney headshots
 
@@ -73,13 +79,14 @@ a bug.
    not asked to.
 2. Save it at the documented path (same filename, landscape, ≥1600px
    wide).
-3. For the 9 empty slots above, you must also restore the code reference:
+3. For the empty slots above, you must also restore the code reference:
    set the relevant `imageUrl` (`src/lib/practice-areas.ts`) or
    `heroImage` (`src/lib/blog.ts`) field back to the file path, or
    restore the `<Image>` usage in `app/about/page.tsx` /
    `app/process/page.tsx`. The navy fallback only disappears once the
    reference is restored — dropping a file into the folder alone does
-   nothing.
+   nothing. (The five practice-area `imageUrl` references were restored
+   this way on 2026-07-06.)
 4. Re-inspect the file one more time after saving, in situ, in whatever
    overlay/full-bleed context it will render in (hero sections apply a
    navy overlay that can make faint artifacts ghost through even when
