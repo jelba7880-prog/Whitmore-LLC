@@ -6,7 +6,6 @@ const firmLinks = [
   { label: "Attorneys", href: "/attorneys" },
   { label: "Results", href: "/results" },
   { label: "Process", href: "/process" },
-  { label: "Blog", href: "/blog" },
 ];
 
 const contactLinks = [
