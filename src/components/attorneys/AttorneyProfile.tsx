@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Attorney, BlogPost, CaseResult } from "@/types";
+import type { Attorney, CaseResult } from "@/types";
 import CaseResultCard from "@/components/results/CaseResultCard";
-import BlogCard from "@/components/blog/BlogCard";
 import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
 import { practiceAreas as allAreas } from "@/lib/practice-areas";
@@ -10,15 +9,14 @@ import { practiceAreas as allAreas } from "@/lib/practice-areas";
 interface AttorneyProfileProps {
   attorney: Attorney;
   relatedResults: CaseResult[];
-  posts: BlogPost[];
 }
 
-// Full attorney profile layout. Section order is mandated by CLAUDE.md:
-// A) Hero  B) Biography  C) Notable Matters  D) Articles. Server component.
+// Full attorney profile layout. Sections: A) Hero  B) Biography
+// C) Notable Matters. (The blog-backed "Articles by this attorney" section is
+// paused along with the rest of the blog — see lib/blog.ts.) Server component.
 export default function AttorneyProfile({
   attorney,
   relatedResults,
-  posts,
 }: AttorneyProfileProps) {
   const bioIsTodo =
     attorney.bio.length === 0 || attorney.bio.startsWith("{/*");
@@ -213,28 +211,6 @@ export default function AttorneyProfile({
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {relatedResults.map((result) => (
                 <CaseResultCard key={result.id} result={result} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ──── SECTION D: Articles by This Attorney ──── */}
-      {posts.length > 0 && (
-        <section className="bg-cream py-20">
-          <div className="mx-auto max-w-[1200px] px-6">
-            <SectionDivider className="mb-16" />
-            <GoldRule />
-            <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
-              Insights & Commentary
-            </p>
-            <h2 className="mb-10 mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
-              Articles by {attorney.name}
-            </h2>
-
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
-                <BlogCard key={post.slug} post={post} showAuthor={false} />
               ))}
             </div>
           </div>

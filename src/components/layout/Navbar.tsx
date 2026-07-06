@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { href: "/practice-areas", label: "Practice Areas" },
   { href: "/attorneys", label: "Attorneys" },
   { href: "/results", label: "Results" },
-  { href: "/blog", label: "Blog" },
 ];
 
 export default function Navbar() {

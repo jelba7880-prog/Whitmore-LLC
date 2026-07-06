@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import AttorneyProfile from "@/components/attorneys/AttorneyProfile";
 import { attorneys } from "@/lib/attorneys";
 import { caseResults } from "@/lib/results";
-import { blogPosts } from "@/lib/blog";
 
 export function generateStaticParams() {
   return attorneys.map((attorney) => ({ slug: attorney.slug }));
@@ -45,13 +44,10 @@ export default function AttorneyProfilePage({
     attorney.practiceAreas.includes(result.practiceArea),
   );
 
-  const posts = blogPosts.filter((post) => post.authorSlug === attorney.slug);
-
   return (
     <AttorneyProfile
       attorney={attorney}
       relatedResults={relatedResults}
-      posts={posts}
     />
   );
 }
