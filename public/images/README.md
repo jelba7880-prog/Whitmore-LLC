@@ -38,6 +38,9 @@ dimensions (1600×1067, landscape) until real photography is supplied.
 | `practice-areas/contract-disputes.jpg` | Real photography — replacement upload (embedded credit: Alex Saharchuk) | Yes — inspected 2026-07-06, a legal contract being signed. Contract legalese is the photograph's subject; no firm branding, logo, or watermark | Same as above |
 | `practice-areas/international-arbitration.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, modern tiered assembly / tribunal chamber with dais and flags. Small venue placard on the lectern only (not firm branding); no logo or watermark | Same as above |
 | `practice-areas/securities-fraud.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, financial report with charts beside a calculator and keyboard; no firm branding, logo, or watermark. **Note:** the report's body text is Russian (Cyrillic) — real photographed document content, heavily darkened under the navy overlay in both render contexts, flagged for editorial review | Same as above |
+| `about/law-library.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, an attorney reviewing documents in a wood-paneled library office with two colleagues; framed portrait prints on the wall (historical figures, not firm branding); no logo or watermark | `app/about/page.tsx` (firm story figure — bordered, fixed 3:2 aspect, no overlay) |
+| `about/office-interior.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, a conference room (long table, leather chairs, wall-mounted TV, floating shelves); no firm branding, logo, or watermark. **Note:** the shelved book spines are legible Portuguese/Brazilian titles — real photographed content, flagged for editorial review | `app/about/page.tsx` ("Visit Our Offices" section — bordered, fixed 3:2 aspect, no overlay) |
+| `process/glass-architecture.jpg` | Real photography — replacement upload | Yes — inspected 2026-07-06, upward angle of glass/steel skyscrapers against a blue sky; no text, logo, or watermark of any kind | `app/process/page.tsx` (process intro hero — full-bleed with `bg-navy/60` overlay) |
 | `results/city-skyline.jpg` | AI-generated placeholder | Yes — inspected 2026-07-01, plain skyline, no text | `app/results/page.tsx` (results page hero) |
 
 ### Empty slots — NEEDS REPLACEMENT
@@ -48,20 +51,32 @@ were nulled at the same time (`imageUrl` / `heroImage` fields set to
 absent, hardcoded `<Image>` usages removed) and each rendered a plain
 `bg-navy` / `bg-navy-mid` fallback block instead of a broken image icon.
 
-**Five of those slots — the five practice-area images — were refilled
-on 2026-07-06** with verified-clean replacement photography (see the
-"Present and verified clean" table above; each was opened and inspected
-before its `imageUrl` was restored in `src/lib/practice-areas.ts`). The
-four slots below remain empty. **Do not re-add a file at these paths
-without manually viewing it first — the baked-in-logo failure mode is why
-these slots are empty.**
+**All eight of the non-blog slots have now been refilled** with
+verified-clean replacement photography (see the "Present and verified
+clean" table above). The five practice-area images were refilled on
+2026-07-06, wired via `imageUrl` in `src/lib/practice-areas.ts`. The
+`about/` and `process/` images were refilled the same day but were
+initially **uploaded to the wrong path** — see the callout below — and
+were relocated and wired in a follow-up commit. Only the blog slot
+remains empty (blog is currently paused). **Do not re-add a file at any
+of these paths without manually viewing it first — the baked-in-logo
+failure mode is why these slots were ever empty.**
 
-| Path | Status | Rendered by (currently shows navy fallback) |
+| Path | Status | Rendered by |
 | --- | --- | --- |
-| `about/law-library.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01; no replacement file supplied as of 2026-07-06 | `app/about/page.tsx` (firm story figure) |
-| `about/office-interior.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01; no replacement file supplied as of 2026-07-06 | `app/about/page.tsx` ("Visit Our Offices" section) |
-| `process/glass-architecture.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01; no replacement file supplied as of 2026-07-06 | `app/process/page.tsx` (process intro hero) |
 | `blog/default-hero.jpg` | NEEDS REPLACEMENT — text-artifact removed 2026-07-01 (blog is currently paused, so these components render on no live surface) | `components/blog/BlogCard.tsx` + `components/blog/BlogPostLayout.tsx` via `heroImage` in `src/lib/blog.ts` (currently absent on both posts) |
+
+> **Wrong-path incident (2026-07-06):** `law-library.jpg`, `office-interior.jpg`,
+> and `glass-architecture.jpg` were uploaded to `src/app/about/` and
+> `src/app/process/` — next to the route `page.tsx` files — instead of
+> `public/images/about/` and `public/images/process/`. Files under `src/app/`
+> are source code, not static assets; Next.js never serves them at a URL, so
+> the pages kept showing their navy fallback even though the files existed in
+> the repo. A path-only inventory check (`find public/images`) missed them
+> entirely; they were found only by cross-checking the GitHub file browser
+> against the expected `public/images/...` paths. If a "verified clean" image
+> still shows a navy fallback after a build, check whether it landed under
+> `src/app/` by mistake before assuming the file is simply missing.
 
 ### Attorney headshots
 
