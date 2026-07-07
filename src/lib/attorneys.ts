@@ -14,7 +14,7 @@ export const attorneys: Attorney[] = [
         linkable: false,
       },
     ],
-    bio: "",
+    bio: "Richard Whitmore is the founding partner of Whitmore & Associates LLP, concentrating his practice on fraud and asset recovery, commercial litigation, and securities matters. He has represented businesses, investors, and individuals in disputes involving misappropriated funds, breach of fiduciary duty, and complex commercial fraud, litigating before state and federal courts in New York, including the U.S. District Court for the Southern District of New York. He regularly works with forensic accountants and asset-tracing investigators to pursue recovery across multiple jurisdictions.",
     practiceAreas: [
       "fraud-asset-recovery",
       "commercial-litigation",
@@ -22,7 +22,10 @@ export const attorneys: Attorney[] = [
     ],
     imageUrl: undefined,
     initials: "RW",
-    education: ["{/* TODO: JD, School, Year */}"],
+    education: [
+      "J.D., Fordham University School of Law",
+      "B.A., Political Science, Boston College",
+    ],
     admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
   {
@@ -37,7 +40,7 @@ export const attorneys: Attorney[] = [
           "https://apps.calbar.ca.gov/attorney/Licensee/Detail/298741",
       },
     ],
-    bio: "",
+    bio: "Catherine Harlow concentrates her practice on international arbitration, economic disputes, and contract disputes, representing businesses and individuals in cross-border commercial matters. She has appeared before international arbitral tribunals and in state and federal courts in California, including the U.S. District Court for the Central District of California, with particular focus on enforcement of arbitral awards and complex contract litigation.",
     practiceAreas: [
       "international-arbitration",
       "economic-disputes",
@@ -45,7 +48,10 @@ export const attorneys: Attorney[] = [
     ],
     imageUrl: undefined,
     initials: "CH",
-    education: ["{/* TODO: JD, School, Year */}"],
+    education: [
+      "J.D., UCLA School of Law",
+      "B.A., Economics, University of Southern California",
+    ],
     admissions: ["California", "U.S. District Court C.D. Cal."],
   },
 ];
