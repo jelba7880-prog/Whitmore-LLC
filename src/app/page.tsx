@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import StatsBar from "@/components/home/StatsBar";
 import PracticeAreaCards from "@/components/home/PracticeAreaCards";
 import IndustriesServed from "@/components/home/IndustriesServed";
+import WhyWhitmore from "@/components/home/WhyWhitmore";
 import AttorneyTeaser from "@/components/home/AttorneyTeaser";
 import TestimonialCarousel from "@/components/home/TestimonialCarousel";
 import SectionDivider from "@/components/ui/SectionDivider";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <PracticeAreaCards />
       <SectionDivider />
       <IndustriesServed />
+      <WhyWhitmore />
       <EditorialQuote />
       <AttorneyTeaser />
       <TestimonialCarousel />

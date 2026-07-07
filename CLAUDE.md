@@ -281,6 +281,15 @@ export const STATS = [
 - Rationale: PracticeAreaCards and IndustriesServed previously shared identical visual grammar (cream background, bordered card, centered icon-over-label) back-to-back, reading as repetitive regardless of content. The navy-mid background plus inline-list layout makes this section structurally distinct from the card grid above it rather than relying on a divider alone to break the resemblance.
 - Entrance animation: one-time fade + 8–12px slide-up on scroll-into-view via IntersectionObserver; triggers once and never re-triggers on scroll up/down — this section has no numbers, so there is nothing to count or roll up
 
+### WhyWhitmore
+- Server component, no client state, no scroll-entrance animation (Hard Rule #6 reserves the one-time reveal animation for StatsBar and IndustriesServed only)
+- Background `--parchment`; eyebrow "Why Whitmore" (Jost 11px, 0.2em tracking, uppercase, gold); H2 "How We Approach Every Matter" (Cormorant Garamond 40px 700, −0.02em, ink)
+- Six equal-weight differentiators (Strategic Thinking, Partner-Level Attention, Business-Minded Advice, Cross-Border Perspective, Efficient Resolution, Clear Communication) in a stacked 2-column × 3-row editorial text list — **no icons, no borders, no per-item background fill**; this is deliberately not a card grid
+- Item: headline Cormorant Garamond 28px 700 −0.01em ink, 1–2 sentence supporting copy Source Serif 4 17px muted, line-height 1.75
+- Rows separated by the existing `GoldRule` component (default `solid` variant) as a thin horizontal divider — between rows only, never between the two columns
+- No numbered circles, sequence indicators, or arrows between items — that treatment is reserved for the Process Timeline; these six items are equal-weight, not sequential steps
+- Copy is positioning/philosophy language (approach, values), not absolute operational guarantees, and contains no superlatives, per CA Bar compliance
+
 ### AttorneyCard (horizontal layout)
 - Photo slot: `w-[196px] flex-shrink-0 bg-navy-light` — grayscale image or initials fallback
 - **Always render bar number + verify link** — missing either is a hard failure
@@ -308,11 +317,14 @@ Section order (strict):
 1. `<Hero />` — headline, subtext, 2 CTAs, architectural photo right
 2. `<StatsBar />` — 4 canonical stats
 3. `<PracticeAreaCards />` — 3×2 grid, all 6 areas
-4. `<IndustriesServed />` — industries/sectors served
-5. `<AttorneyTeaser />` — 2–3 cards, "View All Attorneys →" → `/attorneys`
-6. `<TestimonialBlock />` — single featured testimonial
-7. *(CTASection injected by layout)*
-8. *(Footer injected by layout)*
+4. `<SectionDivider />` — gold hairline seam (both neighboring sections are `--cream`)
+5. `<IndustriesServed />` — industries/sectors served
+6. `<WhyWhitmore />` — six equal-weight firm differentiators, editorial text list
+7. `<EditorialQuote />` — unattributed firm-philosophy pull quote
+8. `<AttorneyTeaser />` — 2–3 cards, "View All Attorneys →" → `/attorneys`
+9. `<TestimonialCarousel />` — rotating client testimonials
+10. *(CTASection injected by layout)*
+11. *(Footer injected by layout)*
 
 ### Practice Area pages (`/practice-areas/[slug]`)
 1. Page hero (navy bg, breadcrumb)
