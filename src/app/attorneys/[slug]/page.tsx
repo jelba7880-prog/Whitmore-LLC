@@ -38,10 +38,8 @@ export default function AttorneyProfilePage({
     notFound();
   }
 
-  // Proxy for "this attorney's matters" until per-attorney result linking
-  // exists: surface results whose practice area is in this attorney's focus.
   const relatedResults = caseResults.filter((result) =>
-    attorney.practiceAreas.includes(result.practiceArea),
+    result.attorneySlugs.includes(attorney.slug),
   );
 
   return (

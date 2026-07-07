@@ -6,6 +6,7 @@ export interface Attorney {
     state: string; // e.g. "NY"
     number: string; // e.g. "5892012"
     verifyUrl: string; // e.g. "https://iapps.courts.state.ny.us/..."
+    linkable?: boolean; // false when the issuing bar prohibits direct linking; defaults to true
   }[];
   bio: string;
   practiceAreas: string[]; // array of practice area slugs
@@ -48,6 +49,7 @@ export interface CaseResult {
   practiceArea: string; // practice area slug
   challenge: string; // 1 sentence — the situation/problem, no client names
   resolution: string; // 1 sentence — how it was resolved, no client names
+  attorneySlugs: string[]; // attorneys in lib/attorneys.ts credited with this matter
 }
 
 export interface BlogPost {

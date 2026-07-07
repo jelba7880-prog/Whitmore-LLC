@@ -11,6 +11,7 @@ export const attorneys: Attorney[] = [
         number: "5892012",
         verifyUrl:
           "https://iapps.courts.state.ny.us/attorneyservices/search?1",
+        linkable: false,
       },
     ],
     bio: "",

@@ -56,14 +56,18 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
           {attorney.barNumbers.map((bar) => (
             <span key={`${bar.state}-${bar.number}`}>
               {bar.state} Bar #{bar.number} &middot;{" "}
-              <a
-                href={bar.verifyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-gold transition-colors hover:text-gold-light"
-              >
-                Verify &rarr;
-              </a>
+              {bar.linkable === false ? (
+                <span className="text-muted">verify at {bar.verifyUrl}</span>
+              ) : (
+                <a
+                  href={bar.verifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 text-gold transition-colors hover:text-gold-light"
+                >
+                  Verify &rarr;
+                </a>
+              )}
             </span>
           ))}
         </div>
