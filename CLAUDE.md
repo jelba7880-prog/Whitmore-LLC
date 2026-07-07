@@ -263,10 +263,10 @@ export const STATS = [
 - Separated by `1px bg-navy-light` vertical rules
 - No JavaScript — pure static markup
 
-### IndustriesServed
+### IndustriesServed (revised)
 - Server component by default — `components/home/IndustriesServed.tsx` has no client state of its own; the scroll-entrance animation is isolated to a `<RevealOnScroll>` client wrapper in `components/ui/`
-- Background `--cream`; eyebrow "Industries We Serve" (Jost 11px, 0.2em tracking, uppercase, gold); H2 "Sector-Specific Experience Across Complex Disputes" (Cormorant Garamond 40px 700, −0.02em, ink)
-- Grid of 10 fixed industries — label + icon only, no descriptions, no per-industry stats or claims:
+- Background `--navy-mid` (reused from StatsBar/TestimonialBlock — deliberately distinct from the `--cream` PracticeAreaCards section directly above it, so no two adjacent homepage sections share a background); eyebrow "Industries We Serve" (Jost 11px, 0.2em tracking, uppercase, gold); H2 "Sector-Specific Experience Across Complex Disputes" (Cormorant Garamond 40px 700, −0.02em, **cream** — flipped from ink for the dark background)
+- Inline flowing list of 10 fixed industries — icon + label pairs, wrapping naturally, no descriptions, no per-industry stats or claims, **no per-item border or background box** (this is deliberately not a card grid — see below):
   1. Financial Services & Banking
   2. Private Equity & Hedge Funds
   3. Real Estate & Construction
@@ -277,7 +277,8 @@ export const STATS = [
   8. Insurance
   9. Retail & Consumer Goods
   10. Family Offices & High-Net-Worth Individuals
-- Card: `border border-navy-light bg-parchment`, sharp corners, icon 30×30px inline SVG (gold stroke, stroke-width 1.5, matches Practice Area Card icon treatment), label Jost 13px uppercase
+- Item: icon (20×20px inline SVG, gold stroke, stroke-width 1.5) positioned inline to the left of the label (not stacked above it), label Jost 13px uppercase cream. Items separated by a 1px vertical rule (`bg-navy-light`, `self-stretch`) — the same divider pattern used in StatsBar
+- Rationale: PracticeAreaCards and IndustriesServed previously shared identical visual grammar (cream background, bordered card, centered icon-over-label) back-to-back, reading as repetitive regardless of content. The navy-mid background plus inline-list layout makes this section structurally distinct from the card grid above it rather than relying on a divider alone to break the resemblance.
 - Entrance animation: one-time fade + 8–12px slide-up on scroll-into-view via IntersectionObserver; triggers once and never re-triggers on scroll up/down — this section has no numbers, so there is nothing to count or roll up
 
 ### AttorneyCard (horizontal layout)
