@@ -78,14 +78,20 @@ export default function AttorneyProfile({
                     <span>
                       &#9679; {bar.state} Bar #{bar.number}
                     </span>
-                    <a
-                      href={bar.verifyUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="ml-1 text-gold transition-colors hover:text-gold-light"
-                    >
-                      Verify with {bar.state} State Bar &rarr;
-                    </a>
+                    {bar.linkable === false ? (
+                      <span className="ml-1 text-cream/50">
+                        verify at {bar.verifyUrl}
+                      </span>
+                    ) : (
+                      <a
+                        href={bar.verifyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ml-1 text-gold transition-colors hover:text-gold-light"
+                      >
+                        Verify with {bar.state} State Bar &rarr;
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
