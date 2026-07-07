@@ -1,10 +1,18 @@
 import type { ProcessStep } from "@/types";
+import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 interface ProcessTimelineProps {
   steps: ProcessStep[];
 }
 
-// Firm-wide process timeline (design-tokens.md § 09). Server component, no state.
+// Firm-wide process timeline (design-tokens.md § 09). Server component, no state;
+// the per-step scroll reveal is isolated to the RevealOnScroll client wrapper.
+//
+// Each step is wrapped in its OWN RevealOnScroll so steps fade in independently
+// as each scrolls into view — the sequential progression permitted by Hard
+// Rule #6 — without any custom stagger-delay logic. The vertical rail stays a
+// static line and does NOT fill proportionally with scroll (that's the
+// separate, un-vetted animation category the rule calls out).
 //
 // NOTE: process-step circles are the ONLY elements permitted a border-radius
 // (`rounded-full`), per design-tokens.md § 09. Every other surface — cards,
@@ -23,7 +31,10 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
         const isLast = index === steps.length - 1;
 
         return (
-          <div key={step.number} className="relative pb-12 last:pb-0">
+          <RevealOnScroll
+            key={step.number}
+            className="relative pb-12 last:pb-0"
+          >
             {/* Step circle — rounded-full permitted here only (design-tokens § 09) */}
             <div
               className={`absolute left-[-80px] top-0 flex h-11 w-11 items-center justify-center rounded-full border ${
@@ -48,7 +59,7 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
             <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">
               {step.body}
             </p>
-          </div>
+          </RevealOnScroll>
         );
       })}
     </div>

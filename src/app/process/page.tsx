@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ProcessStep } from "@/types";
 import ProcessTimeline from "@/components/process/ProcessTimeline";
 import GoldRule from "@/components/ui/GoldRule";
+import ParallaxImage from "@/components/ui/ParallaxImage";
 
 export const metadata: Metadata = {
   title: "How We Work",
@@ -51,14 +52,16 @@ export default function ProcessPage() {
     <main className="bg-cream">
       {/* Page hero — process intro, full-bleed background with overlay */}
       <section className="relative overflow-hidden bg-navy py-20">
-        <Image
-          src="/images/process/glass-architecture.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <ParallaxImage>
+          <Image
+            src="/images/process/glass-architecture.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </ParallaxImage>
         <div className="absolute inset-0 bg-navy/60" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-[1200px] px-6">
           <nav className="font-ui text-[11px] uppercase tracking-[0.1em] text-muted">

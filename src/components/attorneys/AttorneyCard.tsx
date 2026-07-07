@@ -24,7 +24,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
     attorney.bio.length > 200 ? attorney.bio.slice(0, 200) + "…" : attorney.bio;
 
   return (
-    <div className="relative flex border border-navy-light bg-parchment transition-colors duration-200 hover:border-gold">
+    <div className="relative flex border border-navy-light bg-parchment transition-all duration-200 hover:-translate-y-1 hover:border-gold hover:shadow-[0_14px_40px_rgba(13,27,42,0.15)]">
       {/* Photo area — grayscale headshot or initials fallback */}
       <div className="relative min-h-[220px] w-[196px] flex-shrink-0 overflow-hidden bg-navy-light">
         {attorney.imageUrl ? (
