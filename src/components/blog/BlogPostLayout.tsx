@@ -79,7 +79,7 @@ export default function BlogPostLayout({
             <p className="mt-6 font-ui text-[10px] uppercase tracking-[0.14em] text-gold">
               {post.practiceArea}
             </p>
-            <h1 className="mt-3 font-display text-[46px] font-bold leading-[1.15] tracking-[-0.02em] text-cream">
+            <h1 className="mt-3 font-display text-h1-blog font-bold leading-[1.15] tracking-[-0.02em] text-cream">
               {post.title}
             </h1>
             <p className="mt-4 font-body text-[19px] leading-[1.65] text-[#9CAFC0]">

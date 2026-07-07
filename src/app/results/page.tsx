@@ -49,7 +49,7 @@ export default function ResultsPage() {
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Representative Matters
           </p>
-          <h1 className="mt-3 font-display text-[56px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-3 font-display text-h1 font-bold tracking-[-0.02em] text-cream">
             Case Results
           </h1>
           <p className="mt-6 max-w-2xl font-body text-[20px] leading-[1.65] text-[#9CAFC0]">

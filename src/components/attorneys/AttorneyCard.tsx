@@ -44,7 +44,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
 
       {/* Content area */}
       <div className="flex flex-1 flex-col p-8">
-        <h3 className="font-display text-[28px] font-bold tracking-[-0.01em] text-ink">
+        <h3 className="font-display text-h3 font-bold tracking-[-0.01em] text-ink">
           {attorney.name}
         </h3>
         <p className="mt-1 font-ui text-[11px] uppercase tracking-[0.12em] text-gold">

@@ -26,7 +26,7 @@ export default function PracticeAreasPage() {
             <span className="text-cream/70">Practice Areas</span>
           </nav>
           <GoldRule className="mt-6" />
-          <h1 className="mt-4 font-display text-[56px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-4 font-display text-h1 font-bold tracking-[-0.02em] text-cream">
             Practice Areas
           </h1>
           <p className="mt-6 max-w-2xl font-body text-[20px] leading-[1.65] text-[#9CAFC0]">

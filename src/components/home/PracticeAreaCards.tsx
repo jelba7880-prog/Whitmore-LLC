@@ -11,7 +11,7 @@ export default function PracticeAreaCards() {
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Our Practice
           </p>
-          <h2 className="mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+          <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
             What We Do
           </h2>
         </div>

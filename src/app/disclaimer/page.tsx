@@ -24,7 +24,7 @@ export default function DisclaimerPage() {
             <span className="text-cream/70">Legal Disclaimer</span>
           </nav>
           <GoldRule className="mt-6" />
-          <h1 className="mt-4 font-display text-[44px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-4 font-display text-h1-legal font-bold tracking-[-0.02em] text-cream">
             Legal Disclaimer
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function DisclaimerPage() {
             Effective Date: January 1, 2025
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             1. Attorney Advertising
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -47,7 +47,7 @@ export default function DisclaimerPage() {
             similar result in any future matter.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             2. No Legal Advice
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -57,7 +57,7 @@ export default function DisclaimerPage() {
             consultation with a qualified attorney.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             3. No Attorney-Client Relationship
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -67,7 +67,7 @@ export default function DisclaimerPage() {
             engagement agreement.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             4. Jurisdiction
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -77,7 +77,7 @@ export default function DisclaimerPage() {
             required by applicable rules.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             5. Accuracy of Information
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -87,7 +87,7 @@ export default function DisclaimerPage() {
             of the information contained herein.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             6. Contact
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">

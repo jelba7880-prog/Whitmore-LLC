@@ -74,7 +74,7 @@ export default function ProcessPage() {
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Our Approach
           </p>
-          <h1 className="mt-3 font-display text-[56px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-3 font-display text-h1 font-bold tracking-[-0.02em] text-cream">
             How We Work
           </h1>
           <p className="mt-6 max-w-xl font-body text-[20px] text-[#9CAFC0]">
@@ -88,7 +88,7 @@ export default function ProcessPage() {
       <section className="py-20">
         <div className="mx-auto max-w-[760px] px-6">
           <GoldRule />
-          <h2 className="mb-12 mt-4 font-display text-[40px] font-bold text-ink">
+          <h2 className="mb-12 mt-4 font-display text-h2 font-bold text-ink">
             Our Process
           </h2>
           <ProcessTimeline steps={steps} />

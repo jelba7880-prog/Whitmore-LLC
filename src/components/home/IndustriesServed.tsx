@@ -129,7 +129,7 @@ export default function IndustriesServed() {
             <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
               Industries We Serve
             </p>
-            <h2 className="mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-cream">
+            <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-cream">
               Sector-Specific Experience Across Complex Disputes
             </h2>
           </div>

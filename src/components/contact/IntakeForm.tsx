@@ -84,7 +84,7 @@ export default function IntakeForm() {
     return (
       <div className="border border-gold/30 bg-parchment p-8">
         <GoldRule />
-        <h3 className="mt-4 font-display text-[28px] font-bold text-ink">
+        <h3 className="mt-4 font-display text-h3 font-bold text-ink">
           Request Received
         </h3>
         <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">

@@ -63,15 +63,32 @@
 
 ### Type Scale
 
-| Name | Size | Font | Weight | Tracking | Line-height |
-| --- | --- | --- | --- | --- | --- |
-| Display | 80px | Cormorant Garamond | 700 | −0.02em | 1.0 |
-| H1 — Page Title | 56px | Cormorant Garamond | 700 | −0.02em | 1.1 |
-| H2 — Section Title | 40px | Cormorant Garamond | 700 | −0.02em | 1.15 |
-| H3 — Card / Sub Title | 28px | Cormorant Garamond | 700 | −0.01em | 1.2 |
-| Body | 18px | Source Serif 4 | 400 | 0   | 1.75 |
-| Label / Nav | 13px | Jost | 400–500 | 0.1em | —   |
-| Fine Print | 12px | Jost | 300 | 0   | 1.75 |
+Heading sizes are centralized as Tailwind `fontSize` tokens in `tailwind.config.ts`
+(each token bakes in size + line-height + tracking). Consume them via the `Class`
+column below — never hardcode `text-[Npx]` for a heading. Weight is **not** baked
+into the token: apply `font-bold` (700) at each usage site.
+
+| Name | Class | Size | Font | Weight | Tracking | Line-height |
+| --- | --- | --- | --- | --- | --- | --- |
+| Display | `text-display` | 80px | Cormorant Garamond | 700 | −0.02em | 1.0 |
+| H1 — Page Title | `text-h1` | 64px | Cormorant Garamond | 700 | −0.02em | 1.1 |
+| H1 — Homepage Hero | `text-h1-hero` | 72px | Cormorant Garamond | 700 | −0.02em | 1.05 |
+| H1 — Legal Page | `text-h1-legal` | 44px | Cormorant Garamond | 700 | −0.01em | 1.15 |
+| H1 — Blog Post | `text-h1-blog` | 46px | Cormorant Garamond | 700 | −0.01em | 1.15 |
+| H2 — Section Title | `text-h2` | 56px | Cormorant Garamond | 700 | −0.02em | 1.15 |
+| H2 — Legal Section | `text-h2-legal` | 28px | Cormorant Garamond | 700 | 0 | 1.3 |
+| H2 — Blog Card (featured) | `text-h2-blog-card` | 36px | Cormorant Garamond | 700 | −0.01em | 1.2 |
+| H3 — Card / Sub Title | `text-h3` | 28px | Cormorant Garamond | 700 | −0.01em | 1.2 |
+| H3 — Blog Card | `text-h3-blog-card` | 22px | Cormorant Garamond | 700 | 0 | 1.25 |
+| Body | — | 18px | Source Serif 4 | 400 | 0   | 1.75 |
+| Label / Nav | — | 13px | Jost | 400–500 | 0.1em | —   |
+| Fine Print | — | 12px | Jost | 300 | 0   | 1.75 |
+
+> **Note:** H1 — Page Title (64px, was 56px) and H2 — Section Title (56px, was 40px)
+> were resized upward when the tokens were introduced. Some bespoke heading sizes
+> remain intentionally un-tokenized (e.g. results-page group headers 32px,
+> practice-area inline-CTA 50px, "Send a Message" 32px, card sub-titles 24–26px);
+> these are candidates for a future token pass.
 
 ### Tailwind Font Mapping
 
