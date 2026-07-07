@@ -5,6 +5,7 @@ import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
 import FAQAccordion from "@/components/practice-areas/FAQAccordion";
 import CaseResultCard from "@/components/results/CaseResultCard";
+import ProcessTimeline from "@/components/process/ProcessTimeline";
 
 interface PracticeAreaDetailProps {
   area: PracticeArea;
@@ -125,48 +126,8 @@ export default function PracticeAreaDetail({
           </h2>
         </div>
 
-        {/* Outer wrapper provides mobile gutters; inner is the positioning
-            context so the rail (left-[22px]) aligns with the 44px circle
-            centers (left-0 → center at 22px). */}
         <div className="mx-auto mt-12 max-w-[760px] px-6">
-          <div className="relative">
-            <div
-              className="absolute bottom-0 left-[22px] top-0 w-px bg-gold opacity-40"
-              aria-hidden="true"
-            />
-            {area.process.map((step, index) => {
-              const isLast = index === area.process.length - 1;
-              return (
-                <div
-                  key={step.number}
-                  className={`relative pl-[80px] ${isLast ? "pb-0" : "pb-12"}`}
-                >
-                  <div
-                    className={`absolute left-0 top-0 flex h-11 w-11 items-center justify-center rounded-full border ${
-                      isLast ? "border-navy bg-navy" : "border-gold bg-cream"
-                    }`}
-                  >
-                    <span
-                      className={`font-display text-[18px] font-bold ${
-                        isLast ? "text-cream" : "text-gold"
-                      }`}
-                    >
-                      {step.number}
-                    </span>
-                  </div>
-                  <p className="mb-1 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
-                    {step.eyebrow}
-                  </p>
-                  <h3 className="font-display text-[26px] font-bold tracking-[-0.01em] text-ink">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">
-                    {step.body}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+          <ProcessTimeline steps={area.process} />
         </div>
       </section>
 
