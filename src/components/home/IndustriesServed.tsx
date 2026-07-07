@@ -5,8 +5,8 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 function IconBase({ children }: { children: ReactNode }) {
   return (
     <svg
-      width="30"
-      height="30"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -121,7 +121,7 @@ const industries: { label: string; icon: ReactNode }[] = [
 
 export default function IndustriesServed() {
   return (
-    <section className="bg-cream py-20">
+    <section className="bg-navy-mid py-20">
       <div className="mx-auto max-w-content px-6">
         <RevealOnScroll>
           <div className="mb-14 text-center">
@@ -129,21 +129,23 @@ export default function IndustriesServed() {
             <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
               Industries We Serve
             </p>
-            <h2 className="mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+            <h2 className="mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-cream">
               Sector-Specific Experience Across Complex Disputes
             </h2>
           </div>
 
-          <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
-            {industries.map((industry) => (
-              <div
-                key={industry.label}
-                className="flex flex-col items-center gap-4 border border-navy-light bg-parchment p-6 text-center"
-              >
-                {industry.icon}
-                <span className="font-ui text-[13px] uppercase tracking-[0.08em] text-ink">
-                  {industry.label}
-                </span>
+          <div className="mx-auto flex max-w-[1200px] flex-wrap items-stretch justify-center">
+            {industries.map((industry, index) => (
+              <div key={industry.label} className="contents">
+                <div className="flex items-center gap-3 px-6 py-3">
+                  {industry.icon}
+                  <span className="font-ui text-[13px] uppercase tracking-[0.08em] text-cream">
+                    {industry.label}
+                  </span>
+                </div>
+                {index < industries.length - 1 && (
+                  <div className="my-1 w-px self-stretch bg-navy-light" />
+                )}
               </div>
             ))}
           </div>
