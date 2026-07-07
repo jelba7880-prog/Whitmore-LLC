@@ -29,7 +29,7 @@ export default function AboutPage() {
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             The Firm
           </p>
-          <h1 className="mt-3 font-display text-[56px] font-bold leading-[1.1] tracking-[-0.02em] text-cream">
+          <h1 className="mt-3 font-display text-h1 font-bold leading-[1.1] tracking-[-0.02em] text-cream">
             About Whitmore &amp; Associates
           </h1>
         </div>
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <section className="bg-cream py-20">
         <div className="mx-auto max-w-[760px] px-6">
           <GoldRule />
-          <h2 className="mb-8 mt-4 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+          <h2 className="mb-8 mt-4 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
             Our Foundation
           </h2>
           <div className="space-y-6 font-body text-[18px] leading-[1.8] text-ink">
@@ -92,7 +92,7 @@ export default function AboutPage() {
       <section className="bg-parchment py-20">
         <div className="mx-auto max-w-[1200px] px-6">
           <GoldRule />
-          <h2 className="mb-12 mt-4 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+          <h2 className="mb-12 mt-4 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
             What Sets Us Apart
           </h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -149,7 +149,7 @@ export default function AboutPage() {
             </div>
             <div>
               <GoldRule />
-              <h2 className="mb-6 mt-4 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+              <h2 className="mb-6 mt-4 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
                 Visit Our Offices
               </h2>
               <p className="mb-6 font-body text-[18px] leading-[1.8] text-ink">

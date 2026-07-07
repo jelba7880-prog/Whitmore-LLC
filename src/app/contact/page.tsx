@@ -29,7 +29,7 @@ export default function ContactPage() {
             <span className="text-cream/70">Contact</span>
           </nav>
           <GoldRule className="mt-6" />
-          <h1 className="mt-3 font-display text-[56px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-3 font-display text-h1 font-bold tracking-[-0.02em] text-cream">
             Contact the Firm
           </h1>
           <p className="mt-4 max-w-xl font-body text-[20px] leading-[1.65] text-[#9CAFC0]">

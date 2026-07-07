@@ -24,7 +24,7 @@ export default function AccessibilityPage() {
             <span className="text-cream/70">Accessibility</span>
           </nav>
           <GoldRule className="mt-6" />
-          <h1 className="mt-4 font-display text-[44px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-4 font-display text-h1-legal font-bold tracking-[-0.02em] text-cream">
             Accessibility
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function AccessibilityPage() {
             Last Updated: January 1, 2025
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             1. Our Commitment
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -47,7 +47,7 @@ export default function AccessibilityPage() {
             Guidelines (WCAG) 2.1 Level AA.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             2. Measures We Have Taken
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -58,7 +58,7 @@ export default function AccessibilityPage() {
             across screen sizes and assistive technologies.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             3. Known Limitations
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -68,7 +68,7 @@ export default function AccessibilityPage() {
             promptly.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             4. Feedback &amp; Contact
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -85,7 +85,7 @@ export default function AccessibilityPage() {
             days.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             5. Formal Complaints
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">

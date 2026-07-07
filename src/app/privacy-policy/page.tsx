@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
             <span className="text-cream/70">Privacy Policy</span>
           </nav>
           <GoldRule className="mt-6" />
-          <h1 className="mt-4 font-display text-[44px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-4 font-display text-h1-legal font-bold tracking-[-0.02em] text-cream">
             Privacy Policy
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
             Effective Date: January 1, 2025
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             1. Information We Collect
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -48,7 +48,7 @@ export default function PrivacyPolicyPage() {
             our hosting provider.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             2. How We Use Your Information
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
             and performance monitoring only.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             3. Attorney-Client Privilege
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
             the same discretion we apply to client matters.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             4. Cookies &amp; Tracking
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
             without affecting your ability to use this site.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             5. Data Retention
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -89,7 +89,7 @@ export default function PrivacyPolicyPage() {
             responsibility rules.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             6. Your Rights
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
             within thirty (30) days.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             7. Changes to This Policy
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
             the revised policy.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             8. Contact
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">

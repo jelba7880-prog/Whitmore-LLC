@@ -38,7 +38,7 @@ export default function Hero() {
           <p className="font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Fraud Recovery &amp; Commercial Litigation
           </p>
-          <h1 className="font-display text-[72px] font-bold leading-[1.05] tracking-[-0.02em] text-cream">
+          <h1 className="font-display text-h1-hero font-bold leading-[1.05] tracking-[-0.02em] text-cream">
             When Millions Are at Stake, the Recovery Strategy Matters.
           </h1>
           <p className="mt-4 font-ui text-[13px] uppercase tracking-[0.1em] text-gold">

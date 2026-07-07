@@ -47,7 +47,7 @@ export default function WhyWhitmore() {
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Why Whitmore
           </p>
-          <h2 className="mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+          <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
             How We Approach Every Matter
           </h2>
         </div>
@@ -59,7 +59,7 @@ export default function WhyWhitmore() {
               <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-16">
                 {row.map((item) => (
                   <div key={item.title}>
-                    <h3 className="font-display text-[28px] font-bold tracking-[-0.01em] text-ink">
+                    <h3 className="font-display text-h3 font-bold tracking-[-0.01em] text-ink">
                       {item.title}
                     </h3>
                     <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">

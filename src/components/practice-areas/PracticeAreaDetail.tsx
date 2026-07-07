@@ -58,7 +58,7 @@ export default function PracticeAreaDetail({
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Practice Area
           </p>
-          <h1 className="mt-3 font-display text-[56px] font-bold leading-[1.1] tracking-[-0.02em] text-cream">
+          <h1 className="mt-3 font-display text-h1 font-bold leading-[1.1] tracking-[-0.02em] text-cream">
             {area.title}
           </h1>
           <p className="mt-6 max-w-2xl font-body text-[20px] leading-[1.65] text-[#9CAFC0]">
@@ -121,7 +121,7 @@ export default function PracticeAreaDetail({
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             How We Approach {area.title}
           </p>
-          <h2 className="mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+          <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
             Our Process
           </h2>
         </div>
@@ -138,7 +138,7 @@ export default function PracticeAreaDetail({
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Common Questions
           </p>
-          <h2 className="mb-10 mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+          <h2 className="mb-10 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
             Frequently Asked Questions
           </h2>
           <FAQAccordion faqs={area.faqs} />
@@ -154,7 +154,7 @@ export default function PracticeAreaDetail({
             <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
               Representative Matters
             </p>
-            <h2 className="mb-10 mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+            <h2 className="mb-10 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
               Case Results
             </h2>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">

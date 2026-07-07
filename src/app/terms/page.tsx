@@ -24,7 +24,7 @@ export default function TermsPage() {
             <span className="text-cream/70">Terms of Use</span>
           </nav>
           <GoldRule className="mt-6" />
-          <h1 className="mt-4 font-display text-[44px] font-bold tracking-[-0.02em] text-cream">
+          <h1 className="mt-4 font-display text-h1-legal font-bold tracking-[-0.02em] text-cream">
             Terms of Use
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function TermsPage() {
             Effective Date: January 1, 2025
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             1. Acceptance of Terms
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -45,7 +45,7 @@ export default function TermsPage() {
             Terms of Use. If you do not agree, please do not use this website.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             2. No Attorney-Client Relationship
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -56,7 +56,7 @@ export default function TermsPage() {
             legal counsel.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             3. Informational Purpose Only
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -66,7 +66,7 @@ export default function TermsPage() {
             constitute a guarantee or prediction of outcome in any future matter.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             4. Intellectual Property
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -77,7 +77,7 @@ export default function TermsPage() {
             our express written consent.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             5. Third-Party Links
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -87,7 +87,7 @@ export default function TermsPage() {
             site.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             6. Limitation of Liability
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -97,7 +97,7 @@ export default function TermsPage() {
             content.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             7. Governing Law
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
@@ -105,7 +105,7 @@ export default function TermsPage() {
             without regard to its conflict-of-law provisions.
           </p>
 
-          <h2 className="mb-4 mt-10 font-display text-[28px] font-bold text-ink">
+          <h2 className="mb-4 mt-10 font-display text-h2-legal font-bold text-ink">
             8. Contact
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">

@@ -5,7 +5,7 @@ export default function CTASection() {
     <section className="bg-navy w-full py-24">
       <div className="max-w-[620px] mx-auto text-center px-6">
         <div className="w-10 h-px bg-gold mx-auto mb-8" />
-        <h2 className="font-display text-5xl font-bold tracking-tight text-cream leading-tight">
+        <h2 className="font-display text-h2 font-bold text-cream">
           Ready to Recover What&apos;s Yours?
         </h2>
         <p className="font-body text-lg text-muted leading-relaxed mt-6">

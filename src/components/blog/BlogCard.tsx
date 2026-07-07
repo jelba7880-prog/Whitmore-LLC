@@ -51,7 +51,7 @@ export default function BlogCard({
           <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
             {post.practiceArea}
           </p>
-          <h2 className="font-display text-[36px] font-bold leading-[1.15] tracking-[-0.01em] text-ink">
+          <h2 className="font-display text-h2-blog-card font-bold leading-[1.15] tracking-[-0.01em] text-ink">
             {post.title}
           </h2>
           <p className="mt-4 font-body text-[17px] leading-[1.7] text-muted">
@@ -94,7 +94,7 @@ export default function BlogCard({
         <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
           {post.practiceArea}
         </p>
-        <h3 className="font-display text-[22px] font-bold leading-[1.25] tracking-[-0.01em] text-ink">
+        <h3 className="font-display text-h3-blog-card font-bold leading-[1.25] tracking-[-0.01em] text-ink">
           {post.title}
         </h3>
         <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted">

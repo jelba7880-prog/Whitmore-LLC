@@ -60,7 +60,7 @@ export default function AttorneyProfile({
             <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
               {attorney.title}
             </p>
-            <h1 className="mt-3 font-display text-[56px] font-bold leading-[1.1] tracking-[-0.02em] text-cream">
+            <h1 className="mt-3 font-display text-h1 font-bold leading-[1.1] tracking-[-0.02em] text-cream">
               {attorney.name}
             </h1>
 
@@ -172,7 +172,7 @@ export default function AttorneyProfile({
           <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
             Biography
           </p>
-          <h2 className="mb-8 mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+          <h2 className="mb-8 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
             About {lastName}
           </h2>
 
@@ -204,7 +204,7 @@ export default function AttorneyProfile({
             <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
               Representative Matters
             </p>
-            <h2 className="mb-10 mt-3 font-display text-[40px] font-bold tracking-[-0.02em] text-ink">
+            <h2 className="mb-10 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
               Notable Results
             </h2>
 
