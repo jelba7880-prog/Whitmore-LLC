@@ -1,4 +1,5 @@
 import GoldRule from "@/components/ui/GoldRule";
+import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 interface Differentiator {
   title: string;
@@ -42,35 +43,39 @@ export default function WhyWhitmore() {
   return (
     <section className="bg-parchment py-20">
       <div className="mx-auto max-w-content px-6">
-        <div className="mb-14 text-center">
-          <GoldRule variant="short" />
-          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
-            Why Whitmore
-          </p>
-          <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
-            How We Approach Every Matter
-          </h2>
-        </div>
+        {/* One-time entrance reveal (opacity/transform only) — no numbers here to
+            count or roll up. Matches IndustriesServed's RevealOnScroll treatment. */}
+        <RevealOnScroll>
+          <div className="mb-14 text-center">
+            <GoldRule variant="short" />
+            <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+              Why Whitmore
+            </p>
+            <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
+              How We Approach Every Matter
+            </h2>
+          </div>
 
-        <div className="mx-auto max-w-[1000px]">
-          {rows.map((row, index) => (
-            <div key={row[0].title}>
-              {index > 0 && <GoldRule className="my-10" />}
-              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-16">
-                {row.map((item) => (
-                  <div key={item.title}>
-                    <h3 className="font-display text-h3 font-bold tracking-[-0.01em] text-ink">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">
-                      {item.body}
-                    </p>
-                  </div>
-                ))}
+          <div className="mx-auto max-w-[1000px]">
+            {rows.map((row, index) => (
+              <div key={row[0].title}>
+                {index > 0 && <GoldRule className="my-10" />}
+                <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-16">
+                  {row.map((item) => (
+                    <div key={item.title}>
+                      <h3 className="font-display text-h3 font-bold tracking-[-0.01em] text-ink">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">
+                        {item.body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </RevealOnScroll>
       </div>
     </section>
   );

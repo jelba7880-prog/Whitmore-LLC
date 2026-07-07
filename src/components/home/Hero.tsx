@@ -1,17 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import ParallaxImage from "@/components/ui/ParallaxImage";
 
 export default function Hero() {
   return (
     <section className="relative min-h-[620px] overflow-hidden bg-navy">
-      <Image
-        src="/images/home/hero-courthouse.jpg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      <ParallaxImage>
+        <Image
+          src="/images/home/hero-courthouse.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </ParallaxImage>
       <div className="absolute inset-0 bg-navy/70" aria-hidden="true" />
 
       {/* SVG grain overlay — turbulence noise, no motion */}

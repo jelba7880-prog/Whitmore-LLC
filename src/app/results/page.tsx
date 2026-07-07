@@ -6,6 +6,7 @@ import { practiceAreas } from "@/lib/practice-areas";
 import CaseResultCard from "@/components/results/CaseResultCard";
 import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
+import ParallaxImage from "@/components/ui/ParallaxImage";
 
 export const metadata: Metadata = {
   title: "Case Results",
@@ -26,14 +27,16 @@ export default function ResultsPage() {
     <main className="bg-cream">
       {/* Page hero */}
       <section className="relative overflow-hidden bg-navy py-20">
-        <Image
-          src="/images/results/city-skyline.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <ParallaxImage>
+          <Image
+            src="/images/results/city-skyline.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </ParallaxImage>
         <div className="absolute inset-0 bg-navy/70" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-[1200px] px-6">
           <nav className="font-ui text-[11px] uppercase tracking-[0.1em] text-muted">

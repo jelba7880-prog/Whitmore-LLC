@@ -21,7 +21,7 @@ export default function PracticeAreaCards() {
             <Link
               key={area.slug}
               href={`/practice-areas/${area.slug}`}
-              className="border border-navy-light bg-parchment p-9 transition-all duration-200 hover:border-gold hover:shadow-[0_8px_32px_rgba(13,27,42,0.13)]"
+              className="border border-navy-light bg-parchment p-9 transition-all duration-200 hover:-translate-y-1 hover:border-gold hover:shadow-[0_14px_40px_rgba(13,27,42,0.18)]"
             >
               {/* Icon placeholder — SVG icons come later */}
               <div className="mb-6 flex h-[30px] w-[30px] items-center justify-center border border-gold/60">
