@@ -26,7 +26,7 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
           <div key={step.number} className="relative pb-12 last:pb-0">
             {/* Step circle — rounded-full permitted here only (design-tokens § 09) */}
             <div
-              className={`absolute left-[-58px] top-0 flex h-11 w-11 items-center justify-center rounded-full border ${
+              className={`absolute left-[-80px] top-0 flex h-11 w-11 items-center justify-center rounded-full border ${
                 isLast ? "border-navy bg-navy" : "border-gold bg-cream"
               }`}
             >
