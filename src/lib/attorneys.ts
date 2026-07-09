@@ -20,7 +20,7 @@ export const attorneys: Attorney[] = [
       "commercial-litigation",
       "securities-fraud",
     ],
-    imageUrl: undefined,
+    imageUrl: "/images/attorneys/richard-whitmore.jpg",
     initials: "RW",
     education: [
       "J.D., Fordham University School of Law",
@@ -46,7 +46,7 @@ export const attorneys: Attorney[] = [
       "economic-disputes",
       "contract-disputes",
     ],
-    imageUrl: undefined,
+    imageUrl: "/images/attorneys/catherine-harlow.jpg",
     initials: "CH",
     education: [
       "J.D., UCLA School of Law",
