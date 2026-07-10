@@ -18,7 +18,7 @@ A high-credibility law firm website for a fraud recovery and commercial litigati
 1. **Every link resolves.** No `href="#"` anywhere. If a page isn't built yet, create a shell with real metadata.
 2. **Single canonical stat block.** The only permitted firm statistics are: `$2.1B Recovered · 350+ Cases · 18 Years · 28 States`. These same four numbers appear in the Stats Bar and nowhere else in a different form.
 3. **Custom domain email only.** `contact@whitmore-assoc.com` — no Gmail, no generic addresses, ever.
-4. **Bar numbers on every attorney card/profile.** Format: `NY Bar #XXXXXXX · [Verify with NY State Bar →]`
+4. **Bar numbers are optional pending verification.** `barNumbers` may be an empty array — real numbers were never verified and were removed as placeholder/fabricated data (see `pre-launch-checklist.md`). When present, format: `NY Bar #XXXXXXX · [Verify with NY State Bar →]`. There is no build-time invariant requiring a non-empty array, and attorney cards/profiles render correctly with none.
 5. **Blog authors must match `/attorneys` roster exactly.** If an attorney isn't on the roster page, they cannot author a post.
 6. **No animated counters.** Stats are static text, never JavaScript number roll-ups. A single one-time fade/slide-in-on-scroll-into-view (e.g. via `IntersectionObserver` + opacity/transform transition) is permitted on the StatsBar, Industries section, Why Whitmore section, and Process Timeline (each step may reveal in sequence, once, as it scrolls into view), but the displayed value/number must never tick, increment, or roll up from zero — it renders at final value immediately, only the entrance is animated. No continuously scroll-linked effects (e.g. a rail line that fills proportionally with scroll position) without separate sign-off — that's a different animation category than a one-time reveal and hasn't been vetted yet.
 7. **No border-radius on cards or buttons.** Sharp corners throughout, per design system.
@@ -166,7 +166,7 @@ export interface Attorney {
   slug: string;
   name: string;
   title: string;              // e.g. "Managing Partner"
-  barNumbers: {
+  barNumbers: {              // may be [] — real numbers pending verification, see pre-launch-checklist.md
     state: string;            // e.g. "NY"
     number: string;           // e.g. "5892012"
     verifyUrl: string;        // e.g. "https://iapps.courts.state.ny.us/..."
@@ -292,8 +292,7 @@ export const STATS = [
 
 ### AttorneyCard (horizontal layout)
 - Photo slot: `w-[196px] flex-shrink-0 bg-navy-light` — grayscale image or initials fallback
-- **Always render bar number + verify link** — missing either is a hard failure
-- Never render if `attorney.barNumbers` is empty
+- Bar number + verify link rendering has been removed pending real, verified data (see `pre-launch-checklist.md`); the card renders correctly with an empty `attorney.barNumbers` array and does not require one
 
 ### PracticeArea [slug] pages
 Must include all of:
@@ -335,7 +334,7 @@ Section order (strict):
 6. Inline CTA ("Discuss Your Case")
 
 ### Attorney Profile pages (`/attorneys/[slug]`)
-1. Attorney hero: name, title, bar number + verify link, practice areas
+1. Attorney hero: name, title, practice areas (bar number + verify link rendering removed pending real, verified data — see `pre-launch-checklist.md`)
 2. Full biography
 3. Notable matters (case result cards, no client names)
 4. Articles by this attorney (blog cards)
