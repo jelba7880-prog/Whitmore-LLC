@@ -44,14 +44,6 @@ export default function AttorneysPage() {
               <AttorneyCard key={attorney.slug} attorney={attorney} />
             ))}
           </div>
-
-          <div className="mt-12 border-t border-navy-light pt-8">
-            <p className="text-center font-ui text-[12px] text-muted">
-              Bar admission and verification information is current as of the
-              date of this publication. Verify current status directly with the
-              relevant state bar.
-            </p>
-          </div>
         </div>
       </section>
     </main>

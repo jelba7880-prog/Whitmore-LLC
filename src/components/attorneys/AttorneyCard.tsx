@@ -10,13 +10,6 @@ interface AttorneyCardProps {
 // Horizontal attorney card (design-tokens.md § 07). Reused on /attorneys and the
 // homepage teaser. Photo left, content right; sharp corners, gold hover border.
 export default function AttorneyCard({ attorney }: AttorneyCardProps) {
-  // Hard Rule #8 — a card without a bar number is a hard failure. Never render one.
-  if (attorney.barNumbers.length === 0) {
-    throw new Error(
-      `Attorney ${attorney.slug} has no bar numbers — violates Hard Rule #8`,
-    );
-  }
-
   // Placeholder bios are stored as TODO comment strings, or left empty
   // pending content; never surface either as rendered copy.
   const showBio = attorney.bio.length > 0 && !attorney.bio.startsWith("{/*");
@@ -50,27 +43,6 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
         <p className="mt-1 font-ui text-[11px] uppercase tracking-[0.12em] text-gold">
           {attorney.title}
         </p>
-
-        {/* Bar numbers + verify links (Hard Rule #8) */}
-        <div className="mt-2 font-ui text-[12px] text-muted">
-          {attorney.barNumbers.map((bar) => (
-            <span key={`${bar.state}-${bar.number}`}>
-              {bar.state} Bar #{bar.number} &middot;{" "}
-              {bar.linkable === false ? (
-                <span className="text-muted">verify at {bar.verifyUrl}</span>
-              ) : (
-                <a
-                  href={bar.verifyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative z-10 text-gold transition-colors hover:text-gold-light"
-                >
-                  Verify &rarr;
-                </a>
-              )}
-            </span>
-          ))}
-        </div>
 
         {showBio && (
           <p className="mt-4 font-body text-[15px] leading-[1.7] text-ink">
