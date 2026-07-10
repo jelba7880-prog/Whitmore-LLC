@@ -7,7 +7,7 @@ import { attorneys } from "@/lib/attorneys";
 export const metadata: Metadata = {
   title: "Our Attorneys",
   description:
-    "Meet the attorneys at Whitmore & Associates LLP — experienced fraud recovery and commercial litigation counsel.",
+    "Meet the attorneys at Whitmore Harlow LLP — experienced fraud recovery and commercial litigation counsel.",
 };
 
 export default function AttorneysPage() {

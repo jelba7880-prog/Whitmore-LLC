@@ -42,10 +42,13 @@ export default function Footer() {
           {/* Column 1 — Firm */}
           <div>
             <div className="font-display text-xl text-cream">
-              Whitmore <span className="text-gold">&</span> Associates LLP
+              Whitmore Harlow{" "}
+              <span className="font-ui text-xs uppercase tracking-widest text-gold">
+                LLP
+              </span>
             </div>
             <p className="font-body text-sm text-cream/60 mt-4 leading-relaxed max-w-[320px]">
-              Whitmore &amp; Associates LLP is a commercial litigation and
+              Whitmore Harlow LLP is a commercial litigation and
               fraud recovery practice representing businesses, investors, and
               individuals in complex disputes across state, federal, and
               international forums.
@@ -140,7 +143,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="font-ui text-[11px] text-muted mt-4">
-          © {new Date().getFullYear()} Whitmore & Associates LLP. All rights
+          © {new Date().getFullYear()} Whitmore Harlow LLP. All rights
           reserved.
         </p>
       </div>

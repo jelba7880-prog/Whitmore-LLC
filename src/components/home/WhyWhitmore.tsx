@@ -49,7 +49,7 @@ export default function WhyWhitmore() {
           <div className="mb-14 text-center">
             <GoldRule variant="short" />
             <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
-              Why Whitmore
+              Why Whitmore Harlow
             </p>
             <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
               How We Approach Every Matter

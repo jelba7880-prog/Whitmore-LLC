@@ -5,7 +5,7 @@ import type { Testimonial } from "@/types";
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "After years of failed attempts with other firms, Whitmore & Associates recovered the full principal and interest within fourteen months. Their command of complex financial fraud litigation is unmatched.",
+      "After years of failed attempts with other firms, Whitmore Harlow recovered the full principal and interest within fourteen months. Their command of complex financial fraud litigation is unmatched.",
     clientType: "Institutional Client",
     matterType: "Securities Fraud Matter",
     court: "Southern District of New York",
@@ -13,7 +13,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "When the funds moved through three jurisdictions in as many weeks, most firms told us to expect years of delay. Whitmore & Associates traced and froze the assets before the trail went cold.",
+      "When the funds moved through three jurisdictions in as many weeks, most firms told us to expect years of delay. Whitmore Harlow traced and froze the assets before the trail went cold.",
     clientType: "Family Office",
     matterType: "Cross-Border Asset Recovery",
     court: "Southern District of Florida",
@@ -29,7 +29,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "A supplier falsified certifications for over a year before we caught it. Whitmore & Associates untangled the paper trail and secured restitution without dragging the case through a jury trial.",
+      "A supplier falsified certifications for over a year before we caught it. Whitmore Harlow untangled the paper trail and secured restitution without dragging the case through a jury trial.",
     clientType: "Manufacturing Company",
     matterType: "Commercial Contract Fraud",
     court: "Northern District of Illinois",
@@ -45,7 +45,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "Winning the arbitration was only half the battle — enforcing it across borders was the real fight. Whitmore & Associates handled that fight without losing a step.",
+      "Winning the arbitration was only half the battle — enforcing it across borders was the real fight. Whitmore Harlow handled that fight without losing a step.",
     clientType: "International Trading Company",
     matterType: "Arbitration Award Enforcement",
     court: "ICC Arbitration (Paris); enforced S.D. New York",

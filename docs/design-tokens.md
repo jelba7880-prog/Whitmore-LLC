@@ -1,4 +1,4 @@
-# Whitmore & Associates LLP — Design Tokens
+# Whitmore Harlow LLP — Design Tokens
 
 > Canonical reference. Do not modify without design review.Extracted from Claude Design system v1.0
 
@@ -117,7 +117,7 @@ into the token: apply `font-bold` (700) at each usage site.
 
 * Height: `72px` desktop, `54px` mobile
 * Background: `--navy`
-* Wordmark: Cormorant Garamond 21px 700, cream; `&` in gold
+* Wordmark: Cormorant Garamond 21px 700, "Whitmore Harlow" in cream; "LLP" set smaller/tracked in gold (Jost, uppercase, tracking-widest)
 * Nav links: Jost 13px, 0.1em tracking, uppercase, cream 0.8 opacity
 * Active link: gold color + 1px gold underline
 * CTA button: Jost 12px, gold border + gold text; hover → gold fill, navy text
@@ -221,7 +221,7 @@ into the token: apply `font-bold` (700) at each usage site.
 * Background: `--navy`
 * **Gold top rule:** `border-top: 1px solid var(--gold)`
 * Grid: `2fr 1fr 1fr 1.5fr` desktop, stack on mobile
-* Wordmark: Cormorant Garamond 22px 700, cream; `&` in gold
+* Wordmark: Cormorant Garamond 22px 700, "Whitmore Harlow" in cream; "LLP" set smaller/tracked in gold (Jost, uppercase, tracking-widest)
 * Column headers: Jost 10px, 0.18em tracking, uppercase, **gold**; `padding-bottom: 12px; border-bottom: 1px solid --navy-light`
 * Links: Jost 13px, cream 0.6 opacity; hover → opacity 1 + gold-light
 * Address: Source Serif 4 15px, cream 0.65 opacity

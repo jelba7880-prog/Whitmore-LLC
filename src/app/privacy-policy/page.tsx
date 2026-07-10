@@ -5,7 +5,7 @@ import GoldRule from "@/components/ui/GoldRule";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Whitmore & Associates LLP collects, uses, and protects information submitted through this website.",
+    "How Whitmore Harlow LLP collects, uses, and protects information submitted through this website.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
             8. Contact
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
-            Whitmore &amp; Associates LLP &middot; One Liberty Plaza, Suite 4200
+            Whitmore Harlow LLP &middot; One Liberty Plaza, Suite 4200
             &middot; New York, NY 10006
             <br />
             contact@whitmore-assoc.com &middot; (212) 555-0100

@@ -1,4 +1,4 @@
-# CLAUDE.md — Whitmore & Associates LLP Website
+# CLAUDE.md — Whitmore Harlow LLP Website
 > Senior developer brief for Claude Code. Read this entire file before writing any code.
 
 ---
@@ -283,7 +283,7 @@ export const STATS = [
 
 ### WhyWhitmore
 - Server component, no client state, no scroll-entrance animation (Hard Rule #6 reserves the one-time reveal animation for StatsBar and IndustriesServed only)
-- Background `--parchment`; eyebrow "Why Whitmore" (Jost 11px, 0.2em tracking, uppercase, gold); H2 "How We Approach Every Matter" (Cormorant Garamond 40px 700, −0.02em, ink)
+- Background `--parchment`; eyebrow "Why Whitmore Harlow" (Jost 11px, 0.2em tracking, uppercase, gold); H2 "How We Approach Every Matter" (Cormorant Garamond 40px 700, −0.02em, ink)
 - Six equal-weight differentiators (Strategic Thinking, Partner-Level Attention, Business-Minded Advice, Cross-Border Perspective, Efficient Resolution, Clear Communication) in a stacked 2-column × 3-row editorial text list — **no icons, no borders, no per-item background fill**; this is deliberately not a card grid
 - Item: headline Cormorant Garamond 28px 700 −0.01em ink, 1–2 sentence supporting copy Source Serif 4 17px muted, line-height 1.75
 - Rows separated by the existing `GoldRule` component (default `solid` variant) as a thin horizontal divider — between rows only, never between the two columns
@@ -382,13 +382,13 @@ When starting the build, complete in this order:
 Each page must export a `generateMetadata` or static `metadata` object:
 ```ts
 export const metadata: Metadata = {
-  title: 'Page Title | Whitmore & Associates LLP',
+  title: 'Page Title | Whitmore Harlow LLP',
   description: '...',
   openGraph: { ... },
 }
 ```
 
-Root layout title template: `'%s | Whitmore & Associates LLP'`
+Root layout title template: `'%s | Whitmore Harlow LLP'`
 
 ---
 
@@ -404,7 +404,7 @@ Root layout title template: `'%s | Whitmore & Associates LLP'`
 ## California Bar Compliance
 
 All pages must have in footer:
-> "Attorney Advertising. Results may vary. Past results do not guarantee future outcomes. Whitmore & Associates LLP is licensed in [states]. [Bar number(s)]."
+> "Attorney Advertising. Results may vary. Past results do not guarantee future outcomes. Whitmore Harlow LLP is licensed in [states]. [Bar number(s)]."
 
 Practice area pages with success statistics must include:
 > "Past results do not guarantee future outcomes. Each case is unique."

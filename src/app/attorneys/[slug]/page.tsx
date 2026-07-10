@@ -21,7 +21,7 @@ export async function generateMetadata({
 
   return {
     title: attorney.name,
-    description: `${attorney.name} is a ${attorney.title} at Whitmore & Associates LLP, focusing on ${attorney.practiceAreas
+    description: `${attorney.name} is a ${attorney.title} at Whitmore Harlow LLP, focusing on ${attorney.practiceAreas
       .slice(0, 2)
       .join(" and ")}.`,
   };

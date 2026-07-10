@@ -27,11 +27,11 @@ const jost = Jost({
 
 export const metadata: Metadata = {
   title: {
-    default: "Whitmore & Associates LLP",
-    template: "%s | Whitmore & Associates LLP",
+    default: "Whitmore Harlow LLP",
+    template: "%s | Whitmore Harlow LLP",
   },
   description:
-    "Whitmore & Associates LLP — fraud recovery and commercial litigation counsel.",
+    "Whitmore Harlow LLP — fraud recovery and commercial litigation counsel.",
 };
 
 export default function RootLayout({
