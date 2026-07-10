@@ -8,6 +8,7 @@
 A high-credibility law firm website for a fraud recovery and commercial litigation practice. Built as a clean, trustworthy replacement for a previous site that failed a credibility audit (inconsistent stats, dead links, Gmail contact, AI-obvious copy, mismatched attorney names).
 
 **Stack:** Next.js 14+ (App Router), TypeScript, Tailwind CSS v3, Vercel deployment  
+**Production URL:** https://whitmore-harlow.vercel.app  
 **Design system:** `docs/design-tokens.md` — canonical token and component spec; read it before styling anything
 
 ---
