@@ -5,7 +5,7 @@ import GoldRule from "@/components/ui/GoldRule";
 export const metadata: Metadata = {
   title: "Accessibility",
   description:
-    "The accessibility commitment and accommodations offered by Whitmore & Associates LLP for visitors to this website.",
+    "The accessibility commitment and accommodations offered by Whitmore Harlow LLP for visitors to this website.",
 };
 
 export default function AccessibilityPage() {
@@ -41,7 +41,7 @@ export default function AccessibilityPage() {
             1. Our Commitment
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
-            Whitmore &amp; Associates LLP is committed to ensuring that this
+            Whitmore Harlow LLP is committed to ensuring that this
             website is accessible to all users, including those with
             disabilities. We aim to conform to the Web Content Accessibility
             Guidelines (WCAG) 2.1 Level AA.

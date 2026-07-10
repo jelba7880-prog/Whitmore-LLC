@@ -5,7 +5,7 @@ import GoldRule from "@/components/ui/GoldRule";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "The terms governing use of the Whitmore & Associates LLP website.",
+    "The terms governing use of the Whitmore Harlow LLP website.",
 };
 
 export default function TermsPage() {
@@ -51,7 +51,7 @@ export default function TermsPage() {
           <p className="font-body text-[18px] leading-[1.8] text-ink">
             Nothing on this website constitutes legal advice, and use of this
             website does not create an attorney-client relationship between you
-            and Whitmore &amp; Associates LLP. Do not act or refrain from acting
+            and Whitmore Harlow LLP. Do not act or refrain from acting
             based on information on this website without first seeking qualified
             legal counsel.
           </p>
@@ -71,7 +71,7 @@ export default function TermsPage() {
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
             All content on this website, including text, design, graphics, and
-            code, is the property of Whitmore &amp; Associates LLP or its
+            code, is the property of Whitmore Harlow LLP or its
             licensors and is protected by applicable intellectual property laws.
             You may not reproduce, distribute, or create derivative works without
             our express written consent.
@@ -91,7 +91,7 @@ export default function TermsPage() {
             6. Limitation of Liability
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
-            To the fullest extent permitted by law, Whitmore &amp; Associates LLP
+            To the fullest extent permitted by law, Whitmore Harlow LLP
             shall not be liable for any indirect, incidental, or consequential
             damages arising from your use of this website or reliance on its
             content.
@@ -109,7 +109,7 @@ export default function TermsPage() {
             8. Contact
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
-            Whitmore &amp; Associates LLP &middot; One Liberty Plaza, Suite 4200
+            Whitmore Harlow LLP &middot; One Liberty Plaza, Suite 4200
             &middot; New York, NY 10006
             <br />
             contact@whitmore-assoc.com

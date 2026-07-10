@@ -14,7 +14,7 @@ export const attorneys: Attorney[] = [
         linkable: false,
       },
     ],
-    bio: "Richard Whitmore is the founding partner of Whitmore & Associates LLP, concentrating his practice on fraud and asset recovery, commercial litigation, and securities matters. He has represented businesses, investors, and individuals in disputes involving misappropriated funds, breach of fiduciary duty, and complex commercial fraud, litigating before state and federal courts in New York, including the U.S. District Court for the Southern District of New York. He regularly works with forensic accountants and asset-tracing investigators to pursue recovery across multiple jurisdictions.",
+    bio: "Richard Whitmore is the founding partner of Whitmore Harlow LLP, concentrating his practice on fraud and asset recovery, commercial litigation, and securities matters. He has represented businesses, investors, and individuals in disputes involving misappropriated funds, breach of fiduciary duty, and complex commercial fraud, litigating before state and federal courts in New York, including the U.S. District Court for the Southern District of New York. He regularly works with forensic accountants and asset-tracing investigators to pursue recovery across multiple jurisdictions.",
     practiceAreas: [
       "fraud-asset-recovery",
       "commercial-litigation",

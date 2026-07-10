@@ -7,7 +7,7 @@ import { practiceAreas } from "@/lib/practice-areas";
 export const metadata: Metadata = {
   title: "Practice Areas",
   description:
-    "Whitmore & Associates LLP handles fraud recovery, commercial litigation, securities fraud, economic disputes, contract disputes, and international arbitration.",
+    "Whitmore Harlow LLP handles fraud recovery, commercial litigation, securities fraud, economic disputes, contract disputes, and international arbitration.",
 };
 
 export default function PracticeAreasPage() {

@@ -5,7 +5,7 @@ import GoldRule from "@/components/ui/GoldRule";
 export const metadata: Metadata = {
   title: "Legal Disclaimer",
   description:
-    "Legal disclaimer regarding the information presented on the Whitmore & Associates LLP website.",
+    "Legal disclaimer regarding the information presented on the Whitmore Harlow LLP website.",
 };
 
 export default function DisclaimerPage() {
@@ -71,7 +71,7 @@ export default function DisclaimerPage() {
             4. Jurisdiction
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
-            Whitmore &amp; Associates LLP attorneys are licensed in New York and
+            Whitmore Harlow LLP attorneys are licensed in New York and
             California. References to practice in other jurisdictions reflect
             matters handled in association with locally licensed counsel where
             required by applicable rules.

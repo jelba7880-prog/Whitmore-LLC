@@ -6,7 +6,7 @@ import ContactForm from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Whitmore & Associates LLP. Phone, address, office hours, and secure inquiry form. All communications are confidential.",
+    "Contact Whitmore Harlow LLP. Phone, address, office hours, and secure inquiry form. All communications are confidential.",
 };
 
 // Shared gold section-label style for the firm info card (design-tokens.md § 12).

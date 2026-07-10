@@ -11,7 +11,7 @@ import ParallaxImage from "@/components/ui/ParallaxImage";
 export const metadata: Metadata = {
   title: "Case Results",
   description:
-    "Representative case results for Whitmore & Associates LLP. Past results do not guarantee future outcomes.",
+    "Representative case results for Whitmore Harlow LLP. Past results do not guarantee future outcomes.",
 };
 
 export default function ResultsPage() {
@@ -90,7 +90,7 @@ export default function ResultsPage() {
           <div className="mt-8 border-t border-navy-light pt-8">
             <p className="mx-auto max-w-[760px] text-center font-ui text-[12px] text-muted">
               The case results described above are intended to illustrate the
-              types of matters handled by Whitmore &amp; Associates LLP. Results
+              types of matters handled by Whitmore Harlow LLP. Results
               depend upon a variety of factors unique to each matter and do not
               guarantee or predict a similar result in any future case. Attorney
               Advertising.

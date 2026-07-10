@@ -6,7 +6,7 @@ import IntakeForm from "@/components/contact/IntakeForm";
 export const metadata: Metadata = {
   title: "Free Consultation",
   description:
-    "Request a free, confidential case evaluation from Whitmore & Associates LLP. No obligation.",
+    "Request a free, confidential case evaluation from Whitmore Harlow LLP. No obligation.",
 };
 
 export default function FreeConsultationPage() {

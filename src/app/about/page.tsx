@@ -7,7 +7,7 @@ import SectionDivider from "@/components/ui/SectionDivider";
 export const metadata: Metadata = {
   title: "About the Firm",
   description:
-    "Whitmore & Associates LLP is a fraud recovery and commercial litigation practice founded on the principle that complex financial harm demands sophisticated legal response.",
+    "Whitmore Harlow LLP is a fraud recovery and commercial litigation practice founded on the principle that complex financial harm demands sophisticated legal response.",
 };
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
             The Firm
           </p>
           <h1 className="mt-3 font-display text-h1 font-bold leading-[1.1] tracking-[-0.02em] text-cream">
-            About Whitmore &amp; Associates
+            About Whitmore Harlow
           </h1>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function AboutPage() {
           </h2>
           <div className="space-y-6 font-body text-[18px] leading-[1.8] text-ink">
             <p>
-              Whitmore &amp; Associates LLP was founded on a straightforward
+              Whitmore Harlow LLP was founded on a straightforward
               premise: victims of financial fraud and commercial misconduct
               deserve the same caliber of representation that sophisticated
               institutions retain. Since our founding, we have built a practice
@@ -141,7 +141,7 @@ export default function AboutPage() {
             <div className="relative aspect-[3/2] w-full overflow-hidden border border-navy-light bg-navy-mid">
               <Image
                 src="/images/about/office-interior.jpg"
-                alt="A conference room at Whitmore & Associates LLP"
+                alt="A conference room at Whitmore Harlow LLP"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -172,7 +172,7 @@ export default function AboutPage() {
       <section className="bg-navy py-12">
         <div className="mx-auto max-w-[760px] px-6 text-center">
           <p className="font-ui text-[12px] leading-[1.8] text-cream/50">
-            Whitmore &amp; Associates LLP is licensed to practice law in New York
+            Whitmore Harlow LLP is licensed to practice law in New York
             and California. For matters in other jurisdictions, we associate with
             qualified local counsel. Attorney Advertising. Prior results do not
             guarantee similar outcomes.

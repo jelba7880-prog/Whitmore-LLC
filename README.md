@@ -1,1 +1,1 @@
-# Whitmore-LLC
+# Whitmore Harlow LLP

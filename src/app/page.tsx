@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   // `absolute` bypasses the root layout title template so the suffix isn't doubled.
   title: {
     absolute:
-      "Fraud Recovery & Commercial Litigation | Whitmore & Associates LLP",
+      "Fraud Recovery & Commercial Litigation | Whitmore Harlow LLP",
   },
   description:
-    "Whitmore & Associates LLP represents individuals and institutions in complex fraud recovery, commercial litigation, and investment disputes. $2.1B recovered.",
+    "Whitmore Harlow LLP represents individuals and institutions in complex fraud recovery, commercial litigation, and investment disputes. $2.1B recovered.",
 };
 
 export default function HomePage() {

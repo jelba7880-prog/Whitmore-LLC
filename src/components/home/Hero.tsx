@@ -48,7 +48,7 @@ export default function Hero() {
             Commercial Litigation &middot; Economic Disputes &middot; Fraud Recovery &middot; International Arbitration
           </p>
           <p className="mt-6 max-w-xl font-body text-[20px] leading-[1.65] text-[#9CAFC0]">
-            Whitmore &amp; Associates LLP represents businesses, institutions, and
+            Whitmore Harlow LLP represents businesses, institutions, and
             individuals pursuing or defending complex commercial and fraud
             claims.
           </p>

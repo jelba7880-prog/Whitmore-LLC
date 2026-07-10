@@ -43,7 +43,10 @@ export default function Navbar() {
           href="/"
           className="font-display text-[18px] md:text-[21px] font-bold text-cream"
         >
-          Whitmore <span className="text-gold">&amp;</span> Associates LLP
+          Whitmore Harlow{" "}
+          <span className="font-ui text-xs uppercase tracking-widest text-gold">
+            LLP
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
