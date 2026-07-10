@@ -64,39 +64,6 @@ export default function AttorneyProfile({
               {attorney.name}
             </h1>
 
-            {/* Bar numbers */}
-            <div className="mt-6">
-              {attorney.barNumbers.map((bar, index) => (
-                <div key={`${bar.state}-${bar.number}`}>
-                  {index > 0 && (
-                    <div
-                      className="my-2 border-b border-navy-light"
-                      aria-hidden="true"
-                    />
-                  )}
-                  <div className="flex items-center gap-3 font-ui text-[13px] text-cream/70">
-                    <span>
-                      &#9679; {bar.state} Bar #{bar.number}
-                    </span>
-                    {bar.linkable === false ? (
-                      <span className="ml-1 text-cream/50">
-                        verify at {bar.verifyUrl}
-                      </span>
-                    ) : (
-                      <a
-                        href={bar.verifyUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="ml-1 text-gold transition-colors hover:text-gold-light"
-                      >
-                        Verify with {bar.state} State Bar &rarr;
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-
             {/* Bar admissions */}
             {attorney.admissions && attorney.admissions.length > 0 && (
               <div className="mt-4">

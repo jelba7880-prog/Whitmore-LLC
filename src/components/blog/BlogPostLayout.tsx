@@ -35,8 +35,6 @@ export default function BlogPostLayout({
   const hasContent =
     post.content.length > 0 && !post.content.trimStart().startsWith("{/*");
 
-  const firstBar = author.barNumbers[0];
-
   const heroImage = post.heroImage;
 
   return (
@@ -141,11 +139,6 @@ export default function BlogPostLayout({
               <p className="mt-1 font-ui text-[10px] uppercase tracking-[0.12em] text-gold">
                 {author.title}
               </p>
-              {firstBar && (
-                <p className="mt-2 font-ui text-[11px] text-muted">
-                  {firstBar.state} Bar #{firstBar.number}
-                </p>
-              )}
             </div>
 
             {/* Practice area card */}
