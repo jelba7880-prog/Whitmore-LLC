@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { practiceAreas } from "@/lib/practice-areas";
 
 const NAV_LINKS = [
-  { href: "/about", label: "About" },
   { href: "/attorneys", label: "Attorneys" },
   { href: "/results", label: "Results" },
 ];
@@ -78,15 +77,18 @@ export default function Navbar() {
               Practice Areas
             </Link>
 
-            <div className="invisible absolute left-0 top-full pt-4 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+            <div className="invisible absolute left-0 top-full pt-4 opacity-0 -translate-y-1 transition-[opacity,transform,visibility] duration-200 ease-out group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
               <div className="w-64 border-t border-gold bg-navy-mid py-3">
                 {practiceAreas.map((area) => (
                   <Link
                     key={area.slug}
                     href={`/practice-areas/${area.slug}`}
-                    className="block px-5 py-2.5 font-ui text-sm text-cream/80 transition-colors hover:text-gold-light"
+                    className="group/item flex items-center justify-between px-5 py-2.5 font-ui text-sm text-cream/80 transition-colors hover:text-gold-light"
                   >
                     {area.title}
+                    <span className="ml-3 opacity-0 -translate-x-1 transition-[opacity,transform] duration-200 ease-out group-hover/item:opacity-100 group-hover/item:translate-x-0">
+                      →
+                    </span>
                   </Link>
                 ))}
               </div>
