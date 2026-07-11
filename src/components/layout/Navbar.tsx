@@ -3,10 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { practiceAreas } from "@/lib/practice-areas";
 
 const NAV_LINKS = [
-  { href: "/about", label: "About" },
-  { href: "/practice-areas", label: "Practice Areas" },
   { href: "/attorneys", label: "Attorneys" },
   { href: "/results", label: "Results" },
 ];
@@ -14,6 +13,8 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobilePracticeAreasOpen, setMobilePracticeAreasOpen] =
+    useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMenuOpen(false);
+    setMobilePracticeAreasOpen(false);
   }, [pathname]);
 
   const isActive = (href: string) =>
@@ -50,6 +52,49 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
+          <Link
+            href="/about"
+            className={`font-ui text-sm uppercase tracking-[0.08em] pb-0.5 transition-colors ${
+              isActive("/about")
+                ? "text-gold border-b border-gold"
+                : "text-cream hover:text-gold-light"
+            }`}
+          >
+            About
+          </Link>
+
+          <div className="group relative">
+            <Link
+              href="/practice-areas"
+              aria-haspopup="true"
+              aria-expanded={isActive("/practice-areas")}
+              className={`font-ui text-sm uppercase tracking-[0.08em] pb-0.5 transition-colors ${
+                isActive("/practice-areas")
+                  ? "text-gold border-b border-gold"
+                  : "text-cream hover:text-gold-light"
+              }`}
+            >
+              Practice Areas
+            </Link>
+
+            <div className="invisible absolute left-0 top-full pt-4 opacity-0 -translate-y-1 transition-[opacity,transform,visibility] duration-200 ease-out group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+              <div className="w-64 border-t border-gold bg-navy-mid py-3">
+                {practiceAreas.map((area) => (
+                  <Link
+                    key={area.slug}
+                    href={`/practice-areas/${area.slug}`}
+                    className="group/item flex items-center justify-between px-5 py-2.5 font-ui text-sm text-cream/80 transition-colors hover:text-gold-light"
+                  >
+                    {area.title}
+                    <span className="ml-3 opacity-0 -translate-x-1 transition-[opacity,transform] duration-200 ease-out group-hover/item:opacity-100 group-hover/item:translate-x-0">
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -108,6 +153,49 @@ export default function Navbar() {
       >
         <div className="flex h-full flex-col justify-between px-6 py-10">
           <nav className="flex flex-col gap-6">
+            <Link
+              href="/about"
+              className={`font-display text-2xl ${
+                isActive("/about") ? "text-gold" : "text-cream"
+              }`}
+            >
+              About
+            </Link>
+
+            <div className="flex flex-col gap-4">
+              <button
+                type="button"
+                aria-expanded={mobilePracticeAreasOpen}
+                onClick={() => setMobilePracticeAreasOpen((open) => !open)}
+                className={`flex items-center justify-between font-display text-2xl ${
+                  isActive("/practice-areas") ? "text-gold" : "text-cream"
+                }`}
+              >
+                Practice Areas
+                <span
+                  className={`ml-3 font-ui text-base transition-transform duration-200 ${
+                    mobilePracticeAreasOpen ? "rotate-180" : ""
+                  }`}
+                >
+                  ▾
+                </span>
+              </button>
+
+              {mobilePracticeAreasOpen && (
+                <div className="flex flex-col gap-4 pl-4">
+                  {practiceAreas.map((area) => (
+                    <Link
+                      key={area.slug}
+                      href={`/practice-areas/${area.slug}`}
+                      className="font-display text-[18px] text-cream/80"
+                    >
+                      {area.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
