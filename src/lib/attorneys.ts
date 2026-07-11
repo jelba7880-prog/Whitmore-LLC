@@ -65,6 +65,7 @@ export const attorneys: Attorney[] = [
     bio: "Michael J. Reed is an accomplished and compassionate attorney licensed in the Commonwealth of Pennsylvania, concentrating his practice on securities and investment fraud and economic disputes. Inspired by a passion for helping clients solve complex problems, he strives to help investors and businesses navigate challenging litigation and provide them with the information they need to make empowered decisions about their financial interests.\n\nAttorney Reed grew up in Idaho, where he spent summers working on his grandfather's farm. During this time, he was instilled with the value of hard work, something he still draws on to this day. In his practice, he leaves no stone unturned in his pursuit of recovery for clients affected by financial misconduct and complex economic loss. He works directly with those he serves, providing honest, reliable, and clear communication to help ensure that they fully understand their legal rights and options.",
     // TODO: placeholder practice areas carried over from prior entry — confirm once real assignment is provided
     practiceAreas: ["securities-fraud", "economic-disputes"],
+    imageUrl: "/images/attorneys/michael-reed.jpg",
     initials: "MR",
     education: [],
   },
