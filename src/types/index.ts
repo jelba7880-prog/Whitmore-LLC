@@ -14,6 +14,7 @@ export interface Attorney {
   initials: string; // e.g. "RW"
   education?: string[];
   admissions?: string[];
+  languages?: string[];
 }
 
 export interface PracticeArea {

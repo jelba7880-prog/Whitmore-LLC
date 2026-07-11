@@ -128,6 +128,18 @@ export default function AttorneyProfile({
                 ))}
               </div>
             )}
+
+            {/* Languages */}
+            {attorney.languages && attorney.languages.length > 0 && (
+              <div className="mt-4">
+                <p className="mb-2 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
+                  Languages
+                </p>
+                <p className="font-body text-[14px] leading-[1.7] text-cream/70">
+                  {attorney.languages.join(" · ")}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
