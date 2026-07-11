@@ -57,18 +57,16 @@ export const attorneys: Attorney[] = [
     ],
   },
   {
-    slug: "priya-anand",
-    name: "Priya N. Anand",
+    slug: "michael-reed",
+    name: "Michael J. Reed",
     title: "Attorney and Counselor at Law",
     // TODO: real bar numbers pending verification — see pre-launch-checklist.md
     barNumbers: [],
-    bio: "Priya Anand concentrates her practice on securities and investment fraud and economic disputes, representing investors and business clients in matters involving financial misconduct and complex economic loss.\n\nPrior to joining Whitmore Harlow LLP, Priya spent several years in financial compliance at a Chicago-based investment firm before transitioning to legal practice — an experience that continues to inform how she approaches securities matters and financial-industry disputes. She is licensed to practice in New York.\n\nPriya regularly works with forensic accountants and financial experts to build the factual record necessary to support a client's claim, particularly in matters involving disputed valuations or complex transaction histories. Outside of work, Priya volunteers with a financial literacy program for first-generation college students and enjoys long-distance cycling.",
+    bio: "Michael J. Reed is an accomplished and compassionate attorney licensed in the Commonwealth of Pennsylvania, concentrating his practice on securities and investment fraud and economic disputes. Inspired by a passion for helping clients solve complex problems, he strives to help investors and businesses navigate challenging litigation and provide them with the information they need to make empowered decisions about their financial interests.\n\nAttorney Reed grew up in Idaho, where he spent summers working on his grandfather's farm. During this time, he was instilled with the value of hard work, something he still draws on to this day. In his practice, he leaves no stone unturned in his pursuit of recovery for clients affected by financial misconduct and complex economic loss. He works directly with those he serves, providing honest, reliable, and clear communication to help ensure that they fully understand their legal rights and options.",
+    // TODO: placeholder practice areas carried over from prior entry — confirm once real assignment is provided
     practiceAreas: ["securities-fraud", "economic-disputes"],
-    initials: "PA",
-    education: [
-      "J.D., Northwestern University Pritzker School of Law",
-      "B.S. Finance, University of Illinois at Urbana-Champaign",
-    ],
+    initials: "MR",
+    education: [],
   },
   {
     slug: "sarah-voss",
