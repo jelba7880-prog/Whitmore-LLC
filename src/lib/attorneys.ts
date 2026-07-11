@@ -47,13 +47,14 @@ export const attorneys: Attorney[] = [
     title: "Attorney and Counselor at Law",
     // TODO: real bar numbers pending verification — see pre-launch-checklist.md
     barNumbers: [],
-    bio: "Daniel Reyes concentrates his practice on commercial litigation and contract and partnership disputes, representing businesses and individual clients in disagreements arising from complex commercial relationships.\n\nBefore joining Whitmore Harlow LLP, Daniel practiced with a mid-sized commercial litigation firm in Philadelphia, where he represented clients in partnership dissolution disputes, breach of contract claims, and business valuation disagreements. He is licensed to practice in Pennsylvania.\n\nDaniel approaches each matter by identifying what a client actually needs to resolve a dispute, rather than defaulting to the most aggressive available strategy. Outside the office, Daniel is a distance runner and serves on the board of a Philadelphia-based legal aid nonprofit.",
+    bio: "Daniel Reyes concentrates his practice on commercial litigation and contract and partnership disputes, representing businesses and individual clients in disagreements arising from complex commercial relationships.\n\nBefore joining Whitmore Harlow LLP, Daniel practiced with a mid-sized commercial litigation firm in Philadelphia, where he represented clients in partnership dissolution disputes, breach of contract claims, and business valuation disagreements. He is licensed to practice in New York.\n\nDaniel approaches each matter by identifying what a client actually needs to resolve a dispute, rather than defaulting to the most aggressive available strategy. Outside the office, Daniel is a distance runner and serves on the board of a Philadelphia-based legal aid nonprofit.",
     practiceAreas: ["commercial-litigation", "contract-disputes"],
     initials: "DR",
     education: [
       "J.D., Temple University Beasley School of Law",
       "B.A. Economics, Villanova University",
     ],
+    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
   {
     slug: "priya-anand",
@@ -61,13 +62,14 @@ export const attorneys: Attorney[] = [
     title: "Attorney and Counselor at Law",
     // TODO: real bar numbers pending verification — see pre-launch-checklist.md
     barNumbers: [],
-    bio: "Priya Anand concentrates her practice on securities and investment fraud and economic disputes, representing investors and business clients in matters involving financial misconduct and complex economic loss.\n\nPrior to joining Whitmore Harlow LLP, Priya spent several years in financial compliance at a Chicago-based investment firm before transitioning to legal practice — an experience that continues to inform how she approaches securities matters and financial-industry disputes. She is licensed to practice in Illinois.\n\nPriya regularly works with forensic accountants and financial experts to build the factual record necessary to support a client's claim, particularly in matters involving disputed valuations or complex transaction histories. Outside of work, Priya volunteers with a financial literacy program for first-generation college students and enjoys long-distance cycling.",
+    bio: "Priya Anand concentrates her practice on securities and investment fraud and economic disputes, representing investors and business clients in matters involving financial misconduct and complex economic loss.\n\nPrior to joining Whitmore Harlow LLP, Priya spent several years in financial compliance at a Chicago-based investment firm before transitioning to legal practice — an experience that continues to inform how she approaches securities matters and financial-industry disputes. She is licensed to practice in New York.\n\nPriya regularly works with forensic accountants and financial experts to build the factual record necessary to support a client's claim, particularly in matters involving disputed valuations or complex transaction histories. Outside of work, Priya volunteers with a financial literacy program for first-generation college students and enjoys long-distance cycling.",
     practiceAreas: ["securities-fraud", "economic-disputes"],
     initials: "PA",
     education: [
       "J.D., Northwestern University Pritzker School of Law",
       "B.S. Finance, University of Illinois at Urbana-Champaign",
     ],
+    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
   {
     slug: "sarah-voss",
@@ -75,7 +77,7 @@ export const attorneys: Attorney[] = [
     title: "Senior Associate",
     // TODO: real bar numbers pending verification — see pre-launch-checklist.md
     barNumbers: [],
-    bio: "Sarah Voss is a senior associate concentrating her practice on fraud and asset recovery and economic disputes. Before attending law school, she worked for several years in commercial banking, including credit risk assessment across the Southeast — experience that continues to inform her approach to tracing and recovering misappropriated assets.\n\nHer practice includes matters involving fraudulent transfers, business valuation disputes, and cases requiring coordination with forensic accountants to reconstruct complex financial transactions. She is licensed to practice in North Carolina.\n\nWhen not working, Sarah hikes in the Blue Ridge Mountains and volunteers with a regional literacy nonprofit.",
+    bio: "Sarah Voss is a senior associate concentrating her practice on fraud and asset recovery and economic disputes. Before attending law school, she worked for several years in commercial banking, including credit risk assessment across the Southeast — experience that continues to inform her approach to tracing and recovering misappropriated assets.\n\nHer practice includes matters involving fraudulent transfers, business valuation disputes, and cases requiring coordination with forensic accountants to reconstruct complex financial transactions. She is licensed to practice in New York.\n\nWhen not working, Sarah hikes in the Blue Ridge Mountains and volunteers with a regional literacy nonprofit.",
     practiceAreas: ["fraud-asset-recovery", "economic-disputes"],
     initials: "SV",
     education: [
@@ -83,6 +85,7 @@ export const attorneys: Attorney[] = [
       "B.A. Political Science, Wake Forest University",
     ],
     languages: ["English", "French"],
+    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
   {
     slug: "james-alvarez",
@@ -90,12 +93,13 @@ export const attorneys: Attorney[] = [
     title: "Associate",
     // TODO: real bar numbers pending verification — see pre-launch-checklist.md
     barNumbers: [],
-    bio: "James Alvarez received his Juris Doctor from Duquesne University School of Law, where he served on the school's trial advocacy team, and his Bachelor of Arts from Pennsylvania State University.\n\nPrior to joining Whitmore Harlow LLP, James clerked for a state trial court in Pittsburgh, gaining early experience with commercial litigation from the perspective of the bench. His practice focuses on commercial litigation and contract and partnership disputes, assisting senior attorneys with case preparation, discovery, and client communication. He is licensed to practice in Pennsylvania.\n\nOutside of the office, James enjoys golf, is a season-ticket holder for Penn State football, and spends time with his wife and their two children.",
+    bio: "James Alvarez received his Juris Doctor from Duquesne University School of Law, where he served on the school's trial advocacy team, and his Bachelor of Arts from Pennsylvania State University.\n\nPrior to joining Whitmore Harlow LLP, James clerked for a state trial court in Pittsburgh, gaining early experience with commercial litigation from the perspective of the bench. His practice focuses on commercial litigation and contract and partnership disputes, assisting senior attorneys with case preparation, discovery, and client communication. He is licensed to practice in New York.\n\nOutside of the office, James enjoys golf, is a season-ticket holder for Penn State football, and spends time with his wife and their two children.",
     practiceAreas: ["commercial-litigation", "contract-disputes"],
     initials: "JA",
     education: [
       "J.D., Duquesne University School of Law",
       "B.A., Pennsylvania State University",
     ],
+    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
 ];
