@@ -112,7 +112,7 @@ export default function TermsPage() {
             Whitmore Harlow LLP &middot; One Liberty Plaza, Suite 4200
             &middot; New York, NY 10006
             <br />
-            contact@whitmore-assoc.com
+            richard@whitmoreharlow.com
           </p>
         </div>
       </section>

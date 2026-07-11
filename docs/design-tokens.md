@@ -225,7 +225,7 @@ into the token: apply `font-bold` (700) at each usage site.
 * Column headers: Jost 10px, 0.18em tracking, uppercase, **gold**; `padding-bottom: 12px; border-bottom: 1px solid --navy-light`
 * Links: Jost 13px, cream 0.6 opacity; hover → opacity 1 + gold-light
 * Address: Source Serif 4 15px, cream 0.65 opacity
-* Contact email: **custom domain only** (`@whitmore-assoc.com`) — NEVER Gmail
+* Contact email: **custom domain only** (`richard@whitmoreharlow.com`) — NEVER Gmail
 * **All links must point to real pages** — no `#` placeholders
 * Compliance bar: `border-top: 1px solid --navy-light`; Jost 11px 300, muted
 * Required compliance text: "Attorney Advertising. Results may vary. Past results do not guarantee future outcomes."

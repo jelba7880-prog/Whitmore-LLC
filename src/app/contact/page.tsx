@@ -73,10 +73,10 @@ export default function ContactPage() {
                 <div className="mb-6">
                   <h2 className={INFO_LABEL}>Email</h2>
                   <a
-                    href="mailto:contact@whitmore-assoc.com"
+                    href="mailto:richard@whitmoreharlow.com"
                     className="font-body text-[15px] text-ink transition-colors hover:text-gold"
                   >
-                    contact@whitmore-assoc.com
+                    richard@whitmoreharlow.com
                   </a>
                 </div>
 

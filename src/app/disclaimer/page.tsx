@@ -92,7 +92,7 @@ export default function DisclaimerPage() {
           </h2>
           <p className="font-body text-[18px] leading-[1.8] text-ink">
             For questions about this disclaimer, contact us at
-            contact@whitmore-assoc.com.
+            richard@whitmoreharlow.com.
           </p>
         </div>
       </section>
