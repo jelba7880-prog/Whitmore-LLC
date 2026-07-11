@@ -49,6 +49,7 @@ export const attorneys: Attorney[] = [
     barNumbers: [],
     bio: "Daniel Reyes concentrates his practice on commercial litigation and contract and partnership disputes, representing businesses and individual clients in disagreements arising from complex commercial relationships.\n\nBefore joining Whitmore Harlow LLP, Daniel practiced with a mid-sized commercial litigation firm in Philadelphia, where he represented clients in partnership dissolution disputes, breach of contract claims, and business valuation disagreements. He is licensed to practice in New York.\n\nDaniel approaches each matter by identifying what a client actually needs to resolve a dispute, rather than defaulting to the most aggressive available strategy. Outside the office, Daniel is a distance runner and serves on the board of a Philadelphia-based legal aid nonprofit.",
     practiceAreas: ["commercial-litigation", "contract-disputes"],
+    imageUrl: "/images/attorneys/daniel-reyes.jpg",
     initials: "DR",
     education: [
       "J.D., Temple University Beasley School of Law",
@@ -77,6 +78,7 @@ export const attorneys: Attorney[] = [
     barNumbers: [],
     bio: "Sarah Voss is a senior associate concentrating her practice on fraud and asset recovery and economic disputes. Before attending law school, she worked for several years in commercial banking, including credit risk assessment across the Southeast — experience that continues to inform her approach to tracing and recovering misappropriated assets.\n\nHer practice includes matters involving fraudulent transfers, business valuation disputes, and cases requiring coordination with forensic accountants to reconstruct complex financial transactions. She is licensed to practice in Pennsylvania.\n\nWhen not working, Sarah hikes in the Pocono Mountains and volunteers with a regional literacy nonprofit.",
     practiceAreas: ["fraud-asset-recovery", "economic-disputes"],
+    imageUrl: "/images/attorneys/sarah-voss.jpg",
     initials: "SV",
     education: [
       "J.D., University of North Carolina School of Law",
@@ -92,6 +94,7 @@ export const attorneys: Attorney[] = [
     barNumbers: [],
     bio: "James Alvarez received his Juris Doctor from Duquesne University School of Law, where he served on the school's trial advocacy team, and his Bachelor of Arts from Pennsylvania State University.\n\nPrior to joining Whitmore Harlow LLP, James clerked for a state trial court in Pittsburgh, gaining early experience with commercial litigation from the perspective of the bench. His practice focuses on commercial litigation and contract and partnership disputes, assisting senior attorneys with case preparation, discovery, and client communication. He is licensed to practice in New York.\n\nOutside of the office, James enjoys golf, is a season-ticket holder for Penn State football, and spends time with his wife and their two children.",
     practiceAreas: ["commercial-litigation", "contract-disputes"],
+    imageUrl: "/images/attorneys/james-alvarez.jpg",
     initials: "JA",
     education: [
       "J.D., Duquesne University School of Law",
