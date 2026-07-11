@@ -75,7 +75,7 @@ export default function AccessibilityPage() {
             If you experience accessibility barriers on this website, please
             contact us:
             <br />
-            Email: contact@whitmore-assoc.com
+            Email: richard@whitmoreharlow.com
             <br />
             Phone: (212) 555-0100
             <br />

@@ -95,7 +95,7 @@ export default function PrivacyPolicyPage() {
           <p className="font-body text-[18px] leading-[1.8] text-ink">
             You may request access to, correction of, or deletion of personal
             information we hold about you by contacting us at
-            contact@whitmore-assoc.com. We will respond to verified requests
+            richard@whitmoreharlow.com. We will respond to verified requests
             within thirty (30) days.
           </p>
 
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
             Whitmore Harlow LLP &middot; One Liberty Plaza, Suite 4200
             &middot; New York, NY 10006
             <br />
-            contact@whitmore-assoc.com &middot; (212) 555-0100
+            richard@whitmoreharlow.com &middot; (212) 555-0100
           </p>
         </div>
       </section>

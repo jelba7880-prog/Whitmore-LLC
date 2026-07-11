@@ -110,10 +110,10 @@ export default function Footer() {
                 (212) 555-0100
               </a>
               <a
-                href="mailto:contact@whitmore-assoc.com"
+                href="mailto:richard@whitmoreharlow.com"
                 className="block text-gold-light"
               >
-                contact@whitmore-assoc.com
+                richard@whitmoreharlow.com
               </a>
               <p className="leading-relaxed">
                 Monday – Friday: 9:00 AM – 6:00 PM ET
