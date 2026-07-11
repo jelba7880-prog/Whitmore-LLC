@@ -54,7 +54,6 @@ export const attorneys: Attorney[] = [
       "J.D., Temple University Beasley School of Law",
       "B.A. Economics, Villanova University",
     ],
-    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
   {
     slug: "priya-anand",
@@ -69,7 +68,6 @@ export const attorneys: Attorney[] = [
       "J.D., Northwestern University Pritzker School of Law",
       "B.S. Finance, University of Illinois at Urbana-Champaign",
     ],
-    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
   {
     slug: "sarah-voss",
@@ -77,7 +75,7 @@ export const attorneys: Attorney[] = [
     title: "Senior Associate",
     // TODO: real bar numbers pending verification — see pre-launch-checklist.md
     barNumbers: [],
-    bio: "Sarah Voss is a senior associate concentrating her practice on fraud and asset recovery and economic disputes. Before attending law school, she worked for several years in commercial banking, including credit risk assessment across the Southeast — experience that continues to inform her approach to tracing and recovering misappropriated assets.\n\nHer practice includes matters involving fraudulent transfers, business valuation disputes, and cases requiring coordination with forensic accountants to reconstruct complex financial transactions. She is licensed to practice in New York.\n\nWhen not working, Sarah hikes in the Blue Ridge Mountains and volunteers with a regional literacy nonprofit.",
+    bio: "Sarah Voss is a senior associate concentrating her practice on fraud and asset recovery and economic disputes. Before attending law school, she worked for several years in commercial banking, including credit risk assessment across the Southeast — experience that continues to inform her approach to tracing and recovering misappropriated assets.\n\nHer practice includes matters involving fraudulent transfers, business valuation disputes, and cases requiring coordination with forensic accountants to reconstruct complex financial transactions. She is licensed to practice in Pennsylvania.\n\nWhen not working, Sarah hikes in the Pocono Mountains and volunteers with a regional literacy nonprofit.",
     practiceAreas: ["fraud-asset-recovery", "economic-disputes"],
     initials: "SV",
     education: [
@@ -85,7 +83,6 @@ export const attorneys: Attorney[] = [
       "B.A. Political Science, Wake Forest University",
     ],
     languages: ["English", "French"],
-    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
   {
     slug: "james-alvarez",
@@ -100,6 +97,5 @@ export const attorneys: Attorney[] = [
       "J.D., Duquesne University School of Law",
       "B.A., Pennsylvania State University",
     ],
-    admissions: ["New York", "U.S. District Court S.D.N.Y."],
   },
 ];
