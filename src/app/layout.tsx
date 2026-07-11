@@ -26,7 +26,7 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://whitmore-harlow.vercel.app/"),
+  metadataBase: new URL("https://www.whitmoreharlow.com/"),
   title: {
     default: "Whitmore Harlow LLP",
     template: "%s | Whitmore Harlow LLP",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Whitmore Harlow LLP",
     description: "Fraud recovery and commercial litigation counsel.",
-    url: "https://whitmore-harlow.vercel.app/",
+    url: "https://www.whitmoreharlow.com/",
     siteName: "Whitmore Harlow LLP",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     locale: "en_US",
