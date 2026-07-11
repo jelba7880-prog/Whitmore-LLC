@@ -399,6 +399,7 @@ Root layout title template: `'%s | Whitmore Harlow LLP'`
 
 - Use `next/font/google` for font loading — not `<link>` tags in layout — for optimal performance
 - Images: use `next/image` for all attorney photos; set `width` and `height`, `alt` required
+- Attorney headshot cropping: Pillow (Python) — sharp and ImageMagick are not installed in this environment. Crop to 950×1067 (0.89:1), centered on the subject's face, matching the AttorneyCard component's photo slot dimensions.
 - Forms: server actions (Next.js 14 `"use server"`) or API routes — no third-party form services
 - Environment variables needed: `CONTACT_EMAIL`, `MAPS_EMBED_KEY` (document in `.env.example`)
 
