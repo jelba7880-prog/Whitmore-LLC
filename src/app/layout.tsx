@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Source_Serif_4, Jost } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
-import CTASection from "@/components/layout/CTASection";
+import GlobalCTA from "@/components/layout/GlobalCTA";
 import Footer from "@/components/layout/Footer";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -71,7 +71,7 @@ export default function RootLayout({
       >
         <Navbar />
         <div className="pt-[54px] md:pt-[72px]">{children}</div>
-        <CTASection />
+        <GlobalCTA />
         <Footer />
       </body>
     </html>
