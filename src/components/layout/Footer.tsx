@@ -2,11 +2,14 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { practiceAreas } from "@/lib/practice-areas";
 
-const practiceAreaLinks = [
-  ...practiceAreas.map((area) => ({
-    label: area.title,
-    href: `/practice-areas/${area.slug}`,
-  })),
+const practiceAreaLinks = practiceAreas.map((area) => ({
+  label: area.title,
+  href: `/practice-areas/${area.slug}`,
+}));
+
+const firmLinks = [
+  { label: "About the Firm", href: "/about" },
+  { label: "Our Attorneys", href: "/attorneys" },
   { label: "Case Results", href: "/results" },
   { label: "How We Work", href: "/process" },
 ];
@@ -38,7 +41,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy border-t border-gold pt-16 pb-8 px-6">
       <div className="max-w-content mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.8fr_1fr_1fr_1fr_1.2fr] gap-12">
           {/* Column 1 — Firm */}
           <div>
             <div className="font-display text-xl text-cream">
@@ -48,10 +51,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="font-body text-sm text-cream/60 mt-4 leading-relaxed max-w-[320px]">
-              Whitmore Harlow LLP is a commercial litigation and
-              fraud recovery practice representing businesses, investors, and
-              individuals in complex disputes across state, federal, and
-              international forums.
+              A commercial litigation and fraud recovery practice serving
+              businesses, investors, and individuals nationwide.
             </p>
             <Button
               variant="ghost"
@@ -79,7 +80,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 — Industries We Serve */}
+          {/* Column 3 — The Firm */}
+          <div>
+            <div className={columnHeaderClasses}>The Firm</div>
+            <ul className="space-y-3">
+              {firmLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="font-ui text-[13px] text-cream/60 hover:text-gold-light hover:opacity-100 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4 — Industries We Serve */}
           <div>
             <div className={columnHeaderClasses}>Industries We Serve</div>
             <ul className="space-y-3">
@@ -94,7 +112,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 — Contact */}
+          {/* Column 5 — Contact */}
           <div>
             <div className={columnHeaderClasses}>Contact</div>
             <div className="font-body text-sm text-cream/60 space-y-4">
@@ -116,9 +134,7 @@ export default function Footer() {
                 richard@whitmoreharlow.com
               </a>
               <p className="leading-relaxed">
-                Monday – Friday: 9:00 AM – 6:00 PM ET
-                <br />
-                Saturday – Sunday: Closed
+                Monday – Friday, 9:00 AM – 6:00 PM ET
               </p>
             </div>
           </div>
