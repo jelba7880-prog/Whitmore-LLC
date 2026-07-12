@@ -29,6 +29,7 @@ export default function Navbar() {
   const practiceAreasTriggerRef = useRef<HTMLAnchorElement>(null);
   const mobileNavRef = useRef<HTMLDivElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const suppressReopenRef = useRef(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -50,6 +51,27 @@ export default function Navbar() {
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = previousOverflow;
+    };
+  }, [menuOpen]);
+
+  // Hide everything except the header from the accessibility tree while the
+  // mobile overlay is open, so screen-reader swipe/rotor navigation (which
+  // doesn't go through Tab) can't reach content stacked behind it.
+  useEffect(() => {
+    if (!menuOpen) return;
+    const header = document.querySelector("header");
+    const siblings = Array.from(document.body.children).filter(
+      (el) => el !== header
+    );
+    siblings.forEach((el) => {
+      el.setAttribute("aria-hidden", "true");
+      el.setAttribute("inert", "");
+    });
+    return () => {
+      siblings.forEach((el) => {
+        el.removeAttribute("aria-hidden");
+        el.removeAttribute("inert");
+      });
     };
   }, [menuOpen]);
 
@@ -94,6 +116,7 @@ export default function Navbar() {
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
+        suppressReopenRef.current = true;
         setDesktopPracticeAreasOpen(false);
         practiceAreasTriggerRef.current?.focus();
       }
@@ -142,7 +165,13 @@ export default function Navbar() {
             className="relative"
             onMouseEnter={() => setDesktopPracticeAreasOpen(true)}
             onMouseLeave={() => setDesktopPracticeAreasOpen(false)}
-            onFocus={() => setDesktopPracticeAreasOpen(true)}
+            onFocus={() => {
+              if (suppressReopenRef.current) {
+                suppressReopenRef.current = false;
+                return;
+              }
+              setDesktopPracticeAreasOpen(true);
+            }}
             onBlur={(event) => {
               if (
                 !practiceAreasGroupRef.current?.contains(
@@ -168,7 +197,7 @@ export default function Navbar() {
             </Link>
 
             <div
-              className={`absolute left-0 top-full pt-4 transition-[opacity,transform,visibility] duration-200 ease-out ${
+              className={`absolute left-0 top-full pt-4 transition-[opacity,transform] duration-200 ease-out ${
                 desktopPracticeAreasOpen
                   ? "visible opacity-100 translate-y-0"
                   : "invisible opacity-0 -translate-y-1"
