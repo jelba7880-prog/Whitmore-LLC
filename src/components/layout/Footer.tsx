@@ -1,30 +1,11 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import { practiceAreas } from "@/lib/practice-areas";
-
-const practiceAreaLinks = practiceAreas.map((area) => ({
-  label: area.title,
-  href: `/practice-areas/${area.slug}`,
-}));
 
 const firmLinks = [
   { label: "About the Firm", href: "/about" },
   { label: "Our Attorneys", href: "/attorneys" },
   { label: "Case Results", href: "/results" },
   { label: "How We Work", href: "/process" },
-];
-
-const industries = [
-  "Financial Services & Banking",
-  "Private Equity & Hedge Funds",
-  "Real Estate & Construction",
-  "Healthcare & Life Sciences",
-  "Technology & Software",
-  "Energy & Natural Resources",
-  "Manufacturing & Industrials",
-  "Insurance",
-  "Retail & Consumer Goods",
-  "Family Offices & High-Net-Worth Individuals",
 ];
 
 const legalLinks = [
@@ -41,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy border-t border-gold pt-16 pb-8 px-6">
       <div className="max-w-content mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.8fr_1fr_1fr_1fr_1.2fr] gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
           {/* Column 1 — Firm */}
           <div>
             <div className="font-display text-xl text-cream">
@@ -63,24 +44,7 @@ export default function Footer() {
             </Button>
           </div>
 
-          {/* Column 2 — Practice Areas */}
-          <div>
-            <div className={columnHeaderClasses}>Practice Areas</div>
-            <ul className="space-y-3">
-              {practiceAreaLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="font-ui text-[13px] text-cream/60 hover:text-gold-light hover:opacity-100 transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3 — The Firm */}
+          {/* Column 2 — The Firm */}
           <div>
             <div className={columnHeaderClasses}>The Firm</div>
             <ul className="space-y-3">
@@ -97,22 +61,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 — Industries We Serve */}
-          <div>
-            <div className={columnHeaderClasses}>Industries We Serve</div>
-            <ul className="space-y-3">
-              {industries.map((industry) => (
-                <li
-                  key={industry}
-                  className="font-ui text-[13px] text-cream/60"
-                >
-                  {industry}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 5 — Contact */}
+          {/* Column 3 — Contact */}
           <div>
             <div className={columnHeaderClasses}>Contact</div>
             <div className="font-body text-sm text-cream/60 space-y-4">
@@ -133,9 +82,6 @@ export default function Footer() {
               >
                 richard@whitmoreharlow.com
               </a>
-              <p className="leading-relaxed">
-                Monday – Friday, 9:00 AM – 6:00 PM ET
-              </p>
             </div>
           </div>
         </div>
