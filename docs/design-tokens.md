@@ -221,8 +221,8 @@ into the token: apply `font-bold` (700) at each usage site.
 * Always rendered in root `layout.tsx` — never duplicated per page
 * Background: `--navy`
 * Gold top border: `border-t border-gold`
-* 5-column grid: `xl:grid-cols-[1.8fr_1fr_1fr_1fr_1.2fr]`, collapse to 3-col at `lg:`, 2-col at `md:`, 1-col below
-* Columns: Firm (2-line blurb + CTA) · Practice Areas (6 items only — practice-area routes exclusively) · The Firm (About, Attorneys, Case Results, How We Work) · Industries We Serve (10 items, unchanged) · Contact (address, phone, email, single-line hours)
+* 3-column grid: `md:grid-cols-3`, 1-col below `md:`
+* Columns: Firm (2-line blurb + CTA) · The Firm (About, Attorneys, Case Results, How We Work) · Contact (address, phone, email)
 * Wordmark: Cormorant Garamond 22px 700, "Whitmore Harlow" in cream; "LLP" set smaller/tracked in gold (Jost, uppercase, tracking-widest)
 * Column headers: Jost 10px, 0.18em tracking, uppercase, gold; `padding-bottom: 12px; border-bottom: 1px solid --navy-light`
 * Links: Jost 13px, cream 0.6 opacity; hover → opacity 1 + gold-light
