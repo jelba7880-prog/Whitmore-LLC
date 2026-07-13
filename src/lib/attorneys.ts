@@ -1,5 +1,13 @@
 import type { Attorney } from "@/types";
 
+// "Partner" / "Managing Partner" vs. "Attorney and Counselor at Law",
+// "Senior Associate", "Associate" — title unambiguously distinguishes named
+// partners from the rest of the roster, so grouping is derived from it
+// rather than duplicated into a separate field.
+export function isPartner(attorney: Attorney): boolean {
+  return attorney.title.includes("Partner");
+}
+
 export const attorneys: Attorney[] = [
   {
     slug: "richard-whitmore",
