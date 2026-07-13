@@ -26,6 +26,12 @@ export interface PracticeArea {
   faqs: FAQ[];
   relatedResults: string[]; // array of result IDs
   imageUrl?: string; // hero/card background image path (e.g. /images/practice-areas/[slug].jpg)
+  sidebarVideo?: {
+    // optional: renders a VideoEmbed card below the "Request a Consultation" sidebar CTA
+    videoId: string; // YouTube video ID
+    title: string; // accessible title for the iframe
+    caption: string; // attribution line, e.g. "From the CFTC's investor education series"
+  };
 }
 
 export interface ProcessStep {
