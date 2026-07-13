@@ -12,8 +12,9 @@ interface PracticeAreaDetailProps {
   relatedResults: CaseResult[];
 }
 
-// Full content layout for a single practice area page. Server component — no
-// client state (the FAQ accordion is zero-JS via <details>/<summary>).
+// Full content layout for a single practice area page. Server component — the
+// FAQ accordion is a client-side island that progressively enhances the
+// native <details>/<summary> toggle with an animated open/close.
 export default function PracticeAreaDetail({
   area,
   relatedResults,
