@@ -190,7 +190,6 @@ export interface PracticeArea {
   longDescription: string;
   process: ProcessStep[];
   faqs: FAQ[];
-  relatedResults: string[];   // array of result IDs
 }
 
 export interface ProcessStep {
@@ -303,8 +302,9 @@ Must include all of:
 - Long description (3+ paragraphs minimum)
 - Process section (≥3 steps)
 - FAQ accordion (≥4 questions)
-- Related case results
 - CTA (inline, before global CTA section)
+
+Case results / representative matters are intentionally NOT shown on practice area pages — removed to keep the page focused and avoid duplicating content already on `/results`. Do not reintroduce a `CaseResultCard` grid here without explicit sign-off.
 
 ### Blog [slug] pages
 - Right rail with author card, practice area card, related posts, mini-CTA
@@ -334,8 +334,7 @@ Section order (strict):
 2. Long description
 3. Our Process (steps specific to this area)
 4. FAQs (accordion)
-5. Related Results (3-card grid)
-6. Inline CTA ("Discuss Your Case")
+5. Inline CTA ("Discuss Your Case")
 
 ### Attorney Profile pages (`/attorneys/[slug]`)
 1. Attorney hero: name, title, practice areas (bar number + verify link rendering removed pending real, verified data — see `pre-launch-checklist.md`)

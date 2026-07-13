@@ -55,7 +55,6 @@ export const practiceAreas: PracticeArea[] = [
           "Fee structures vary depending on the nature of the recovery and the client's preference, and may include hourly, contingent, or hybrid arrangements. We discuss the appropriate structure for a specific matter during the initial consultation, before any engagement begins.",
       },
     ],
-    relatedResults: ["result-001"],
     imageUrl: "/images/practice-areas/fraud-asset-recovery.jpg",
     sidebarVideo: {
       videoId: "43FTPuTCDTY",
@@ -114,7 +113,6 @@ export const practiceAreas: PracticeArea[] = [
           "Many commercial disputes resolve through negotiation, mediation, or summary judgment before reaching trial. We pursue negotiated resolution where it serves the client's interests, while preparing every matter as though it may proceed to trial, so that option remains available if the other side isn't prepared to resolve the matter fairly.",
       },
     ],
-    relatedResults: ["result-002"],
     imageUrl: "/images/practice-areas/commercial-litigation.jpg",
   },
   {
@@ -166,7 +164,6 @@ export const practiceAreas: PracticeArea[] = [
           "Damages calculations typically account for actual investment losses, and in some cases lost opportunity or other recoverable amounts, depending on the theory of liability and applicable law. We work with financial experts where appropriate to establish a defensible damages figure specific to the claim.",
       },
     ],
-    relatedResults: ["result-003"],
     imageUrl: "/images/practice-areas/securities-fraud.jpg",
     sidebarVideo: {
       videoId: "S3NvLQglyy0",
@@ -226,7 +223,6 @@ export const practiceAreas: PracticeArea[] = [
           "Many partnership and shareholder disputes resolve through negotiation or mediation, particularly where an ongoing business relationship or reputational considerations make a public court proceeding undesirable. We pursue private resolution where appropriate, while preparing the matter for litigation if the other side isn't willing to negotiate in good faith.",
       },
     ],
-    relatedResults: ["result-004"],
     imageUrl: "/images/practice-areas/economic-disputes.jpg",
   },
   {
@@ -280,7 +276,6 @@ export const practiceAreas: PracticeArea[] = [
           "Limitations periods for contract claims vary by jurisdiction and the type of agreement involved, and can be affected by when the breach was discovered. We recommend evaluating a potential claim promptly, since delay can affect what remedies remain available.",
       },
     ],
-    relatedResults: ["result-005"],
     imageUrl: "/images/practice-areas/contract-disputes.jpg",
   },
   {
@@ -335,7 +330,6 @@ export const practiceAreas: PracticeArea[] = [
           "Timelines vary significantly based on the complexity of the dispute, the arbitral institution's procedures, and whether either party challenges the resulting award.",
       },
     ],
-    relatedResults: ["result-006"],
     imageUrl: "/images/practice-areas/international-arbitration.jpg",
   },
 ];
