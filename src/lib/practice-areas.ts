@@ -337,5 +337,11 @@ export const practiceAreas: PracticeArea[] = [
     ],
     relatedResults: ["result-006"],
     imageUrl: "/images/practice-areas/international-arbitration.jpg",
+    sidebarVideo: {
+      videoId: "NbDRDCawIdY",
+      title:
+        "What Is Arbitration? Understanding the Steps of the Arbitration Process — American Arbitration Association (AAA)",
+      caption: "From the American Arbitration Association",
+    },
   },
 ];
