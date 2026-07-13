@@ -46,8 +46,9 @@ body {
   text-underline-offset: 2px;
 }
 
-/* Practice-area FAQ accordion (native <details>/<summary>, no JS): rotate the
-   chevron when the item is open. */
+/* Practice-area FAQ accordion: rotate the chevron when the item is open. This
+   CSS transition runs in sync with the JS-driven panel height animation in
+   FAQAccordion.tsx (same duration/easing). */
 .faq-item[open] .faq-chevron {
   transform: rotate(180deg);
 }
