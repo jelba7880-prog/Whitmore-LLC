@@ -7,6 +7,9 @@ import FAQAccordion from "@/components/practice-areas/FAQAccordion";
 import CaseResultCard from "@/components/results/CaseResultCard";
 import ProcessTimeline from "@/components/process/ProcessTimeline";
 import VideoEmbed from "@/components/ui/VideoEmbed";
+import PracticeAreaIllustration, {
+  isPracticeAreaIllustrationSlug,
+} from "@/components/practice-areas/PracticeAreaIllustration";
 
 interface PracticeAreaDetailProps {
   area: PracticeArea;
@@ -116,6 +119,12 @@ export default function PracticeAreaDetail({
                     title={area.sidebarVideo.title}
                     caption={area.sidebarVideo.caption}
                   />
+                </div>
+              )}
+
+              {!area.sidebarVideo && isPracticeAreaIllustrationSlug(area.slug) && (
+                <div className="mt-6 border border-gold/20 bg-navy p-8">
+                  <PracticeAreaIllustration practiceArea={area.slug} />
                 </div>
               )}
             </aside>
