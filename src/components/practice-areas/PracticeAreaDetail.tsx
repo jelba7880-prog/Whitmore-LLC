@@ -6,6 +6,7 @@ import SectionDivider from "@/components/ui/SectionDivider";
 import FAQAccordion from "@/components/practice-areas/FAQAccordion";
 import CaseResultCard from "@/components/results/CaseResultCard";
 import ProcessTimeline from "@/components/process/ProcessTimeline";
+import VideoEmbed from "@/components/ui/VideoEmbed";
 
 interface PracticeAreaDetailProps {
   area: PracticeArea;
@@ -107,6 +108,16 @@ export default function PracticeAreaDetail({
                   unique.
                 </p>
               </div>
+
+              {area.sidebarVideo && (
+                <div className="mt-6 border border-gold/20 bg-navy p-6">
+                  <VideoEmbed
+                    videoId={area.sidebarVideo.videoId}
+                    title={area.sidebarVideo.title}
+                    caption={area.sidebarVideo.caption}
+                  />
+                </div>
+              )}
             </aside>
           </div>
         </div>

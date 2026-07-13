@@ -57,6 +57,12 @@ export const practiceAreas: PracticeArea[] = [
     ],
     relatedResults: ["result-001"],
     imageUrl: "/images/practice-areas/fraud-asset-recovery.jpg",
+    sidebarVideo: {
+      videoId: "43FTPuTCDTY",
+      title:
+        "True Fraud Stories: Hunter Wise's Silvery Slope — CFTC investor education series",
+      caption: "From the CFTC's investor education series",
+    },
   },
   {
     slug: "commercial-litigation",
@@ -162,6 +168,13 @@ export const practiceAreas: PracticeArea[] = [
     ],
     relatedResults: ["result-003"],
     imageUrl: "/images/practice-areas/securities-fraud.jpg",
+    sidebarVideo: {
+      videoId: "S3NvLQglyy0",
+      title:
+        "How to Protect Yourself From Fraud Aimed at Older Investors — Investor.gov (U.S. Securities and Exchange Commission)",
+      caption:
+        "From Investor.gov, a resource of the U.S. Securities and Exchange Commission",
+    },
   },
   {
     slug: "economic-disputes",
