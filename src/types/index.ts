@@ -24,7 +24,6 @@ export interface PracticeArea {
   longDescription: string;
   process: ProcessStep[];
   faqs: FAQ[];
-  relatedResults: string[]; // array of result IDs
   imageUrl?: string; // hero/card background image path (e.g. /images/practice-areas/[slug].jpg)
   sidebarVideo?: {
     // optional: renders a VideoEmbed card below the "Request a Consultation" sidebar CTA

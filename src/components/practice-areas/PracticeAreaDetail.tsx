@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { CaseResult, PracticeArea } from "@/types";
+import type { PracticeArea } from "@/types";
 import GoldRule from "@/components/ui/GoldRule";
 import SectionDivider from "@/components/ui/SectionDivider";
 import FAQAccordion from "@/components/practice-areas/FAQAccordion";
-import CaseResultCard from "@/components/results/CaseResultCard";
 import ProcessTimeline from "@/components/process/ProcessTimeline";
 import VideoEmbed from "@/components/ui/VideoEmbed";
 import PracticeAreaIllustration, {
@@ -13,16 +12,12 @@ import PracticeAreaIllustration, {
 
 interface PracticeAreaDetailProps {
   area: PracticeArea;
-  relatedResults: CaseResult[];
 }
 
 // Full content layout for a single practice area page. Server component — the
 // FAQ accordion is a client-side island that progressively enhances the
 // native <details>/<summary> toggle with an animated open/close.
-export default function PracticeAreaDetail({
-  area,
-  relatedResults,
-}: PracticeAreaDetailProps) {
+export default function PracticeAreaDetail({ area }: PracticeAreaDetailProps) {
   return (
     <main>
       {/* SECTION A — Page Hero */}
@@ -166,28 +161,7 @@ export default function PracticeAreaDetail({
         </div>
       </section>
 
-      {/* SECTION E — Related Results (only when present) */}
-      {relatedResults.length > 0 && (
-        <section className="bg-cream py-20">
-          <div className="mx-auto max-w-[1200px] px-6">
-            <SectionDivider className="mb-16" />
-            <GoldRule />
-            <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
-              Representative Matters
-            </p>
-            <h2 className="mb-10 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
-              Case Results
-            </h2>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {relatedResults.map((result) => (
-                <CaseResultCard key={result.id} result={result} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* SECTION F — Inline CTA */}
+      {/* SECTION E — Inline CTA */}
       <section className="bg-navy py-20">
         <div className="mx-auto max-w-[620px] px-6 text-center">
           <GoldRule variant="short" />
