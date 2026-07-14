@@ -129,12 +129,22 @@ export default function Navbar() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  // On the homepage, the hero photo bleeds up behind the nav (see Hero.tsx),
+  // so the nav renders as a translucent glass bar over the photo until the
+  // page scrolls, then hands off to the standard solid navy bar.
+  const isHome = pathname === "/";
+  const overPhoto = isHome && !scrolled;
+
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full h-[54px] md:h-[72px] bg-navy transition-shadow duration-200 ${
-        scrolled
-          ? "border-b border-gold/25 shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
-          : "border-b border-transparent"
+      className={`fixed top-0 left-0 z-50 w-full h-[54px] md:h-[72px] transition-[background-color,box-shadow] duration-200 ${
+        overPhoto
+          ? "bg-navy/25 border-b border-cream/20 backdrop-blur-md"
+          : `bg-navy border-b ${
+              scrolled
+                ? "border-gold/25 shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
+                : "border-transparent"
+            }`
       }`}
     >
       <div className="mx-auto flex h-full max-w-content items-center justify-between px-6">
