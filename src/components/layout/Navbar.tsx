@@ -179,8 +179,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-10">
-        <nav className="flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           <Link
             href="/about"
             className={`font-ui text-sm uppercase tracking-[0.08em] pb-0.5 transition-colors ${FOCUS_RING} ${
@@ -280,14 +279,6 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-
-          <Link
-            href="/free-consultation"
-            className={`bg-gold px-5 py-2.5 font-ui text-sm uppercase tracking-[0.08em] text-navy transition-colors hover:bg-gold-light ${FOCUS_RING}`}
-          >
-            Free Consultation
-          </Link>
-        </div>
 
         <button
           ref={menuButtonRef}
@@ -416,14 +407,6 @@ export default function Navbar() {
               })}
             </div>
           </div>
-
-          <Link
-            href="/free-consultation"
-            tabIndex={menuOpen ? undefined : -1}
-            className={`block w-full bg-gold px-5 py-3 text-center font-ui text-sm uppercase tracking-[0.08em] text-navy ${FOCUS_RING}`}
-          >
-            Free Consultation
-          </Link>
         </div>
       </div>
     </header>

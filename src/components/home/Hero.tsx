@@ -72,12 +72,6 @@ export default function Hero() {
             >
               Discuss Your Matter &rarr;
             </Link>
-            <a
-              href="tel:+12125550100"
-              className="border border-cream/30 px-10 py-4 font-ui text-xs font-semibold uppercase tracking-widest text-cream transition-colors hover:border-cream/80"
-            >
-              Speak With Our Team
-            </a>
           </div>
         </div>
       </div>
