@@ -136,17 +136,23 @@ export default function Navbar() {
   const overPhoto = isHome && !scrolled;
 
   return (
-    <header
-      className={`fixed top-0 left-0 z-50 w-full h-[54px] md:h-[72px] transition-[background-color,box-shadow] duration-200 ${
-        overPhoto
-          ? "bg-navy/25 border-b border-cream/20 backdrop-blur-md"
-          : `bg-navy border-b ${
-              scrolled
-                ? "border-gold/25 shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
-                : "border-transparent"
-            }`
-      }`}
-    >
+    // Deliberately no filter/backdrop-filter/transform on <header> itself:
+    // any of those would make it the containing block for its `fixed`
+    // descendants (the mobile overlay below), collapsing that overlay to
+    // header's own 54-72px box instead of the full viewport. The glass
+    // background lives on the inner wrapper instead.
+    <header className="fixed top-0 left-0 z-50 w-full h-[54px] md:h-[72px]">
+      <div
+        className={`h-full w-full transition-[background-color,box-shadow] duration-200 ${
+          overPhoto
+            ? "bg-navy/25 border-b border-cream/20 backdrop-blur-md"
+            : `bg-navy border-b ${
+                scrolled
+                  ? "border-gold/25 shadow-[0_4px_24px_rgba(0,0,0,0.35)]"
+                  : "border-transparent"
+              }`
+        }`}
+      >
       <div className="mx-auto flex h-full max-w-content items-center justify-between px-6">
         <Link
           href="/"
@@ -292,6 +298,7 @@ export default function Navbar() {
             }`}
           />
         </button>
+      </div>
       </div>
 
       <div
