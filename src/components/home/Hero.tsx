@@ -2,9 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import ParallaxImage from "@/components/ui/ParallaxImage";
 
+// Full-bleed photo hero (design ref: design_handoff_hero_1c, Option 1C). The
+// section bleeds up behind the fixed Navbar via a negative margin that
+// cancels the root layout's nav-height offset (see layout.tsx), so the photo
+// runs edge-to-edge under the glass nav instead of starting below it.
 export default function Hero() {
   return (
-    <section className="relative min-h-[620px] overflow-hidden bg-navy">
+    <section className="relative -mt-[54px] min-h-[100svh] overflow-hidden bg-navy md:-mt-[72px]">
       <ParallaxImage>
         <Image
           src="/images/home/hero-courthouse.jpg"
@@ -15,7 +19,17 @@ export default function Hero() {
           className="object-cover"
         />
       </ParallaxImage>
-      <div className="absolute inset-0 bg-navy/70" aria-hidden="true" />
+
+      {/* Scrim — diagonal fade from opaque navy (left, behind the headline)
+          to near-transparent (right), so the photo's detail stays visible. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(78deg, rgba(13,27,42,0.94) 0%, rgba(13,27,42,0.78) 38%, rgba(13,27,42,0.25) 72%, rgba(13,27,42,0.05) 100%)",
+        }}
+        aria-hidden="true"
+      />
 
       {/* SVG grain overlay — turbulence noise, no motion */}
       <svg
@@ -34,54 +48,36 @@ export default function Hero() {
         <rect width="100%" height="100%" filter="url(#hero-grain)" />
       </svg>
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[620px] max-w-content items-center px-6">
+      {/* Content, bottom-anchored */}
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-content flex-col justify-end px-6 pb-16 pt-24 md:pb-20">
         <div className="max-w-[660px]">
-          <div className="mb-4 h-px w-11 bg-gold" />
-          <p className="font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
-            Fraud Recovery &amp; Commercial Litigation
-          </p>
-          <h1 className="font-display text-h1-hero font-bold leading-[1.05] tracking-[-0.02em] text-cream">
-            When Millions Are at Stake, the Recovery Strategy Matters.
+          <div className="mb-[26px] flex items-center gap-3.5">
+            <span className="h-px w-11 bg-gold" aria-hidden="true" />
+            <span className="font-ui text-[13px] font-semibold uppercase tracking-[0.26em] text-gold">
+              Fraud Recovery &amp; Commercial Litigation
+            </span>
+          </div>
+          <h1 className="font-display text-h1-hero font-bold text-cream [text-wrap:balance]">
+            Complex claims. Decisive recovery.
           </h1>
-          <p className="mt-4 font-ui text-[13px] uppercase tracking-[0.1em] text-gold">
-            Commercial Litigation &middot; Economic Disputes &middot; Fraud Recovery &middot; International Arbitration
-          </p>
           <p className="mt-6 max-w-xl font-body text-[20px] leading-[1.65] text-[#9CAFC0]">
-            Whitmore Harlow LLP represents businesses, institutions, and
-            individuals pursuing or defending complex commercial and fraud
-            claims.
+            Whitmore Harlow LLP acts for businesses, institutions, and
+            individuals in high-value commercial disputes and fraud recovery
+            worldwide.
           </p>
-          <div className="mt-10 flex gap-4">
+          <div className="mt-9 flex flex-wrap gap-4">
             <Link
               href="/free-consultation"
-              className="bg-gold px-9 py-4 font-ui text-[12px] font-semibold uppercase tracking-widest text-navy transition-colors hover:bg-gold-light"
+              className="bg-gold px-10 py-4 font-ui text-xs font-semibold uppercase tracking-widest text-navy transition-colors hover:bg-gold-light"
             >
-              Discuss Your Matter
+              Discuss Your Matter &rarr;
             </Link>
             <a
               href="tel:+12125550100"
-              className="border border-cream/30 px-9 py-4 font-ui text-[12px] font-semibold uppercase tracking-widest text-cream transition-colors hover:border-cream/80"
+              className="border border-cream/30 px-10 py-4 font-ui text-xs font-semibold uppercase tracking-widest text-cream transition-colors hover:border-cream/80"
             >
               Speak With Our Team
             </a>
-          </div>
-          <div className="mt-8 flex flex-wrap items-center gap-x-0 gap-y-3">
-            {[
-              "Confidential Representation",
-              "Cross-Border Experience",
-              "Business-Focused Strategy",
-              "Responsive Counsel",
-            ].map((label, index) => (
-              <span key={label} className="flex items-center">
-                {index > 0 && (
-                  <span className="mx-4 h-3 w-px bg-navy-light" aria-hidden="true" />
-                )}
-                <span className="font-ui text-[11px] text-cream/65">
-                  {label}
-                </span>
-              </span>
-            ))}
           </div>
         </div>
       </div>
