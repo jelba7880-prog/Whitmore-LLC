@@ -158,7 +158,8 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
+        <nav className="flex items-center gap-8">
           <Link
             href="/about"
             className={`font-ui text-sm uppercase tracking-[0.08em] pb-0.5 transition-colors ${FOCUS_RING} ${
@@ -259,7 +260,6 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
           <Link
             href="/free-consultation"
             className={`bg-gold px-5 py-2.5 font-ui text-sm uppercase tracking-[0.08em] text-navy transition-colors hover:bg-gold-light ${FOCUS_RING}`}
