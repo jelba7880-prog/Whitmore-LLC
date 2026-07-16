@@ -317,96 +317,95 @@ export default function Navbar() {
         aria-hidden={!menuOpen}
       >
         <div className="flex h-full flex-col px-6 py-10">
-          {/* Sliding stage: the main list and the Practice Areas submenu are
-              both full-size, absolutely-stacked panels. Toggling
-              mobilePracticeAreasOpen pushes one out and the other in via
-              transform, instead of the old inline accordion expand/collapse. */}
-          <div className="relative flex-1 overflow-hidden">
-            <nav
-              className={`absolute inset-0 flex flex-col gap-6 overflow-y-auto transition-transform duration-200 ease-out ${
-                mobilePracticeAreasOpen ? "-translate-x-full" : "translate-x-0"
+          <nav className="flex flex-1 flex-col gap-6 overflow-y-auto">
+            <button
+              type="button"
+              tabIndex={menuOpen ? undefined : -1}
+              onClick={() => setMenuOpen(false)}
+              className={`flex items-center gap-2 self-start font-ui text-xs uppercase tracking-widest text-cream/60 transition-colors hover:text-gold-light ${FOCUS_RING}`}
+            >
+              <span aria-hidden="true">&larr;</span> Close
+            </button>
+
+            <Link
+              href="/about"
+              tabIndex={menuOpen ? undefined : -1}
+              className={`font-display text-2xl ${FOCUS_RING} ${
+                isActive("/about") ? "text-gold" : "text-cream"
               }`}
             >
+              About
+            </Link>
+
+            <div>
               <button
                 type="button"
-                tabIndex={menuOpen && !mobilePracticeAreasOpen ? undefined : -1}
-                onClick={() => setMenuOpen(false)}
-                className={`flex items-center gap-2 self-start font-ui text-xs uppercase tracking-widest text-cream/60 transition-colors hover:text-gold-light ${FOCUS_RING}`}
-              >
-                <span aria-hidden="true">&larr;</span> Close
-              </button>
-
-              <Link
-                href="/about"
-                tabIndex={menuOpen && !mobilePracticeAreasOpen ? undefined : -1}
-                className={`font-display text-2xl ${FOCUS_RING} ${
-                  isActive("/about") ? "text-gold" : "text-cream"
-                }`}
-              >
-                About
-              </Link>
-
-              <button
-                type="button"
-                tabIndex={menuOpen && !mobilePracticeAreasOpen ? undefined : -1}
+                tabIndex={menuOpen ? undefined : -1}
                 aria-expanded={mobilePracticeAreasOpen}
-                onClick={() => setMobilePracticeAreasOpen(true)}
-                className={`flex items-center justify-between font-display text-2xl ${FOCUS_RING} ${
+                onClick={() => setMobilePracticeAreasOpen((open) => !open)}
+                className={`flex w-full items-center justify-between font-display text-2xl ${FOCUS_RING} ${
                   isActive("/practice-areas") ? "text-gold" : "text-cream"
                 }`}
               >
                 Practice Areas
-                <span aria-hidden="true" className="ml-3 font-ui text-base">
-                  &rsaquo;
-                </span>
-              </button>
-
-              {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  tabIndex={menuOpen && !mobilePracticeAreasOpen ? undefined : -1}
-                  className={`font-display text-2xl ${FOCUS_RING} ${
-                    isActive(link.href) ? "text-gold" : "text-cream"
+                <svg
+                  className={`ml-3 flex-shrink-0 transition-transform duration-200 ease-out ${
+                    mobilePracticeAreasOpen ? "rotate-180" : ""
                   }`}
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-
-            <div
-              className={`absolute inset-0 flex flex-col gap-4 overflow-y-auto transition-transform duration-200 ease-out ${
-                mobilePracticeAreasOpen ? "translate-x-0" : "translate-x-full"
-              }`}
-              aria-hidden={!mobilePracticeAreasOpen}
-            >
-              <button
-                type="button"
-                tabIndex={menuOpen && mobilePracticeAreasOpen ? undefined : -1}
-                onClick={() => setMobilePracticeAreasOpen(false)}
-                className={`flex items-center gap-2 self-start font-ui text-xs uppercase tracking-widest text-cream/60 transition-colors hover:text-gold-light ${FOCUS_RING}`}
-              >
-                <span aria-hidden="true">&larr;</span> Back
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
               </button>
 
-              {practiceAreas.map((area) => {
-                const href = `/practice-areas/${area.slug}`;
-                return (
-                  <Link
-                    key={area.slug}
-                    href={href}
-                    tabIndex={menuOpen && mobilePracticeAreasOpen ? undefined : -1}
-                    className={`font-display text-xl ${FOCUS_RING} ${
-                      pathname === href ? "text-gold-light" : "text-cream/80"
-                    }`}
-                  >
-                    {area.title}
-                  </Link>
-                );
-              })}
+              <div
+                className={`grid overflow-hidden transition-[grid-template-rows] duration-200 ease-out ${
+                  mobilePracticeAreasOpen ? "mt-4 grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
+              >
+                <div className="flex flex-col gap-4 overflow-hidden pl-4">
+                  {practiceAreas.map((area) => {
+                    const href = `/practice-areas/${area.slug}`;
+                    return (
+                      <Link
+                        key={area.slug}
+                        href={href}
+                        tabIndex={
+                          menuOpen && mobilePracticeAreasOpen ? undefined : -1
+                        }
+                        className={`font-display text-xl ${FOCUS_RING} ${
+                          pathname === href ? "text-gold-light" : "text-cream/80"
+                        }`}
+                      >
+                        {area.title}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
-          </div>
+
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                tabIndex={menuOpen ? undefined : -1}
+                className={`font-display text-2xl ${FOCUS_RING} ${
+                  isActive(link.href) ? "text-gold" : "text-cream"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </header>
