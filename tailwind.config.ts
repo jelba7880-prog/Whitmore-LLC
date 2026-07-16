@@ -27,14 +27,20 @@ const config: Config = {
       fontSize: {
         // Centralized type-scale tokens (see docs/design-tokens.md → Type Scale).
         // font-weight stays a separate `font-bold` class at each usage site.
-        display: ["80px", { lineHeight: "1", letterSpacing: "-0.02em" }],
-        h1: ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        "h1-hero": ["72px", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        "h1-legal": ["44px", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
-        "h1-blog": ["46px", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
-        h2: ["56px", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+        //
+        // Sizes use clamp(min, preferred, max) so headings scale down on small
+        // screens. The `max` of each clamp equals the canonical desktop px value
+        // from design-tokens.md, so desktop (≥ the preferred/vw crossover) renders
+        // pixel-identically; only mobile/tablet shrink. Line-height/tracking are
+        // unchanged.
+        display: ["clamp(2.75rem, 8vw, 80px)", { lineHeight: "1", letterSpacing: "-0.02em" }],
+        h1: ["clamp(2.25rem, 6.5vw, 64px)", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        "h1-hero": ["clamp(2.5rem, 8vw, 72px)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "h1-legal": ["clamp(2rem, 5.5vw, 44px)", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
+        "h1-blog": ["clamp(2rem, 5.5vw, 46px)", { lineHeight: "1.15", letterSpacing: "-0.01em" }],
+        h2: ["clamp(2rem, 6vw, 56px)", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
         "h2-legal": ["28px", { lineHeight: "1.3", letterSpacing: "0" }],
-        "h2-blog-card": ["36px", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        "h2-blog-card": ["clamp(1.6rem, 4.5vw, 36px)", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
         h3: ["28px", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
         "h3-blog-card": ["22px", { lineHeight: "1.25", letterSpacing: "0" }],
       },

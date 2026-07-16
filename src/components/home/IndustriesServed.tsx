@@ -144,7 +144,7 @@ export default function IndustriesServed() {
                   </span>
                 </div>
                 {index < industries.length - 1 && (
-                  <div className="my-1 w-px self-stretch bg-navy-light" />
+                  <div className="my-1 hidden w-px self-stretch bg-navy-light md:block" />
                 )}
               </div>
             ))}

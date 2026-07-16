@@ -14,6 +14,19 @@
   --muted: #6b7a8d;
 }
 
+html,
+body {
+  /* Defense-in-depth: keep any stray full-bleed child from producing a
+     page-wide horizontal scrollbar on small screens. Root causes are fixed at
+     the component level; this is a safety net, not a substitute for them.
+     `clip` (not `hidden`) is used so this does NOT create a scroll container —
+     `hidden` would force overflow-y to `auto` and break the site's `lg:sticky`
+     asides (contact, practice-area, blog). The `hidden` line is a fallback for
+     browsers without `overflow: clip` support. */
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
 body {
   color: var(--ink);
   background: var(--cream);
