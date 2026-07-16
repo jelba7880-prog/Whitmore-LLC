@@ -407,14 +407,6 @@ export default function Navbar() {
               })}
             </div>
           </div>
-
-          <Link
-            href="/free-consultation"
-            tabIndex={menuOpen ? undefined : -1}
-            className={`block w-full bg-gold px-5 py-3 text-center font-ui text-sm uppercase tracking-[0.08em] text-navy ${FOCUS_RING}`}
-          >
-            Free Consultation
-          </Link>
         </div>
       </div>
     </header>
