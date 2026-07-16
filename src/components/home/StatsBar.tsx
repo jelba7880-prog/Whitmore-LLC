@@ -8,20 +8,22 @@ export default function StatsBar() {
           immediately (no counter/roll-up), per Hard Rule #6. RevealOnScroll is
           the sole client boundary; StatsBar stays a server component. */}
       <RevealOnScroll>
-        <div className="mx-auto grid max-w-content grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]">
-          {STATS.map((stat, index) => (
-            <div key={stat.label} className="contents">
-              <div className="px-8 text-center">
-                <div className="font-display text-[58px] font-bold leading-none text-gold">
-                  {stat.value}
-                </div>
-                <div className="mt-2 font-ui text-[11px] uppercase tracking-[0.14em] text-cream/65">
-                  {stat.label}
-                </div>
+        {/* 2×2 grid on mobile → 4-across from md up. Dividers are cell borders
+            (not separate grid tracks) so they render correctly in both layouts:
+            mobile shows a cross between the four cells; md shows three vertical
+            rules between the row of four. */}
+        <div className="mx-auto grid max-w-content grid-cols-2 md:grid-cols-4">
+          {STATS.map((stat) => (
+            <div
+              key={stat.label}
+              className="border-navy-light px-4 py-4 text-center md:px-8 md:py-2 [&:nth-child(even)]:border-l [&:nth-child(n+3)]:border-t md:[&:nth-child(3)]:border-l md:[&:nth-child(n+3)]:border-t-0"
+            >
+              <div className="font-display text-[42px] font-bold leading-none text-gold md:text-[58px]">
+                {stat.value}
               </div>
-              {index < STATS.length - 1 && (
-                <div className="my-6 w-px self-stretch bg-navy-light" />
-              )}
+              <div className="mt-2 font-ui text-[11px] uppercase tracking-[0.14em] text-cream/65">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>

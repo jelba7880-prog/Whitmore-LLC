@@ -93,9 +93,9 @@ export default function BlogPostLayout({
 
       {/* Body + right rail */}
       <section className="py-20">
-        <div className="mx-auto flex max-w-[1200px] items-start gap-16 px-6">
+        <div className="mx-auto flex max-w-[1200px] flex-col items-start gap-16 px-6 lg:flex-row">
           {/* Article body */}
-          <article className="flex-1">
+          <article className="min-w-0 flex-1">
             {hasContent ? (
               <div
                 className="max-w-[70ch] font-body text-[18px] leading-[1.8] text-ink [&_blockquote]:my-8 [&_blockquote]:border-l-2 [&_blockquote]:border-gold [&_blockquote]:bg-parchment [&_blockquote]:px-7 [&_blockquote]:py-4 [&_blockquote]:font-body [&_blockquote]:text-[18px] [&_blockquote]:italic [&_h3]:mb-4 [&_h3]:mt-8 [&_h3]:font-display [&_h3]:text-[28px] [&_h3]:font-bold [&_h3]:tracking-[-0.01em] [&_h3]:text-ink [&_p]:mb-6"
@@ -109,7 +109,7 @@ export default function BlogPostLayout({
           </article>
 
           {/* Right rail */}
-          <aside className="sticky top-24 flex w-[300px] flex-shrink-0 flex-col gap-6">
+          <aside className="flex w-full flex-shrink-0 flex-col gap-6 lg:sticky lg:top-24 lg:w-[300px]">
             {/* Author card */}
             <div className="border border-navy-light bg-parchment p-6">
               <p className="mb-4 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-gold">

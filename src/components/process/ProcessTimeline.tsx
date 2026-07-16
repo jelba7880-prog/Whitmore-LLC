@@ -20,7 +20,7 @@ interface ProcessTimelineProps {
 // border-radius anywhere else.
 export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
   return (
-    <div className="relative pl-[80px]">
+    <div className="relative pl-14 sm:pl-[80px]">
       {/* Vertical gold rail running the full height of the timeline */}
       <div
         className="absolute bottom-0 left-[22px] top-0 w-px bg-gold opacity-40"
@@ -37,7 +37,7 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
           >
             {/* Step circle — rounded-full permitted here only (design-tokens § 09) */}
             <div
-              className={`absolute left-[-80px] top-0 flex h-11 w-11 items-center justify-center rounded-full border ${
+              className={`absolute left-[-56px] top-0 flex h-11 w-11 items-center justify-center rounded-full border sm:left-[-80px] ${
                 isLast ? "border-navy bg-navy" : "border-gold bg-cream"
               }`}
             >

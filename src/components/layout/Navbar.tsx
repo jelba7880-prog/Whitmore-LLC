@@ -179,7 +179,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-10">
         <nav className="flex items-center gap-8">
           <Link
             href="/about"
@@ -295,7 +295,7 @@ export default function Navbar() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
-          className={`md:hidden flex h-10 w-10 flex-col items-center justify-center gap-[6px] ${FOCUS_RING}`}
+          className={`lg:hidden flex h-10 w-10 flex-col items-center justify-center gap-[6px] ${FOCUS_RING}`}
         >
           <span
             className={`block h-px w-[22px] bg-cream transition-all duration-200 ${
@@ -318,7 +318,7 @@ export default function Navbar() {
 
       <div
         ref={mobileNavRef}
-        className={`md:hidden fixed inset-x-0 top-[54px] bottom-0 overflow-hidden bg-navy transition-transform duration-200 ease-out will-change-transform ${
+        className={`lg:hidden fixed inset-x-0 top-[54px] bottom-0 overflow-hidden bg-navy transition-transform duration-200 ease-out will-change-transform md:top-[72px] ${
           menuOpen
             ? "translate-x-0 pointer-events-auto"
             : "translate-x-full pointer-events-none"
