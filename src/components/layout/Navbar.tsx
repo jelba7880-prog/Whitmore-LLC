@@ -230,8 +230,8 @@ export default function Navbar() {
             <div
               className={`absolute left-0 top-full pt-4 transition-[opacity,transform] duration-200 ease-out ${
                 desktopPracticeAreasOpen
-                  ? "visible opacity-100 translate-y-0"
-                  : "invisible opacity-0 -translate-y-1"
+                  ? "pointer-events-auto opacity-100 translate-y-0"
+                  : "pointer-events-none opacity-0 -translate-y-1"
               }`}
             >
               <div className="w-64 border-t border-gold bg-navy-mid py-3">
