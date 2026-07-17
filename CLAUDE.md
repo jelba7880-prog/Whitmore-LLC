@@ -16,7 +16,7 @@ A high-credibility law firm website for a fraud recovery and commercial litigati
 ## Hard Rules (Non-Negotiable)
 
 1. **Every link resolves.** No `href="#"` anywhere. If a page isn't built yet, create a shell with real metadata.
-2. **Single canonical stat block.** The only permitted firm statistics are: `$2.1B Recovered · 350+ Cases · 18 Years · 28 States`. These same four numbers appear in the Stats Bar and nowhere else in a different form.
+2. **Single canonical stat block.** The only permitted firm statistics are: `$185M Recovered · 100+ Cases · 18 Years · 28 States`. These same four numbers appear in the Stats Bar and nowhere else in a different form.
 3. **Custom domain email only.** `richard@whitmoreharlow.com` — no Gmail, no generic addresses, ever.
 4. **Bar numbers are optional pending verification.** `barNumbers` may be an empty array — real numbers were never verified and were removed as placeholder/fabricated data (see `pre-launch-checklist.md`). When present, format: `NY Bar #XXXXXXX · [Verify with NY State Bar →]`. There is no build-time invariant requiring a non-empty array, and attorney cards/profiles render correctly with none.
 5. **Blog authors must match `/attorneys` roster exactly.** If an attorney isn't on the roster page, they cannot author a post.
@@ -257,8 +257,8 @@ export interface BlogPost {
 ```ts
 // lib/stats.ts
 export const STATS = [
-  { value: '$2.1B', label: 'Recovered for Clients' },
-  { value: '350+',  label: 'Complex Cases' },
+  { value: '$185M', label: 'Recovered for Clients' },
+  { value: '100+',  label: 'Complex Cases' },
   { value: '18',    label: 'Years of Practice' },
   { value: '28',    label: 'States & Jurisdictions' },
 ] as const;

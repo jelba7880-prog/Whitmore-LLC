@@ -144,8 +144,8 @@ into the token: apply `font-bold` (700) at each usage site.
 * Stat number: Cormorant Garamond 58px 700, gold, line-height 1
 * Stat label: Jost 11px, 0.14em tracking, uppercase, cream 0.65 opacity
 * **CANONICAL STATS — use these exact values everywhere:**
-  * `$2.1B` — Recovered for Clients
-  * `350+` — Complex Cases
+  * `$185M` — Recovered for Clients
+  * `100+` — Complex Cases
   * `18` — Years of Practice
   * `28` — States & Jurisdictions
 * **NO animated counters. Static display only.**
@@ -291,7 +291,7 @@ into the token: apply `font-bold` (700) at each usage site.
 * ❌ No stock photos of people / faces in hero
 * ❌ No Gmail or generic email addresses
 * ❌ No `#` placeholder links — every link must resolve
-* ❌ No inconsistent stats — `$2.1B / 350+ / 18 / 28` everywhere
+* ❌ No inconsistent stats — `$185M / 100+ / 18 / 28` everywhere
 * ❌ No anonymous blog authors — must match `/attorneys` roster
 * ❌ No AI-obvious skeleton content
 * ❌ Gold on large fills or body copy is forbidden

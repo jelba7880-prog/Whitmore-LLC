@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Fraud Recovery & Commercial Litigation | Whitmore Harlow LLP",
   },
   description:
-    "Whitmore Harlow LLP represents individuals and institutions in complex fraud recovery, commercial litigation, and investment disputes. $2.1B recovered.",
+    "Whitmore Harlow LLP represents individuals and institutions in complex fraud recovery, commercial litigation, and investment disputes. $185M recovered.",
 };
 
 export default function HomePage() {
