@@ -15,13 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default function ResultsPage() {
-  // Group results by practice area, dropping areas with no results.
-  const grouped = practiceAreas
-    .map((area) => ({
-      area,
-      results: caseResults.filter((r) => r.practiceArea === area.slug),
-    }))
-    .filter((group) => group.results.length > 0);
+  // Sorted newest-first. Rendered as a single unified grid rather than
+  // grouped per practice area — with one result per area today, per-area
+  // grouping produced lone cards stranded in otherwise-empty rows.
+  const results = [...caseResults].sort((a, b) => b.year - a.year);
 
   return (
     <main className="bg-cream">
@@ -66,28 +63,45 @@ export default function ResultsPage() {
         </div>
       </section>
 
-      {/* Results grid, grouped by practice area */}
+      {/* Results grid — unified across all practice areas */}
       <section className="py-20">
         <div className="mx-auto max-w-[1200px] px-6">
-          {grouped.map(({ area, results }, index) => (
-            <div key={area.slug}>
-              <GoldRule />
-              <h2 className="mb-8 mt-4 font-display text-[32px] font-bold tracking-[-0.01em] text-ink">
-                {area.title}
-              </h2>
-              <div className="mb-16 grid grid-cols-1 gap-6 md:grid-cols-3">
-                {results.map((r) => (
-                  <CaseResultCard result={r} key={r.id} />
-                ))}
-              </div>
-              {index < grouped.length - 1 && (
-                <SectionDivider className="mb-16" />
-              )}
+          <GoldRule />
+          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+            Selected Outcomes
+          </p>
+          <h2 className="mb-10 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
+            Representative Case Results
+          </h2>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {results.map((r) => (
+              <CaseResultCard result={r} key={r.id} />
+            ))}
+          </div>
+
+          <SectionDivider className="mt-16" />
+
+          {/* Explore by practice area — cross-links, replaces the old per-area headers */}
+          <div className="mt-16">
+            <p className="font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+              Explore by Practice Area
+            </p>
+            <div className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
+              {practiceAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/practice-areas/${area.slug}`}
+                  className="font-ui text-[13px] uppercase tracking-wide text-ink transition-colors hover:text-gold"
+                >
+                  {area.title} &rarr;
+                </Link>
+              ))}
             </div>
-          ))}
+          </div>
 
           {/* Bottom compliance block */}
-          <div className="mt-8 border-t border-navy-light pt-8">
+          <div className="mt-16 border-t border-navy-light pt-8">
             <p className="mx-auto max-w-[760px] text-center font-ui text-[12px] text-muted">
               The case results described above are intended to illustrate the
               types of matters handled by Whitmore Harlow LLP. Results
