@@ -195,7 +195,11 @@ export default function AttorneyProfile({
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {relatedResults.map((result) => (
-                <CaseResultCard key={result.id} result={result} />
+                <CaseResultCard
+                  key={result.id}
+                  result={result}
+                  hideAttorneyCredit
+                />
               ))}
             </div>
           </div>
