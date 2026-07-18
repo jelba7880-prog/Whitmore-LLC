@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
   await resend.emails.send({
     from: "Whitmore Harlow LLP <notifications@mail.whitmoreharlow.com>",
-    to: "richard@whitmoreharlow.com",
+    to: process.env.CONTACT_EMAIL || "richard@whitmoreharlow.com",
     replyTo: email,
     subject: `New inquiry: ${matterType}`,
     html: `
