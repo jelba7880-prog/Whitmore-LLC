@@ -90,7 +90,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* TODO: replace with Google Maps iframe when MAPS_EMBED_KEY is set */}
-                <div className="mt-6 flex aspect-[4/3] w-full items-center justify-center bg-navy-light p-4 text-center font-ui text-[11px] text-muted">
+                <div className="mt-6 flex aspect-[4/3] w-full items-center justify-center bg-navy-mid p-4 text-center font-ui text-[11px] text-muted">
                   Map embed — add MAPS_EMBED_KEY to .env.local
                 </div>
               </div>

@@ -140,7 +140,7 @@ export default function TestimonialCarousel() {
           ))}
         </div>
 
-        <p className="mt-8 text-center font-ui text-[11px] text-muted/70">
+        <p className="mt-8 text-center font-ui text-[11px] text-muted-on-dark">
           Past results do not guarantee future outcomes. Each case is unique.
         </p>
       </div>
