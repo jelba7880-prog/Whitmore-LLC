@@ -33,7 +33,7 @@ export default function PracticeAreaCards() {
               <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted-on-light">
                 {area.shortDescription}
               </p>
-              <span className="mt-6 block font-ui text-[11px] uppercase tracking-[0.1em] text-gold">
+              <span className="mt-6 block font-ui text-[11px] uppercase tracking-[0.1em] text-ink">
                 Learn More &rarr;
               </span>
             </Link>
