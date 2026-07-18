@@ -97,7 +97,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
               <path d="M6 9l6 6 6-6" />
             </svg>
           </summary>
-          <div className="overflow-hidden pb-5 font-body text-[17px] leading-[1.75] text-muted">
+          <div className="overflow-hidden pb-5 font-body text-[17px] leading-[1.75] text-muted-on-light">
             {faq.answer}
           </div>
         </details>

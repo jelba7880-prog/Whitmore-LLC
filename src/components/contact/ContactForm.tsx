@@ -54,7 +54,7 @@ export default function ContactForm() {
         <h3 className="mt-4 font-display text-h3 font-bold text-ink">
           Message Received
         </h3>
-        <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">
+        <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted-on-light">
           Thank you for reaching out. A member of our team will contact you
           within one business day to discuss your matter.
         </p>
@@ -170,7 +170,7 @@ export default function ContactForm() {
         {loading ? "Sending..." : "Submit Inquiry"}
       </button>
 
-      <p className="mt-4 font-ui text-[11px] text-muted">
+      <p className="mt-4 font-ui text-[11px] text-muted-on-light">
         Attorney-client privilege attaches to this communication. We respond to
         all inquiries within one business day.
       </p>

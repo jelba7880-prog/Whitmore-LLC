@@ -33,7 +33,7 @@ export default function DisclaimerPage() {
       {/* Content */}
       <section className="py-20">
         <div className="mx-auto max-w-[760px] px-6">
-          <p className="mb-8 font-ui text-[12px] text-muted">
+          <p className="mb-8 font-ui text-[12px] text-muted-on-light">
             Effective Date: January 1, 2025
           </p>
 

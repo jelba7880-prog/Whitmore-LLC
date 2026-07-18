@@ -17,7 +17,13 @@ const config: Config = {
         cream: "#F8F5EE",
         parchment: "#EDE8DF",
         ink: "#1A1A2E",
-        muted: "#6B7A8D",
+        // `muted` is aliased to `muted-on-dark` — the original #6B7A8D was tuned
+        // for dark backgrounds but failed WCAG AA (~3.1:1) when reused on the
+        // light parchment/cream surfaces. Use `muted-on-light` on light
+        // backgrounds and `muted-on-dark` on navy/navy-mid. See docs/design-tokens.md.
+        muted: "#9CAFC0",
+        "muted-on-light": "#5A6472",
+        "muted-on-dark": "#9CAFC0",
       },
       fontFamily: {
         display: ["var(--font-display)", '"Cormorant Garamond"', "Georgia", "serif"],

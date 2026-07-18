@@ -41,7 +41,12 @@ colors: {
   cream:       '#F8F5EE',
   parchment:   '#EDE8DF',
   ink:         '#1A1A2E',
-  muted:       '#6B7A8D',
+  // `muted` is an alias of `muted-on-dark`. The original single #6B7A8D failed
+  // WCAG AA (~3.1:1) on light backgrounds; use `muted-on-light` on cream/parchment
+  // and `muted-on-dark` on navy/navy-mid. See docs/design-tokens.md.
+  muted:            '#9CAFC0',  // alias → muted-on-dark
+  'muted-on-light': '#5A6472',  // subtext/metadata on cream/parchment (AA)
+  'muted-on-dark':  '#9CAFC0',  // subtext/metadata on navy/navy-mid
 },
 fontFamily: {
   display: ['"Cormorant Garamond"', 'Georgia', 'serif'],   // font-display → headlines

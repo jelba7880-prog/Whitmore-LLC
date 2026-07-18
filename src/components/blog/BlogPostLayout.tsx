@@ -102,7 +102,7 @@ export default function BlogPostLayout({
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             ) : (
-              <div className="border border-navy-light bg-parchment p-8 text-center font-ui text-[13px] text-muted">
+              <div className="border border-navy-light bg-parchment p-8 text-center font-ui text-[13px] text-muted-on-light">
                 Article content coming soon.
               </div>
             )}
@@ -176,7 +176,7 @@ export default function BlogPostLayout({
                       <span className="block font-display text-[16px] font-bold leading-[1.3] text-ink transition-colors hover:text-gold">
                         {related.title}
                       </span>
-                      <span className="mt-1 block font-ui text-[11px] text-muted">
+                      <span className="mt-1 block font-ui text-[11px] text-muted-on-light">
                         {related.readMinutes} min read
                       </span>
                     </Link>

@@ -54,18 +54,18 @@ export default function BlogCard({
           <h2 className="font-display text-h2-blog-card font-bold leading-[1.15] tracking-[-0.01em] text-ink">
             {post.title}
           </h2>
-          <p className="mt-4 font-body text-[17px] leading-[1.7] text-muted">
+          <p className="mt-4 font-body text-[17px] leading-[1.7] text-muted-on-light">
             {post.deck}
           </p>
           <div className="mt-6 flex items-center justify-between border-t border-navy-light pt-4">
             {showAuthor ? (
-              <span className="font-ui text-[12px] text-muted">
+              <span className="font-ui text-[12px] text-muted-on-light">
                 {author?.name ?? post.authorSlug}
               </span>
             ) : (
               <span aria-hidden="true" />
             )}
-            <span className="font-ui text-[12px] text-muted">
+            <span className="font-ui text-[12px] text-muted-on-light">
               {post.readMinutes} min read &middot; {formattedDate}
             </span>
           </div>
@@ -97,18 +97,18 @@ export default function BlogCard({
         <h3 className="font-display text-h3-blog-card font-bold leading-[1.25] tracking-[-0.01em] text-ink">
           {post.title}
         </h3>
-        <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted">
+        <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted-on-light">
           {post.deck}
         </p>
         <div className="mt-4 flex items-center justify-between border-t border-navy-light pt-4">
           {showAuthor ? (
-            <span className="font-ui text-[11px] text-muted">
+            <span className="font-ui text-[11px] text-muted-on-light">
               {author?.name ?? post.authorSlug}
             </span>
           ) : (
             <span aria-hidden="true" />
           )}
-          <span className="font-ui text-[11px] text-muted">
+          <span className="font-ui text-[11px] text-muted-on-light">
             {post.readMinutes} min read &middot; {formattedDate}
           </span>
         </div>
