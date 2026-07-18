@@ -89,7 +89,7 @@ export default function AboutPage() {
                 className="object-cover"
               />
             </div>
-            <figcaption className="mt-3 font-ui text-[11px] uppercase tracking-[0.1em] text-muted">
+            <figcaption className="mt-3 font-ui text-[11px] uppercase tracking-[0.1em] text-muted-on-light">
               Our research library — the foundation of disciplined case work.
             </figcaption>
           </figure>
@@ -178,7 +178,7 @@ export default function AboutPage() {
               <h3 className="mb-3 font-display text-[24px] font-bold text-ink">
                 Focused Practice
               </h3>
-              <p className="font-body text-[16px] leading-[1.75] text-muted">
+              <p className="font-body text-[16px] leading-[1.75] text-muted-on-light">
                 We handle only fraud recovery and complex commercial
                 litigation. We do not take on divorces, real estate closings,
                 personal injury matters, or general corporate work. That focus
@@ -195,7 +195,7 @@ export default function AboutPage() {
               <h3 className="mb-3 font-display text-[24px] font-bold text-ink">
                 Technical Depth
               </h3>
-              <p className="font-body text-[16px] leading-[1.75] text-muted">
+              <p className="font-body text-[16px] leading-[1.75] text-muted-on-light">
                 Financial fraud and complex commercial matters require
                 understanding the mechanics of what actually went wrong, not
                 just the legal theory built on top of it. Our attorneys work
@@ -212,7 +212,7 @@ export default function AboutPage() {
               <h3 className="mb-3 font-display text-[24px] font-bold text-ink">
                 Institutional Relationships
               </h3>
-              <p className="font-body text-[16px] leading-[1.75] text-muted">
+              <p className="font-body text-[16px] leading-[1.75] text-muted-on-light">
                 Eighteen years of practice in the same courts and before the
                 same arbitral institutions has given our attorneys a
                 practical, on-the-ground familiarity that&apos;s difficult to

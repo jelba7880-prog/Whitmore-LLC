@@ -156,7 +156,7 @@ export default function AttorneyProfile({
           </h2>
 
           {bioIsTodo ? (
-            <div className="border border-navy-light bg-parchment p-8 text-center font-ui text-[13px] text-muted">
+            <div className="border border-navy-light bg-parchment p-8 text-center font-ui text-[13px] text-muted-on-light">
               Attorney biography coming soon.
             </div>
           ) : (
@@ -187,7 +187,7 @@ export default function AttorneyProfile({
               Notable Results
             </h2>
 
-            <p className="mb-8 font-ui text-[11px] text-muted">
+            <p className="mb-8 font-ui text-[11px] text-muted-on-light">
               Past results do not guarantee future outcomes. Each case is unique.
               Client names and identifying details are omitted to protect
               confidentiality.

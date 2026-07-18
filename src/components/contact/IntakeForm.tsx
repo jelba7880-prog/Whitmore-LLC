@@ -87,7 +87,7 @@ export default function IntakeForm() {
         <h3 className="mt-4 font-display text-h3 font-bold text-ink">
           Request Received
         </h3>
-        <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">
+        <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted-on-light">
           An attorney will review your matter and contact you within one
           business day to schedule your consultation.
         </p>
@@ -265,7 +265,7 @@ export default function IntakeForm() {
         {loading ? "Sending..." : "Submit Case for Review"}
       </button>
 
-      <p className="mt-4 font-ui text-[11px] text-muted">
+      <p className="mt-4 font-ui text-[11px] text-muted-on-light">
         This submission does not create an attorney-client relationship.
         Confidential. No obligation.
       </p>

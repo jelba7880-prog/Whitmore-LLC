@@ -11,7 +11,14 @@
   --cream: #f8f5ee;
   --parchment: #ede8df;
   --ink: #1a1a2e;
-  --muted: #6b7a8d;
+  /* Muted text tokens. `--muted-on-light` (#5a6472) passes WCAG AA on the
+     light parchment/cream surfaces; `--muted-on-dark` (#9cafc0) is the
+     dark-background value (also used for hero subheads). `--muted` is kept as
+     an alias of `--muted-on-dark` so existing dark-context usage is unchanged.
+     The former single value (#6b7a8d) failed AA (~3.1:1) on light backgrounds. */
+  --muted-on-light: #5a6472;
+  --muted-on-dark: #9cafc0;
+  --muted: var(--muted-on-dark);
 }
 
 html,

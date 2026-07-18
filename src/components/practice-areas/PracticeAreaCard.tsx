@@ -38,7 +38,7 @@ export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
         <h3 className="mt-4 font-display text-[26px] font-bold tracking-[-0.01em] text-ink">
           {area.title}
         </h3>
-        <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted">
+        <p className="mt-3 font-body text-[15px] leading-[1.65] text-muted-on-light">
           {area.shortDescription}
         </p>
         <span className="mt-6 block font-ui text-[11px] uppercase tracking-[0.1em] text-gold">

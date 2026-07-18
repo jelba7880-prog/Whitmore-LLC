@@ -17,8 +17,17 @@
       --cream:      #F8F5EE;  /* Primary light background */
       --parchment:  #EDE8DF;  /* Card backgrounds */
       --ink:        #1A1A2E;  /* Body text on light backgrounds */
-      --muted:      #6B7A8D;  /* Subtext, captions, metadata */
+      --muted-on-light: #5A6472;  /* Subtext/metadata on cream/parchment — WCAG AA (≥4.5:1) */
+      --muted-on-dark:  #9CAFC0;  /* Subtext/metadata + hero subheads on navy/navy-mid */
+      --muted:      var(--muted-on-dark);  /* Alias → --muted-on-dark (dark-context default) */
     }
+
+> **Muted text — background-specific.** The former single `--muted` (#6B7A8D)
+> was tuned for dark backgrounds and failed WCAG AA (~3.1:1) when reused on the
+> light parchment/cream surfaces. It is split into two tokens: use
+> `muted-on-light` (#5A6472) on cream/parchment and `muted-on-dark` (#9CAFC0)
+> on navy/navy-mid/navy-light. `--muted` is kept as an alias of `--muted-on-dark`
+> so existing dark-context usage is unchanged.
 
 ### Tailwind Mapping
 
@@ -32,7 +41,9 @@
       cream:       '#F8F5EE',
       parchment:   '#EDE8DF',
       ink:         '#1A1A2E',
-      muted:       '#6B7A8D',
+      muted:            '#9CAFC0',  // alias → muted-on-dark
+      'muted-on-light': '#5A6472',  // subtext/metadata on cream/parchment (WCAG AA)
+      'muted-on-dark':  '#9CAFC0',  // subtext/metadata on navy/navy-mid
     }
 
 ### Color Usage Rules
@@ -42,6 +53,7 @@
 * **NO** startup-style gradients
 * `--gold` is reserved for headlines, ruled lines, and icon accents **only** — never body copy or large fills
 * Gold as text: only on dark (navy) backgrounds or as small accent labels
+* Muted text: use `text-muted-on-light` on cream/parchment and `text-muted-on-dark` (or the `text-muted` alias) on navy/navy-mid — never `text-muted-on-dark` on a light surface (fails contrast)
 
 * * *
 

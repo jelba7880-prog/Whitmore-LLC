@@ -56,7 +56,7 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
             <h3 className="font-display text-[26px] font-bold tracking-[-0.01em] text-ink">
               {step.title}
             </h3>
-            <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted">
+            <p className="mt-3 font-body text-[17px] leading-[1.75] text-muted-on-light">
               {step.body}
             </p>
           </RevealOnScroll>

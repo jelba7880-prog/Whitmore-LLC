@@ -102,7 +102,7 @@ export default function ResultsPage() {
 
           {/* Bottom compliance block */}
           <div className="mt-16 border-t border-navy-light pt-8">
-            <p className="mx-auto max-w-[760px] text-center font-ui text-[12px] text-muted">
+            <p className="mx-auto max-w-[760px] text-center font-ui text-[12px] text-muted-on-light">
               The case results described above are intended to illustrate the
               types of matters handled by Whitmore Harlow LLP. Results
               depend upon a variety of factors unique to each matter and do not

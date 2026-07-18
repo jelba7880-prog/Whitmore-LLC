@@ -25,7 +25,7 @@ export default function CaseResultCard({
   return (
     <div className="flex h-full flex-col border border-navy-light bg-parchment p-8">
       <div className="mb-2 flex items-start justify-between gap-3">
-        <p className="font-ui text-[10px] uppercase tracking-[0.14em] text-muted">
+        <p className="font-ui text-[10px] uppercase tracking-[0.14em] text-muted-on-light">
           Result
         </p>
         {area && (
@@ -43,13 +43,13 @@ export default function CaseResultCard({
       <p className="mt-2 font-display text-[20px] font-bold text-ink">
         {result.description}
       </p>
-      <p className="mt-3 font-ui text-[12px] text-muted">
+      <p className="mt-3 font-ui text-[12px] text-muted-on-light">
         {result.matterType} &middot; {result.court} &middot; {result.year}
       </p>
-      <p className="mt-4 font-body text-[14px] leading-[1.6] text-muted">
+      <p className="mt-4 font-body text-[14px] leading-[1.6] text-muted-on-light">
         {result.challenge}
       </p>
-      <p className="mt-2 font-body text-[14px] leading-[1.6] text-muted">
+      <p className="mt-2 font-body text-[14px] leading-[1.6] text-muted-on-light">
         {result.resolution}
       </p>
       {!hideAttorneyCredit && credited.length > 0 && (
@@ -68,7 +68,7 @@ export default function CaseResultCard({
           ))}
         </p>
       )}
-      <p className="mt-auto pt-4 font-ui text-[10px] text-muted/60">
+      <p className="mt-auto pt-4 font-ui text-[10px] text-muted-on-light">
         Past results do not guarantee future outcomes.
       </p>
     </div>

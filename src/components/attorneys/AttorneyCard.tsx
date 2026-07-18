@@ -57,7 +57,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
             const area = practiceAreas.find((a) => a.slug === slug);
             const label = area?.title ?? slug;
             return (
-              <span key={slug} className="font-ui text-[11px] text-muted">
+              <span key={slug} className="font-ui text-[11px] text-muted-on-light">
                 &#9679; {label}
               </span>
             );
