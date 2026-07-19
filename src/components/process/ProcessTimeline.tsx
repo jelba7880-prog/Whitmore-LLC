@@ -43,14 +43,14 @@ export default function ProcessTimeline({ steps }: ProcessTimelineProps) {
             >
               <span
                 className={`font-display text-[18px] font-bold ${
-                  isLast ? "text-cream" : "text-gold"
+                  isLast ? "text-cream" : "text-ink"
                 }`}
               >
                 {step.number}
               </span>
             </div>
 
-            <p className="mb-1 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
+            <p className="mb-1 font-ui text-[10px] uppercase tracking-[0.16em] text-ink">
               {step.eyebrow}
             </p>
             <h3 className="font-display text-[26px] font-bold tracking-[-0.01em] text-ink">

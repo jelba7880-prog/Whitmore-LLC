@@ -79,11 +79,11 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
             onClick={handleToggleClick}
             className="group/faq flex cursor-pointer list-none items-center justify-between py-5 [&::-webkit-details-marker]:hidden"
           >
-            <span className="font-display text-[20px] font-bold text-ink transition-colors group-hover/faq:text-gold">
+            <span className="font-display text-[20px] font-bold text-ink transition-colors group-hover/faq:text-navy-light">
               {faq.question}
             </span>
             <svg
-              className="faq-chevron ml-4 flex-shrink-0 text-gold transition-transform duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+              className="faq-chevron ml-4 flex-shrink-0 text-ink transition-transform duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
               width="20"
               height="20"
               viewBox="0 0 24 24"

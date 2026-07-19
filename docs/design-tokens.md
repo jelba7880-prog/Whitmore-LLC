@@ -52,7 +52,7 @@
 * **NEVER** use purple, teal, or SaaS-blue
 * **NO** startup-style gradients
 * `--gold` is reserved for headlines, ruled lines, and icon accents **only** — never body copy or large fills
-* Gold as text: only on dark (navy) backgrounds or as small accent labels
+* Gold as text, filled glyphs, or icon strokes is permitted only on navy / navy-mid / navy-light backgrounds. Gold is never permitted on cream or parchment for any foreground element — text, links, eyebrows, labels, icon strokes, or large display figures — at any size or weight, since gold cannot reach even 3:1 against either light background. On cream/parchment, use ink for text, links, and icon glyphs. Gold on light backgrounds is permitted only for 1px decorative rules, borders, and hover-state border colors — never for anything conveying text or shape.
 * Muted text: use `text-muted-on-light` on cream/parchment and `text-muted-on-dark` (or the `text-muted` alias) on navy/navy-mid — never `text-muted-on-dark` on a light surface (fails contrast)
 
 * * *
@@ -167,10 +167,10 @@ into the token: apply `font-bold` (700) at each usage site.
 * Grid: `3×2` desktop → `2×3` tablet → `1-col` mobile
 * Card: `background: --parchment; border: 1px solid --navy-light; padding: 36px`
 * **Sharp corners only** — no border-radius
-* Icon: 30×30px SVG, stroke `#C9A84C`, stroke-width 1.5
+* Icon: 30×30px SVG, stroke `--ink` (card is on `--parchment`; gold strokes are not permitted on light backgrounds), stroke-width 1.5
 * H3: Cormorant Garamond 26px 700, −0.01em, ink
 * Description: Source Serif 4 15px, muted, line-height 1.65
-* "Learn More →": Jost 11px, 0.1em tracking, uppercase, gold
+* "Learn More →": Jost 11px, 0.1em tracking, uppercase, ink
 * **Hover:** `border-color: var(--gold); box-shadow: 0 8px 32px rgba(13,27,42,0.13)`
 * Card links: `/practice-areas/{slug}`
 
@@ -180,11 +180,11 @@ into the token: apply `font-bold` (700) at each usage site.
 * Photo area: `--navy-light` background, grayscale photo; initials placeholder
 * Content background: `--parchment`
 * Name: Cormorant Garamond 28px 700, −0.01em, ink
-* Title: Jost 11px, 0.12em tracking, uppercase, gold
-* **Bar number required:** Jost 12px, muted — format: `NY Bar #XXXXXXX · [Verify link in gold]`
+* Title: Jost 11px, 0.12em tracking, uppercase, ink (content bg is `--parchment` — gold text is not permitted on light backgrounds)
+* **Bar number required:** Jost 12px, muted — format: `NY Bar #XXXXXXX · [Verify link in ink]` (verify link renders on the `--parchment` content background — ink, not gold)
 * Bio: Source Serif 4 15px, ink, line-height 1.7
-* Practice tags: Jost 11px, muted; gold bullet `●`
-* "View Profile →": Jost 11px, 0.1em tracking, uppercase, gold
+* Practice tags: Jost 11px, muted; muted bullet `●`
+* "View Profile →": Jost 11px, 0.1em tracking, uppercase, ink
 * **Hover (card):** `border-color: var(--gold)`
 * Profile links: `/attorneys/{slug}`
 
@@ -202,7 +202,7 @@ into the token: apply `font-bold` (700) at each usage site.
 
 * Background: `--parchment`, border `1px --navy-light`, padding 32px
 * "Result" label: Jost 10px, 0.14em tracking, uppercase, muted
-* Amount: Cormorant Garamond 44px 700, **gold**
+* Amount: Cormorant Garamond 44px 700, **ink** (card bg is `--parchment` — gold display figures are not permitted on light backgrounds)
 * Description: Cormorant Garamond 20px 700, ink
 * Meta: Jost 12px, muted — matter type, court, year
 
@@ -210,9 +210,9 @@ into the token: apply `font-bold` (700) at each usage site.
 
 * Background: `--cream`
 * Left rail: `position: absolute; left: 22px; width: 1px; background: var(--gold); opacity: 0.4`
-* Step circle: 44px diameter; `border: 1px solid var(--gold); background: var(--cream)` (last step: navy fill)
-* Step number: Cormorant Garamond 18px 700, gold
-* Eyebrow label: Jost 10px, 0.16em tracking, uppercase, gold
+* Step circle: 44px diameter; `border: 1px solid var(--gold); background: var(--cream)` (last step: navy fill) — border is a 1px decorative rule, still permitted in gold on light
+* Step number: Cormorant Garamond 18px 700, ink (sits inside the `--cream` circle — gold text is not permitted on light backgrounds)
+* Eyebrow label: Jost 10px, 0.16em tracking, uppercase, ink
 * Step title: Cormorant Garamond 26px 700, −0.01em, ink
 * Step body: Source Serif 4 17px, muted, line-height 1.75
 * Container: `padding-left: 80px` relative
@@ -267,7 +267,7 @@ into the token: apply `font-bold` (700) at each usage site.
 * Pull quote: `border-left: 2px solid var(--gold); background: var(--parchment); padding: 16px 28px`
 * Right rail (300px): author card, practice area card, related posts, mini-CTA (navy bg)
 * **Author must be a named bar-licensed attorney on the site** — no anonymous or mismatched names
-* Author mini-card: photo/initials, name in Cormorant Garamond 18px 700, title in Jost gold uppercase, bar number
+* Author mini-card: photo/initials, name in Cormorant Garamond 18px 700, title in Jost ink uppercase (card bg is `--parchment` — gold text is not permitted on light backgrounds), bar number
 
 * * *
 

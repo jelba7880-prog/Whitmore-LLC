@@ -41,7 +41,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
         <h3 className="font-display text-h3 font-bold tracking-[-0.01em] text-ink">
           {attorney.name}
         </h3>
-        <p className="mt-1 font-ui text-[11px] uppercase tracking-[0.12em] text-gold">
+        <p className="mt-1 font-ui text-[11px] uppercase tracking-[0.12em] text-ink">
           {attorney.title}
         </p>
 
@@ -66,7 +66,7 @@ export default function AttorneyCard({ attorney }: AttorneyCardProps) {
 
         <Link
           href={`/attorneys/${attorney.slug}`}
-          className="before:absolute before:inset-0 before:content-[''] mt-auto pt-5 font-ui text-[11px] uppercase tracking-[0.1em] text-gold"
+          className="before:absolute before:inset-0 before:content-[''] mt-auto pt-5 font-ui text-[11px] uppercase tracking-[0.1em] text-ink"
         >
           View Profile &rarr;
         </Link>
