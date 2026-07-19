@@ -267,7 +267,7 @@ into the token: apply `font-bold` (700) at each usage site.
 * Pull quote: `border-left: 2px solid var(--gold); background: var(--parchment); padding: 16px 28px`
 * Right rail (300px): author card, practice area card, related posts, mini-CTA (navy bg)
 * **Author must be a named bar-licensed attorney on the site** — no anonymous or mismatched names
-* Author mini-card: photo/initials, name in Cormorant Garamond 18px 700, title in Jost gold uppercase, bar number
+* Author mini-card: photo/initials, name in Cormorant Garamond 18px 700, title in Jost ink uppercase (card bg is `--parchment` — gold text is not permitted on light backgrounds), bar number
 
 * * *
 
