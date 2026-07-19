@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 // Shared gold section-label style for the firm info card (design-tokens.md § 12).
 const INFO_LABEL =
-  "mb-3 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-gold";
+  "mb-3 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-ink";
 
 export default function ContactPage() {
   return (
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   <h2 className={INFO_LABEL}>Telephone</h2>
                   <a
                     href="tel:+12125550100"
-                    className="font-body text-[15px] text-ink transition-colors hover:text-gold"
+                    className="font-body text-[15px] text-ink transition-colors hover:text-navy-light"
                   >
                     (212) 555-0100
                   </a>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   <h2 className={INFO_LABEL}>Email</h2>
                   <a
                     href="mailto:richard@whitmoreharlow.com"
-                    className="font-body text-[15px] text-ink transition-colors hover:text-gold"
+                    className="font-body text-[15px] text-ink transition-colors hover:text-navy-light"
                   >
                     richard@whitmoreharlow.com
                   </a>

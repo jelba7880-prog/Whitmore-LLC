@@ -48,7 +48,7 @@ export default function BlogCard({
           )}
         </div>
         <div className="flex flex-1 flex-col justify-center p-10">
-          <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
+          <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-ink">
             {post.practiceArea}
           </p>
           <h2 className="font-display text-h2-blog-card font-bold leading-[1.15] tracking-[-0.01em] text-ink">
@@ -91,7 +91,7 @@ export default function BlogCard({
         )}
       </div>
       <div className="p-7">
-        <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-gold">
+        <p className="mb-3 font-ui text-[10px] uppercase tracking-[0.16em] text-ink">
           {post.practiceArea}
         </p>
         <h3 className="font-display text-h3-blog-card font-bold leading-[1.25] tracking-[-0.01em] text-ink">

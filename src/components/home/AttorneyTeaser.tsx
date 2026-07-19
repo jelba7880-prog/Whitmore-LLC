@@ -16,7 +16,7 @@ export default function AttorneyTeaser() {
       <div className="mx-auto max-w-content px-6">
         <div className="mb-14 text-center">
           <GoldRule variant="short" />
-          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-ink">
             The Firm
           </p>
           <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
@@ -33,7 +33,7 @@ export default function AttorneyTeaser() {
         <div className="mx-auto max-w-[1200px] text-right">
           <Link
             href="/attorneys"
-            className="mt-8 inline-block font-ui text-[13px] uppercase tracking-widest text-gold hover:text-gold-light"
+            className="mt-8 inline-block font-ui text-[13px] uppercase tracking-widest text-ink hover:text-navy-light"
           >
             View All Attorneys &rarr;
           </Link>

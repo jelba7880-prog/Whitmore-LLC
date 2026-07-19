@@ -8,7 +8,7 @@ export default function PracticeAreaCards() {
       <div className="mx-auto max-w-content px-6">
         <div className="mb-14 text-center">
           <GoldRule variant="short" />
-          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-ink">
             Our Practice
           </p>
           <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
@@ -24,8 +24,8 @@ export default function PracticeAreaCards() {
               className="border border-navy-light bg-parchment p-9 transition-all duration-200 hover:-translate-y-1 hover:border-gold hover:shadow-[0_14px_40px_rgba(13,27,42,0.18)]"
             >
               {/* Icon placeholder — SVG icons come later */}
-              <div className="mb-6 flex h-[30px] w-[30px] items-center justify-center border border-gold/60">
-                <div className="h-3 w-3 bg-gold/70" />
+              <div className="mb-6 flex h-[30px] w-[30px] items-center justify-center border border-ink/30">
+                <div className="h-3 w-3 bg-ink/20" />
               </div>
               <h3 className="mt-4 font-display text-[26px] font-bold tracking-[-0.01em] text-ink">
                 {area.title}
