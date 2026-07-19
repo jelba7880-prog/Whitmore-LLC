@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import GoldRule from "@/components/ui/GoldRule";
 import { industries } from "@/lib/industries";
@@ -19,7 +20,24 @@ export default function IndustriesPage() {
     <main>
       {/* Page hero */}
       <section className="relative overflow-hidden bg-navy py-20">
-        <div className="mx-auto max-w-[1200px] px-6">
+        <Image
+          src="/images/industries/hero.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        {/* Navy scrim so the gold/cream hero content stays legible over the photo */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(100deg, rgba(13,27,42,0.94) 0%, rgba(13,27,42,0.86) 45%, rgba(13,27,42,0.7) 100%)",
+          }}
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto max-w-[1200px] px-6">
           <nav className="font-ui text-[11px] uppercase tracking-[0.1em] text-muted">
             <Link href="/" className="transition-colors hover:text-gold">
               Home
