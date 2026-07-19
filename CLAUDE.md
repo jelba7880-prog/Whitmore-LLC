@@ -68,6 +68,7 @@ Gold (`#C9A84C`) is used ONLY for: headlines, ruled lines (1px), icon strokes, a
 /attorneys/[slug]           → Individual Attorney Profile
 /practice-areas             → Practice Areas Index
 /practice-areas/[slug]      → Individual Practice Area
+/industries                 → Industries We Serve
 /results                    → Case Results
 /process                    → How We Work
 /blog                       → Blog Index

@@ -78,3 +78,12 @@ export interface Testimonial {
   court: string; // e.g. "Southern District of New York"
   year: number;
 }
+
+export interface Industry {
+  slug: string; // e.g. "financial-services-banking"
+  label: string; // e.g. "Financial Services & Banking"
+  icon: JSX.Element; // inline SVG shared with the homepage IndustriesServed section
+  definition: string; // 1–2 sentences: neutral description of the sector, not a claim about the firm
+  involvement: string; // 2–3 sentences: the TYPE of disputes we handle in the sector, in general terms — no invented figures
+  relatedPracticeAreas: string[]; // practice area slugs from lib/practice-areas.ts; substantiates involvement via cross-link
+}

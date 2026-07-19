@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { practiceAreas } from "@/lib/practice-areas";
 
 const NAV_LINKS = [
+  { href: "/industries", label: "Industries" },
   { href: "/attorneys", label: "Attorneys" },
   { href: "/results", label: "Results" },
 ];
