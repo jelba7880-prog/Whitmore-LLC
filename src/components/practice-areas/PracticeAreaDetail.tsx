@@ -134,7 +134,7 @@ export default function PracticeAreaDetail({ area }: PracticeAreaDetailProps) {
         {/* C — Our Process */}
         <div className="mx-auto max-w-[1200px] px-6">
           <GoldRule />
-          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-ink">
             How We Approach {area.title}
           </p>
           <h2 className="mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
@@ -151,7 +151,7 @@ export default function PracticeAreaDetail({ area }: PracticeAreaDetailProps) {
       <section className="bg-parchment py-20">
         <div className="mx-auto max-w-[760px] px-6">
           <GoldRule />
-          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-ink">
             Common Questions
           </p>
           <h2 className="mb-10 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">

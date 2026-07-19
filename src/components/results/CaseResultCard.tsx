@@ -10,9 +10,9 @@ interface CaseResultCardProps {
   hideAttorneyCredit?: boolean;
 }
 
-// Case result card (design-tokens.md § 08). Gold on the amount figure is an
-// explicit, sanctioned use in the design system. Compliance line is mandatory
-// on every card.
+// Case result card (design-tokens.md § 08). The amount figure and all label
+// text render in ink — gold is not permitted on the parchment card background
+// (fails WCAG contrast). Compliance line is mandatory on every card.
 export default function CaseResultCard({
   result,
   hideAttorneyCredit = false,
@@ -31,13 +31,13 @@ export default function CaseResultCard({
         {area && (
           <Link
             href={`/practice-areas/${area.slug}`}
-            className="font-ui text-[10px] uppercase tracking-[0.14em] text-gold transition-colors hover:text-gold-light"
+            className="font-ui text-[10px] uppercase tracking-[0.14em] text-ink transition-colors hover:text-navy-light"
           >
             {area.title}
           </Link>
         )}
       </div>
-      <p className="font-display text-[44px] font-bold leading-none text-gold">
+      <p className="font-display text-[44px] font-bold leading-none text-ink">
         {result.amount}
       </p>
       <p className="mt-2 font-display text-[20px] font-bold text-ink">
@@ -59,7 +59,7 @@ export default function CaseResultCard({
             <span key={a.slug}>
               <Link
                 href={`/attorneys/${a.slug}`}
-                className="transition-colors hover:text-gold"
+                className="transition-colors hover:text-navy-light"
               >
                 {a.name}
               </Link>

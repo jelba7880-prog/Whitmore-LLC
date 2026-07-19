@@ -112,7 +112,7 @@ export default function BlogPostLayout({
           <aside className="flex w-full flex-shrink-0 flex-col gap-6 lg:sticky lg:top-24 lg:w-[300px]">
             {/* Author card */}
             <div className="border border-navy-light bg-parchment p-6">
-              <p className="mb-4 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-gold">
+              <p className="mb-4 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-ink">
                 Author
               </p>
               <div className="relative aspect-square max-h-[120px] w-full overflow-hidden bg-navy-light">
@@ -132,29 +132,29 @@ export default function BlogPostLayout({
               </div>
               <Link
                 href={`/attorneys/${author.slug}`}
-                className="mt-3 block font-display text-[18px] font-bold text-ink transition-colors hover:text-gold"
+                className="mt-3 block font-display text-[18px] font-bold text-ink transition-colors hover:text-navy-light"
               >
                 {author.name}
               </Link>
-              <p className="mt-1 font-ui text-[10px] uppercase tracking-[0.12em] text-gold">
+              <p className="mt-1 font-ui text-[10px] uppercase tracking-[0.12em] text-ink">
                 {author.title}
               </p>
             </div>
 
             {/* Practice area card */}
             <div className="border border-navy-light bg-parchment p-6">
-              <p className="mb-4 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-gold">
+              <p className="mb-4 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-ink">
                 Practice Area
               </p>
               <Link
                 href={`/practice-areas/${post.practiceArea}`}
-                className="mt-3 block font-display text-[18px] font-bold text-ink transition-colors hover:text-gold"
+                className="mt-3 block font-display text-[18px] font-bold text-ink transition-colors hover:text-navy-light"
               >
                 {practiceAreaTitle}
               </Link>
               <Link
                 href={`/practice-areas/${post.practiceArea}`}
-                className="mt-2 block font-ui text-[11px] uppercase tracking-[0.1em] text-gold"
+                className="mt-2 block font-ui text-[11px] uppercase tracking-[0.1em] text-ink"
               >
                 View all {practiceAreaTitle} resources &rarr;
               </Link>
@@ -163,7 +163,7 @@ export default function BlogPostLayout({
             {/* Related posts */}
             {relatedPosts.length > 0 && (
               <div className="border border-navy-light bg-parchment p-6">
-                <p className="mb-4 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-gold">
+                <p className="mb-4 border-b border-navy-light pb-2 font-ui text-[10px] uppercase tracking-[0.18em] text-ink">
                   Related Insights
                 </p>
                 <div className="mt-4 flex flex-col gap-4">
@@ -173,7 +173,7 @@ export default function BlogPostLayout({
                       href={`/blog/${related.slug}`}
                       className="block"
                     >
-                      <span className="block font-display text-[16px] font-bold leading-[1.3] text-ink transition-colors hover:text-gold">
+                      <span className="block font-display text-[16px] font-bold leading-[1.3] text-ink transition-colors hover:text-navy-light">
                         {related.title}
                       </span>
                       <span className="mt-1 block font-ui text-[11px] text-muted-on-light">

@@ -67,7 +67,7 @@ export default function ResultsPage() {
       <section className="py-20">
         <div className="mx-auto max-w-[1200px] px-6">
           <GoldRule />
-          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+          <p className="mt-4 font-ui text-[11px] uppercase tracking-[0.2em] text-ink">
             Selected Outcomes
           </p>
           <h2 className="mb-10 mt-3 font-display text-h2 font-bold tracking-[-0.02em] text-ink">
@@ -84,7 +84,7 @@ export default function ResultsPage() {
 
           {/* Explore by practice area — cross-links, replaces the old per-area headers */}
           <div className="mt-16">
-            <p className="font-ui text-[11px] uppercase tracking-[0.2em] text-gold">
+            <p className="font-ui text-[11px] uppercase tracking-[0.2em] text-ink">
               Explore by Practice Area
             </p>
             <div className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
@@ -92,7 +92,7 @@ export default function ResultsPage() {
                 <Link
                   key={area.slug}
                   href={`/practice-areas/${area.slug}`}
-                  className="font-ui text-[13px] uppercase tracking-wide text-ink transition-colors hover:text-gold"
+                  className="font-ui text-[13px] uppercase tracking-wide text-ink transition-colors hover:text-navy-light"
                 >
                   {area.title} &rarr;
                 </Link>
