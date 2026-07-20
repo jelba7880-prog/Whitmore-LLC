@@ -10,7 +10,7 @@ export default function GoldRule({ variant = "solid", className = "" }: GoldRule
         className={`w-full h-px opacity-50 ${className}`}
         style={{
           background:
-            "linear-gradient(to right, transparent, #C9A84C, transparent)",
+            "linear-gradient(to right, transparent, var(--gold), transparent)",
         }}
       />
     );

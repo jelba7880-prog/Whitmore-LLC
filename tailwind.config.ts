@@ -12,10 +12,16 @@ const config: Config = {
         navy: "#0D1B2A",
         "navy-mid": "#1B2E44",
         "navy-light": "#2C4A6E",
+        // Tonal navy variants — one per homepage section that previously
+        // shared navy-mid identically. See docs/design-tokens.md.
+        "navy-hero": "#081522",
+        "navy-deep": "#162B45",
+        "navy-industry": "#20344D",
         gold: "#C9A84C",
         "gold-light": "#E8C97A",
         cream: "#F8F5EE",
         parchment: "#EDE8DF",
+        "cream-light": "#FCFAF6",
         ink: "#1A1A2E",
         // `muted` is aliased to `muted-on-dark` — the original #6B7A8D was tuned
         // for dark backgrounds but failed WCAG AA (~3.1:1) when reused on the
@@ -24,6 +30,10 @@ const config: Config = {
         muted: "#9CAFC0",
         "muted-on-light": "#5A6472",
         "muted-on-dark": "#9CAFC0",
+        // Warm-neutral border replacing navy-light where navy-light was used
+        // as a border color (not a fill/divider) — avoids a blue-tinted
+        // border on parchment/cream card surfaces.
+        "border-warm": "#DDD3C0",
       },
       fontFamily: {
         display: ["var(--font-display)", '"Cormorant Garamond"', "Georgia", "serif"],
