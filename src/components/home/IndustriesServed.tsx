@@ -4,7 +4,7 @@ import { industries } from "@/lib/industries";
 
 export default function IndustriesServed() {
   return (
-    <section className="bg-navy-mid py-20">
+    <section className="bg-navy-industry py-20">
       <div className="mx-auto max-w-content px-6">
         <RevealOnScroll>
           <div className="mb-14 text-center">

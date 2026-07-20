@@ -81,7 +81,7 @@ export default function TestimonialCarousel() {
   );
 
   return (
-    <section ref={sectionRef} className="bg-navy-mid py-20">
+    <section ref={sectionRef} className="bg-navy-deep py-20">
       <div
         className={`mx-auto max-w-[1200px] px-6 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none ${
           entered ? "translate-y-0 opacity-100" : "translate-y-2.5 opacity-0"

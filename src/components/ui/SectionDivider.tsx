@@ -12,7 +12,7 @@ export default function SectionDivider({
       className={`h-px w-full opacity-50 ${className}`}
       style={{
         background:
-          "linear-gradient(to right, transparent, #C9A84C, transparent)",
+          "linear-gradient(to right, transparent, var(--gold), transparent)",
       }}
     />
   );

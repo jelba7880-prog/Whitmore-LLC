@@ -8,7 +8,7 @@ import ParallaxImage from "@/components/ui/ParallaxImage";
 // runs edge-to-edge under the glass nav instead of starting below it.
 export default function Hero() {
   return (
-    <section className="relative -mt-[54px] min-h-[100svh] overflow-hidden bg-navy md:-mt-[72px]">
+    <section className="relative -mt-[54px] min-h-[100svh] overflow-hidden bg-navy-hero md:-mt-[72px]">
       <ParallaxImage>
         <Image
           src="/images/home/hero-courthouse.jpg"

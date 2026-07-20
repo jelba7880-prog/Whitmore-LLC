@@ -12,14 +12,19 @@
       --navy:       #0D1B2A;  /* Dominant background, primary text */
       --navy-mid:   #1B2E44;  /* Section backgrounds, card fills */
       --navy-light: #2C4A6E;  /* Borders, dividers, subtle fills */
+      --navy-hero:     #081522;  /* Hero section only — tonal variant of navy */
+      --navy-deep:     #162B45;  /* Stats + Testimonials — related "proof" sections */
+      --navy-industry: #20344D;  /* Industries We Serve only — distinct from navy-deep */
       --gold:       #C9A84C;  /* Headlines, rules, icon accents ONLY */
       --gold-light: #E8C97A;  /* Hover states, highlights */
       --cream:      #F8F5EE;  /* Primary light background */
       --parchment:  #EDE8DF;  /* Card backgrounds */
+      --cream-light:   #FCFAF6;  /* EditorialQuote — differentiates from flanking parchment sections */
       --ink:        #1A1A2E;  /* Body text on light backgrounds */
       --muted-on-light: #5A6472;  /* Subtext/metadata on cream/parchment — WCAG AA (≥4.5:1) */
       --muted-on-dark:  #9CAFC0;  /* Subtext/metadata + hero subheads on navy/navy-mid */
       --muted:      var(--muted-on-dark);  /* Alias → --muted-on-dark (dark-context default) */
+      --border-warm:   #DDD3C0;  /* Card borders on parchment/cream — replaces navy-light as a border color */
     }
 
 > **Muted text — background-specific.** The former single `--muted` (#6B7A8D)
@@ -36,14 +41,19 @@
       navy:        '#0D1B2A',
       'navy-mid':  '#1B2E44',
       'navy-light':'#2C4A6E',
+      'navy-hero':     '#081522',  // Hero only
+      'navy-deep':     '#162B45',  // Stats + Testimonials
+      'navy-industry': '#20344D',  // Industries We Serve only
       gold:        '#C9A84C',
       'gold-light':'#E8C97A',
       cream:       '#F8F5EE',
       parchment:   '#EDE8DF',
+      'cream-light':   '#FCFAF6',  // EditorialQuote only
       ink:         '#1A1A2E',
       muted:            '#9CAFC0',  // alias → muted-on-dark
       'muted-on-light': '#5A6472',  // subtext/metadata on cream/parchment (WCAG AA)
       'muted-on-dark':  '#9CAFC0',  // subtext/metadata on navy/navy-mid
+      'border-warm':    '#DDD3C0',  // card borders on parchment/cream (replaces navy-light as a border)
     }
 
 ### Color Usage Rules

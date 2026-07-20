@@ -3,7 +3,7 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 export default function StatsBar() {
   return (
-    <section className="bg-navy-mid py-12">
+    <section className="bg-navy-deep py-12">
       {/* One-time entrance reveal only — the stat VALUES render at final value
           immediately (no counter/roll-up), per Hard Rule #6. RevealOnScroll is
           the sole client boundary; StatsBar stays a server component. */}
@@ -16,7 +16,7 @@ export default function StatsBar() {
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="border-navy-light px-4 py-4 text-center md:px-8 md:py-2 [&:nth-child(even)]:border-l [&:nth-child(n+3)]:border-t md:[&:nth-child(3)]:border-l md:[&:nth-child(n+3)]:border-t-0"
+              className="border-border-warm px-4 py-4 text-center md:px-8 md:py-2 [&:nth-child(even)]:border-l [&:nth-child(n+3)]:border-t md:[&:nth-child(3)]:border-l md:[&:nth-child(n+3)]:border-t-0"
             >
               <div className="font-display text-[42px] font-bold leading-none text-gold md:text-[58px]">
                 {stat.value}
