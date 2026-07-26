@@ -3,7 +3,7 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 export default function StatsBar() {
   return (
-    <section className="bg-navy-deep py-12">
+    <section className="bg-navy py-12">
       {/* One-time entrance reveal only — the stat VALUES render at final value
           immediately (no counter/roll-up), per Hard Rule #6. RevealOnScroll is
           the sole client boundary; StatsBar stays a server component. */}

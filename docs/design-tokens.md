@@ -13,8 +13,7 @@
       --navy-mid:   #1B2E44;  /* Section backgrounds, card fills */
       --navy-light: #2C4A6E;  /* Borders, dividers, subtle fills */
       --navy-hero:     #081522;  /* Hero section only — tonal variant of navy */
-      --navy-deep:     #162B45;  /* Stats + Testimonials — related "proof" sections */
-      --navy-industry: #20344D;  /* Industries We Serve only — distinct from navy-deep */
+      --navy-industry: #20344D;  /* Industries We Serve only */
       --gold:       #C9A84C;  /* Headlines, rules, icon accents ONLY */
       --gold-light: #E8C97A;  /* Hover states, highlights */
       --cream:      #F8F5EE;  /* Primary light background */
@@ -42,7 +41,6 @@
       'navy-mid':  '#1B2E44',
       'navy-light':'#2C4A6E',
       'navy-hero':     '#081522',  // Hero only
-      'navy-deep':     '#162B45',  // Stats + Testimonials
       'navy-industry': '#20344D',  // Industries We Serve only
       gold:        '#C9A84C',
       'gold-light':'#E8C97A',
