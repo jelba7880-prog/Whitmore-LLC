@@ -15,7 +15,6 @@ const config: Config = {
         // Tonal navy variants — one per homepage section that previously
         // shared navy-mid identically. See docs/design-tokens.md.
         "navy-hero": "#081522",
-        "navy-deep": "#162B45",
         "navy-industry": "#20344D",
         gold: "#C9A84C",
         "gold-light": "#E8C97A",
